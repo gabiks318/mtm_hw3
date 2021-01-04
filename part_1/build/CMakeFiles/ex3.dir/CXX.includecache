@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date/date.h
+stdbool.h
+-
+
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date_wrap.cpp
+iostream
+-
+date_wrap.h
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date_wrap.h
+date/date.h
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date/date.h
+
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date_wrap.h
+iostream
+-
+date/date.h
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date/date.h
+

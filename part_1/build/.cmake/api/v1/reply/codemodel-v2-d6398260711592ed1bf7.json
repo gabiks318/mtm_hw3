@@ -64,9 +64,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "my_executable::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-my_executable-Debug-355973becef9414efc39.json",
-					"name" : "my_executable",
+					"id" : "ex3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ex3-Debug-3a944a7c7cf3beaf477b.json",
+					"name" : "ex3",
 					"projectIndex" : 0
 				}
 			]

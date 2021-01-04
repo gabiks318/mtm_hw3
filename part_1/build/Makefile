@@ -129,17 +129,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named my_executable
+# Target rules for targets named ex3
 
 # Build rule for target.
-my_executable: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 my_executable
-.PHONY : my_executable
+ex3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ex3
+.PHONY : ex3
 
 # fast build rule for target.
-my_executable/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/build
-.PHONY : my_executable/fast
+ex3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/build
+.PHONY : ex3/fast
+
+date/date.obj: date/date.c.obj
+
+.PHONY : date/date.obj
+
+# target to build an object file
+date/date.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/date/date.c.obj
+.PHONY : date/date.c.obj
+
+date/date.i: date/date.c.i
+
+.PHONY : date/date.i
+
+# target to preprocess a source file
+date/date.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/date/date.c.i
+.PHONY : date/date.c.i
+
+date/date.s: date/date.c.s
+
+.PHONY : date/date.s
+
+# target to generate assembly for a file
+date/date.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/date/date.c.s
+.PHONY : date/date.c.s
+
+date_wrap.obj: date_wrap.cpp.obj
+
+.PHONY : date_wrap.obj
+
+# target to build an object file
+date_wrap.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/date_wrap.cpp.obj
+.PHONY : date_wrap.cpp.obj
+
+date_wrap.i: date_wrap.cpp.i
+
+.PHONY : date_wrap.i
+
+# target to preprocess a source file
+date_wrap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/date_wrap.cpp.i
+.PHONY : date_wrap.cpp.i
+
+date_wrap.s: date_wrap.cpp.s
+
+.PHONY : date_wrap.s
+
+# target to generate assembly for a file
+date_wrap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/date_wrap.cpp.s
+.PHONY : date_wrap.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -147,7 +201,7 @@ main.obj: main.cpp.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -156,7 +210,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -165,7 +219,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_executable.dir\build.make CMakeFiles/my_executable.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -176,7 +230,13 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... my_executable
+	@echo ... ex3
+	@echo ... date/date.obj
+	@echo ... date/date.i
+	@echo ... date/date.s
+	@echo ... date_wrap.obj
+	@echo ... date_wrap.i
+	@echo ... date_wrap.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "my_executable.exe"
+			"path" : "ex3.exe"
 		},
 		{
-			"path" : "my_executable.pdb"
+			"path" : "ex3.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -38,23 +38,37 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
+					"fragment" : "-std=c++11 --pedantic-errors -Wall -Werror -L. -g"
 				}
 			],
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				2
 			]
 		}
 	],
-	"id" : "my_executable::@6890427a1f51a3e7e1df",
+	"id" : "ex3::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
+				"fragment" : "-std=c++11 --pedantic-errors -Wall -Werror -L. -g",
 				"role" : "flags"
 			},
 			{
@@ -68,8 +82,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "my_executable",
-	"nameOnDisk" : "my_executable.exe",
+	"name" : "ex3",
+	"nameOnDisk" : "ex3.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -81,7 +95,9 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1,
+				2
 			]
 		}
 	],
@@ -90,7 +106,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "date_wrap.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "date/date.c",
 			"sourceGroupIndex" : 0
 		}
 	],
