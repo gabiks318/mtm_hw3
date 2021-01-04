@@ -2,6 +2,7 @@
 #define DATE_WRAP_H
 
 #include <iostream>
+using std::ostream;
 
 extern "C"
 {
@@ -20,19 +21,17 @@ class DateWrap{
     int year() const;
     DateWrap operator++(int);
     DateWrap& operator+=(int num);
-    friend std::ostream& operator<<(std::ostream& os, const DateWrap&);
-    friend bool operator==(const DateWrap& date1, const DateWrap& date2);
-    friend bool operator>(const DateWrap& date1, const DateWrap& date2);
+    friend ostream& operator<<(ostream& os, const DateWrap&);
+    bool operator==(const DateWrap& date1) const;
+    bool operator>(const DateWrap& date1) const;
 
     class InvalidDate{};
     class NegativeDays{};
 };
 
-bool isDateLegal(int day, int month , int year);
 
 bool operator!=(const DateWrap& date1, const DateWrap& date2);
 bool operator<=(const DateWrap& date1, const DateWrap& date2);
-bool operator>(const DateWrap& date1, const DateWrap& date2);
 bool operator>=(const DateWrap& date1, const DateWrap& date2);
 DateWrap operator+(DateWrap date ,int num);
 DateWrap operator+(int num, DateWrap date);
