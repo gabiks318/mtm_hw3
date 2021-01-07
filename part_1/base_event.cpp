@@ -7,7 +7,7 @@ using std::ostream;
 
 BaseEvent::BaseEvent(DateWrap date, string name): date(date), name(name), participants()
 {
-            participants = new bool[MAX_PARTICIPANTS];
+    participants = new bool[MAX_PARTICIPANTS];
 }
 
 BaseEvent::BaseEvent(const BaseEvent& event){
@@ -36,6 +36,7 @@ void BaseEvent::unregistrParticpant(int student) const{
 ostream& BaseEvent::printShort(ostream& os){
     return os << name << " " << date << "\n";
 }
+
 ostream& BaseEvent::printLong(ostream& os){
     ostream& os_2 = printShort(os);
     for(int i = 1; i < MAX_PARTICIPANTS; i++){
@@ -46,6 +47,3 @@ ostream& BaseEvent::printLong(ostream& os){
     return os_2;
 }
 
-BaseEvent* BaseEvent::clone(){
-    return new BaseEvent(*this);
-}

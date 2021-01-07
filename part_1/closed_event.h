@@ -12,6 +12,9 @@ namespace mtm
         ClosedEvent(DateWrap date, string name):BaseEvent(date, name), allowed_participants(){
             allowed_participants = new bool[MAX_PARTICIPANTS];
         }
+        ~ClosedEvent(){
+            delete[] allowed_participants;
+        }
         void addInvitee(int student){
             if(allowed_participants[student]){
                 throw AlreadyInvited();
@@ -26,6 +29,9 @@ namespace mtm
                 participants[student] = true; //TODO : what if student not allowed to register?
             }
         }
+        ClosedEvent* clone() override{
+            return new ClosedEvent(*this);
+}
     }
 }
 #endif

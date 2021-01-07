@@ -9,6 +9,9 @@ namespace mtm
     class OpenEvent: public BaseEvent{
         public:
         OpenEvent(DateWrap date, string name):BaseEvent(date,name){}
+        ~OpenEvent(){}
+        BaseEvent* clone() override{
+            return new OpenEvent(*this);
     }
 }
 #endif

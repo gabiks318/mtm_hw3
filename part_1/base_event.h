@@ -20,14 +20,14 @@ namespace mtm{
             participants = new bool[MAX_PARTICIPANTS];
         } */
         BaseEvent(const BaseEvent& event);
-        virtual ~BaseEvent() {
+        ~BaseEvent() {
             delete[] participants;
         }
         virtual void registerParticipant(int student) const;
         virtual void unregistrParticpant(int student) const;
         virtual ostream& printShort(ostream& os);
         virtual ostream& printLong(ostream& os);
-        virtual BaseEvent* clone();
+        virtual BaseEvent* clone() = 0;
         };
         
 }
