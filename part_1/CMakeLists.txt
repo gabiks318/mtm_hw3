@@ -10,4 +10,4 @@ set(CMAKE_CXX_FLAGS ${MTM_FLAGS_DEBUG})
 add_subdirectory("${PROJECT_SOURCE_DIR}/date")
 add_subdirectory("${PROJECT_SOURCE_DIR}/provided")
 
-add_executable(ex3 date_wrap.cpp main.cpp date/date.c)
+add_executable(ex3 date_wrap.cpp main.cpp date/date.c base_event.cpp)

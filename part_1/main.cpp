@@ -1,8 +1,9 @@
 #include <iostream>
 #include "date_wrap.h"
+#include "base_event.h"
 using std::cout;
 using std::endl;
-
+using mtm::DateWrap;
 
 int main(){
     DateWrap date(30, 11, 2020);
@@ -19,5 +20,4 @@ int main(){
     date += (-3); // throw exception NegativeDays
     date = date + (-3); // throw exception NegativeDays
     return 0;
-
 }

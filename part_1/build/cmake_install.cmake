@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1
+# Install script for directory: C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,13 +34,13 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Program Files (x86)/gcc/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build/date/cmake_install.cmake")
-  include("C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build/provided/cmake_install.cmake")
+  include("C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/build/date/cmake_install.cmake")
+  include("C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/build/provided/cmake_install.cmake")
 
 endif()
 
@@ -52,5 +52,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

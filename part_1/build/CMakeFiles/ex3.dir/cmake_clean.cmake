@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ex3.dir/base_event.cpp.obj"
   "CMakeFiles/ex3.dir/date/date.c.obj"
   "CMakeFiles/ex3.dir/date_wrap.cpp.obj"
   "CMakeFiles/ex3.dir/main.cpp.obj"

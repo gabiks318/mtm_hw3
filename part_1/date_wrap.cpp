@@ -1,8 +1,13 @@
 #include <iostream>
 #include "date_wrap.h"
+#include "exceptions.h"
+
 
 #define MAX_DAY 30
 #define MAX_MONTH 12
+
+using mtm::DateWrap;
+using std::ostream;
 
 extern "C"
 {
@@ -27,14 +32,25 @@ DateWrap::DateWrap(int day, int month, int year){
     if(date == NULL){
         // TODO: Handle memory fail
     }
-    
+   
 }
+
 DateWrap::~DateWrap(){
     dateDestroy(date);
 }
 
 DateWrap::DateWrap(const DateWrap& date2){
     date = dateCreate(date2.day(), date2.month(), date2.year());
+}
+
+DateWrap& DateWrap::operator=(const DateWrap& date_wrap){
+    if(this == &date_wrap){
+        return *this;
+    }
+    dateDestroy(date);
+    date = dateCreate(date_wrap.day(), date_wrap.month(), date_wrap.year());
+
+    return *this;
 }
 
 int DateWrap::day() const{
@@ -55,7 +71,7 @@ int DateWrap::year() const{
     return year;
 }
 
-ostream& operator<<(ostream& os, const DateWrap& date){
+ostream& mtm::operator<<(ostream& os, const DateWrap& date){
     return os << date.day() << "/" << date.month() << "/" << date.year();
 }
 
@@ -63,11 +79,11 @@ bool DateWrap::operator==(const DateWrap& date1) const{
     return dateCompare(this->date, date1.date) == 0;
 }
 
-bool operator!=(const DateWrap& date1, const DateWrap& date2){
+bool mtm::operator!=(const DateWrap& date1, const DateWrap& date2){
     return ! (date1 == date2);
 }
 
-bool operator<=(const DateWrap& date1, const DateWrap& date2){
+bool mtm::operator<=(const DateWrap& date1, const DateWrap& date2){
     return date2 > date1 || date1 == date2;
 }
 
@@ -75,11 +91,11 @@ bool DateWrap::operator>(const DateWrap& date1) const{
     return dateCompare(this->date, date1.date) > 0;
 }
 
-bool operator>=(const DateWrap& date1, const DateWrap& date2){
+bool mtm::operator>=(const DateWrap& date1, const DateWrap& date2){
     return date1 > date2 || date1 == date2;
 }
 
-bool operator<(const DateWrap& date1, const DateWrap& date2){
+bool mtm::operator<(const DateWrap& date1, const DateWrap& date2){
     return date2 > date1;
 }
 
@@ -95,17 +111,15 @@ DateWrap& DateWrap::operator+=(int num){
     }
     for(int i = 0; i < num; i++){
         dateTick(date);
-        /* *this++; */
     }
     return *this;
 }
 
-
-DateWrap operator+(DateWrap date, int num){
+DateWrap mtm::operator+(DateWrap& date ,int num){
     DateWrap new_date = date;
     return new_date += num;
 }
 
-DateWrap operator+(int num, DateWrap date){
+DateWrap mtm::operator+(int num, DateWrap& date){
     return date + num;
 }

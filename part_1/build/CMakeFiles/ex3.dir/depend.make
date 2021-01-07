@@ -4,10 +4,18 @@
 CMakeFiles/ex3.dir/date/date.c.obj: ../date/date.c
 CMakeFiles/ex3.dir/date/date.c.obj: ../date/date.h
 
+CMakeFiles/ex3.dir/base_event.cpp.obj: ../base_event.cpp
+CMakeFiles/ex3.dir/base_event.cpp.obj: ../base_event.h
+CMakeFiles/ex3.dir/base_event.cpp.obj: ../date/date.h
+CMakeFiles/ex3.dir/base_event.cpp.obj: ../date_wrap.h
+CMakeFiles/ex3.dir/base_event.cpp.obj: ../exceptions.h
+
 CMakeFiles/ex3.dir/date_wrap.cpp.obj: ../date/date.h
 CMakeFiles/ex3.dir/date_wrap.cpp.obj: ../date_wrap.cpp
 CMakeFiles/ex3.dir/date_wrap.cpp.obj: ../date_wrap.h
+CMakeFiles/ex3.dir/date_wrap.cpp.obj: ../exceptions.h
 
+CMakeFiles/ex3.dir/main.cpp.obj: ../base_event.h
 CMakeFiles/ex3.dir/main.cpp.obj: ../date/date.h
 CMakeFiles/ex3.dir/main.cpp.obj: ../date_wrap.h
 CMakeFiles/ex3.dir/main.cpp.obj: ../main.cpp
