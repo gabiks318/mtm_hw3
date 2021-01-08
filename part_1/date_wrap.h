@@ -9,9 +9,7 @@ extern "C"
 }
 namespace mtm
 {
-
-
-class DateWrap{
+  class DateWrap{
     Date date;
 
     public:

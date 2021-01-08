@@ -5,31 +5,46 @@
 
 using mtm::EventContainer;
 
-EventContainer::EventIterator::EventIterator(BaseEvent* event):iterator(event){}
 
+EventContainer::EventIterator::EventIterator(List<BaseEvent*> events, int index): event(events[index]), index(index), events(events)
+{}
 
-EventContainer::EventIterator::EventIterator(const EventIterator& iterator){
-
+EventContainer::EventIterator::EventIterator(const EventIterator& event_iterator){
+    event = event_iterator.event;
+    index = event_iterator.index;
+    events = event_iterator.events;
 }
-EventIterator& EventContainer::EventIterator::operator=(const EventIterator& iterator){
-
+EventContainer::EventIterator& EventContainer::EventIterator::operator=(const EventIterator& event_iterator){
+    if(*this == event_iterator){
+        return *this;
+    }
+    delete &events;
+    delete &event;
+    event = event_iterator.event;
+    index = event_iterator.index;
+    events = event_iterator.events;
+    return *this;
 }
-EventIterator& EventContainer::EventIterator::operator*(){
-
+mtm::BaseEvent& EventContainer::EventIterator::operator*(){
+    return *event;
 }
-EventIterator EventContainer::EventIterator::operator++(int){
 
+EventContainer::EventIterator& EventContainer::EventIterator::operator++(){
+    index++;
+    event = events[index];
+    return *this;
 }
-bool EventContainer::EventIterator::operator==(const EventIterator& iterator) const{
-
+bool EventContainer::EventIterator::operator==(const EventIterator& event_iterator) const{
+    return *event == *event_iterator.event;
 }
-bool EventContainer::EventIterator::operator!=(const EventIterator& iterator) const{
-
+bool EventContainer::EventIterator::operator!=(const EventIterator& event_iterator) const{
+    return !(event == event_iterator.event);
 }
    
 EventContainer::EventIterator EventContainer::begin(){
-    return EventContainer::EventIterator(events[0]);
+    return EventIterator(events, 0);
 }
 EventContainer::EventIterator EventContainer::end(){
-    return EventContainer::EventIterator(events[getSize(events)]);
+    int size = events.getSize();
+    return EventIterator(events, size);
 }
