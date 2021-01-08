@@ -3,35 +3,20 @@
 #include "date_wrap.h"
 #include "base_event.h"
 #include <string>
+#include "./linked_list/linked_list.h"
 
 namespace mtm
 {
-    class ClosedEvent: public BaseEvent{
-        bool* allowed_participants;
+    class ClosedEvent: public BaseEvent
+    {
+        List<int> allowed_participants;
         public:
-        ClosedEvent(DateWrap date, string name):BaseEvent(date, name), allowed_participants(){
-            allowed_participants = new bool[MAX_PARTICIPANTS];
-        }
-        ~ClosedEvent(){
-            delete[] allowed_participants;
-        }
-        void addInvitee(int student){
-            if(allowed_participants[student]){
-                throw AlreadyInvited();
-            }
-            allowed_participants[student] = true;
-        }
-        void registerParticipant(int student) const override{
-            if(participants[student]){
-                throw AlreadyRegistered();
-            }
-            if(allowed_participants[student]){
-                participants[student] = true; //TODO : what if student not allowed to register?
-            }
-        }
-        ClosedEvent* clone() override{
-            return new ClosedEvent(*this);
-}
-    }
+        ClosedEvent(DateWrap date, string name):BaseEvent(date, name), allowed_participants(){}
+        ClosedEvent(const ClosedEvent& event);
+        ~ClosedEvent() override {}
+        void addInvitee(int student);
+        void registerParticipant(int student) override;
+        BaseEvent* clone() const override;
+    };
 }
 #endif

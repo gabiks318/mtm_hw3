@@ -1,36 +1,39 @@
 #include <iostream>
 #include "base_event.h"
 #include "exceptions.h"
+#include "./linked_list/linked_list.h"
 
 using mtm::BaseEvent;
+using mtm::List;
 using std::ostream;
 
+#define MIN_ID 1
+#define MAX_ID 20000
+
 BaseEvent::BaseEvent(DateWrap date, string name): date(date), name(name), participants()
-{
-    participants = new bool[MAX_PARTICIPANTS];
-}
+{}
 
 BaseEvent::BaseEvent(const BaseEvent& event){
     name = event.name;
     date = event.date;
-    participants = new bool[MAX_PARTICIPANTS];
-    for(int i = 0; i < MAX_PARTICIPANTS; i++){
-        participants[i] = event.participants[i];
-    }
+    participants = event.participants;
 }
 
-void BaseEvent::registerParticipant(int student) const{
-    if(participants[student]){
+void BaseEvent::registerParticipant(int student){
+    if(student < MIN_ID || student > MAX_ID){
+        throw InvalidStudent();
+    }
+    if(participants.exists(student)){
         throw AlreadyRegistered();
     }
-    participants[student] = true;
+    participants.insert(student);
 }
 
-void BaseEvent::unregistrParticpant(int student) const{
-    if(!participants[student]){
+void BaseEvent::unregisterParticpant(int student){
+    if(!participants.exists(student)){
         throw NotRegistered();
     }
-    participants[student] = false;
+    participants.remove(student);
 } 
 
 ostream& BaseEvent::printShort(ostream& os){
@@ -39,11 +42,21 @@ ostream& BaseEvent::printShort(ostream& os){
 
 ostream& BaseEvent::printLong(ostream& os){
     ostream& os_2 = printShort(os);
-    for(int i = 1; i < MAX_PARTICIPANTS; i++){
-        if(participants[i]){
-            os_2<< i << "\n";
-        }
+    for(int i = 0; i < participants.getSize(); i++){
+            os_2<< participants[i] << "\n";
+        
     }
     return os_2;
 }
 
+DateWrap BaseEvent::getDate() const{
+    return date;
+}
+
+string BaseEvent::getName() const {
+    return name;
+}
+
+List<int> BaseEvent::getParticipants() const{
+    return participants;
+}

@@ -40,7 +40,9 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/build/date/cmake_install.cmake")
+  include("C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/build/linked_list/cmake_install.cmake")
   include("C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/build/provided/cmake_install.cmake")
+  include("C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/build/tests/cmake_install.cmake")
 
 endif()
 

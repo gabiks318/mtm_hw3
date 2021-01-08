@@ -1,3 +1,5 @@
+#ifndef EXCEPTIONS_H
+#define EXCEPTIONS_H
 #include <exception>
 
 namespace mtm{
@@ -6,6 +8,10 @@ namespace mtm{
     class InvalidDate: public Exception{};
     class NegativeDays: public Exception{};
     class AlreadyRegistered: public Exception{};
+    class InvalidStudent: public Exception{};
     class NotRegistered: public Exception{};
     class AlreadyInvited: public Exception{};
+    class RegistrationBlocked: public Exception{};
+    class OutOfBoundaries: public Exception{};
 }
+#endif

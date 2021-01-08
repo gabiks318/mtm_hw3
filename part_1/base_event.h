@@ -2,32 +2,33 @@
 #define BASE_EVENT_H
 #include "date_wrap.h"
 #include <string>
+#include "./linked_list/linked_list.h"
+
 
 using std::string;
 using mtm::DateWrap;
 using std::ostream; 
-#define MAX_PARTICIPANTS 20000
 
 namespace mtm{
 
     class BaseEvent{
+        protected:
         DateWrap date;
         string name;
-        bool* participants;
+        List<int> participants;
         public:
-        BaseEvent(DateWrap date, string name);/* : date(date), name(name), participants()
-        {
-            participants = new bool[MAX_PARTICIPANTS];
-        } */
+        BaseEvent(DateWrap date, string name);
         BaseEvent(const BaseEvent& event);
-        ~BaseEvent() {
-            delete[] participants;
-        }
-        virtual void registerParticipant(int student) const;
-        virtual void unregistrParticpant(int student) const;
+        virtual ~BaseEvent() {};
+        virtual void registerParticipant(int student);
+        virtual void unregisterParticpant(int student);
         virtual ostream& printShort(ostream& os);
         virtual ostream& printLong(ostream& os);
-        virtual BaseEvent* clone() = 0;
+        virtual BaseEvent* clone() const = 0;
+
+        DateWrap getDate() const;
+        string getName() const;
+        List<int> getParticipants() const;
         };
         
 }

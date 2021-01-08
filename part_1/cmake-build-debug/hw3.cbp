@@ -5,7 +5,7 @@
 		<Option title="hw3"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\date\;CMake Files\provided\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\date\;CMake Files\linked_list\;CMake Files\provided\;CMake Files\tests\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/cmake-build-debug"/>
@@ -80,6 +80,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/base_event.cpp">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/base_event.h">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/closed_event.cpp">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/closed_event.h">
+			<Option target="ex3"/>
+		</Unit>
 		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date/date.c">
 			<Option target="ex3"/>
 		</Unit>
@@ -92,7 +104,7 @@
 		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date_wrap.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/main.cpp">
+		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/tests/event_tests.cpp">
 			<Option target="ex3"/>
 		</Unit>
 		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/CMakeLists.txt">
@@ -101,8 +113,14 @@
 		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\date\"/>
 		</Unit>
+		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/linked_list/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\linked_list\"/>
+		</Unit>
 		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/provided/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\provided\"/>
+		</Unit>
+		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/tests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

@@ -9,9 +9,11 @@ namespace mtm
     class OpenEvent: public BaseEvent{
         public:
         OpenEvent(DateWrap date, string name):BaseEvent(date,name){}
-        ~OpenEvent(){}
-        BaseEvent* clone() override{
+        OpenEvent(const OpenEvent& event):BaseEvent(event){}
+        virtual ~OpenEvent() {}
+        BaseEvent* clone() const override {
             return new OpenEvent(*this);
-    }
+        }
+    };
 }
 #endif

@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ex3.dir/base_event.cpp.obj"
+  "CMakeFiles/ex3.dir/closed_event.cpp.obj"
   "CMakeFiles/ex3.dir/date/date.c.obj"
   "CMakeFiles/ex3.dir/date_wrap.cpp.obj"
-  "CMakeFiles/ex3.dir/main.cpp.obj"
+  "CMakeFiles/ex3.dir/tests/event_tests.cpp.obj"
   "ex3.exe"
   "ex3.exe.manifest"
   "ex3.pdb"

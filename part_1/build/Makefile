@@ -168,6 +168,33 @@ base_event.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/base_event.cpp.s
 .PHONY : base_event.cpp.s
 
+closed_event.obj: closed_event.cpp.obj
+
+.PHONY : closed_event.obj
+
+# target to build an object file
+closed_event.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/closed_event.cpp.obj
+.PHONY : closed_event.cpp.obj
+
+closed_event.i: closed_event.cpp.i
+
+.PHONY : closed_event.i
+
+# target to preprocess a source file
+closed_event.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/closed_event.cpp.i
+.PHONY : closed_event.cpp.i
+
+closed_event.s: closed_event.cpp.s
+
+.PHONY : closed_event.s
+
+# target to generate assembly for a file
+closed_event.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/closed_event.cpp.s
+.PHONY : closed_event.cpp.s
+
 date/date.obj: date/date.c.obj
 
 .PHONY : date/date.obj
@@ -222,32 +249,32 @@ date_wrap.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/date_wrap.cpp.s
 .PHONY : date_wrap.cpp.s
 
-main.obj: main.cpp.obj
+tests/event_tests.obj: tests/event_tests.cpp.obj
 
-.PHONY : main.obj
+.PHONY : tests/event_tests.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+tests/event_tests.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/event_tests.cpp.obj
+.PHONY : tests/event_tests.cpp.obj
 
-main.i: main.cpp.i
+tests/event_tests.i: tests/event_tests.cpp.i
 
-.PHONY : main.i
+.PHONY : tests/event_tests.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/main.cpp.i
-.PHONY : main.cpp.i
+tests/event_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/event_tests.cpp.i
+.PHONY : tests/event_tests.cpp.i
 
-main.s: main.cpp.s
+tests/event_tests.s: tests/event_tests.cpp.s
 
-.PHONY : main.s
+.PHONY : tests/event_tests.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/main.cpp.s
-.PHONY : main.cpp.s
+tests/event_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/event_tests.cpp.s
+.PHONY : tests/event_tests.cpp.s
 
 # Help Target
 help:
@@ -261,15 +288,18 @@ help:
 	@echo ... base_event.obj
 	@echo ... base_event.i
 	@echo ... base_event.s
+	@echo ... closed_event.obj
+	@echo ... closed_event.i
+	@echo ... closed_event.s
 	@echo ... date/date.obj
 	@echo ... date/date.i
 	@echo ... date/date.s
 	@echo ... date_wrap.obj
 	@echo ... date_wrap.i
 	@echo ... date_wrap.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... tests/event_tests.obj
+	@echo ... tests/event_tests.i
+	@echo ... tests/event_tests.s
 .PHONY : help
 
 

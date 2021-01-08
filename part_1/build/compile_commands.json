@@ -1,22 +1,27 @@
 [
 {
   "directory": "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/build",
-  "command": "C:\\PROGRA~2\\MINGW-~1\\I686-8~1.0-P\\mingw32\\bin\\I686-W~2.EXE   -std=c++11 --pedantic-errors -Wall -Werror -L. -g -o CMakeFiles\\ex3.dir\\date_wrap.cpp.obj -c \"C:\\Users\\Gabriel\\Desktop\\Technion\\Programming Files\\Matam\\mtm_hw3\\part_1\\date_wrap.cpp\"",
-  "file": "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date_wrap.cpp"
-},
-{
-  "directory": "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/build",
-  "command": "C:\\PROGRA~2\\MINGW-~1\\I686-8~1.0-P\\mingw32\\bin\\I686-W~2.EXE   -std=c++11 --pedantic-errors -Wall -Werror -L. -g -o CMakeFiles\\ex3.dir\\main.cpp.obj -c \"C:\\Users\\Gabriel\\Desktop\\Technion\\Programming Files\\Matam\\mtm_hw3\\part_1\\main.cpp\"",
-  "file": "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/main.cpp"
-},
-{
-  "directory": "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/build",
-  "command": "C:\\PROGRA~2\\MINGW-~1\\I686-8~1.0-P\\mingw32\\bin\\I6EEE3~1.EXE   -g -o CMakeFiles\\ex3.dir\\date\\date.c.obj -c \"C:\\Users\\Gabriel\\Desktop\\Technion\\Programming Files\\Matam\\mtm_hw3\\part_1\\date\\date.c\"",
-  "file": "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date/date.c"
+  "command": "C:\\PROGRA~2\\MINGW-~1\\I686-8~1.0-P\\mingw32\\bin\\I686-W~2.EXE   -std=c++11 --pedantic-errors -Wall -Werror -L. -g -o CMakeFiles\\ex3.dir\\tests\\event_tests.cpp.obj -c \"C:\\Users\\Gabriel\\Desktop\\Technion\\Programming Files\\Matam\\mtm_hw3\\part_1\\tests\\event_tests.cpp\"",
+  "file": "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/tests/event_tests.cpp"
 },
 {
   "directory": "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/build",
   "command": "C:\\PROGRA~2\\MINGW-~1\\I686-8~1.0-P\\mingw32\\bin\\I686-W~2.EXE   -std=c++11 --pedantic-errors -Wall -Werror -L. -g -o CMakeFiles\\ex3.dir\\base_event.cpp.obj -c \"C:\\Users\\Gabriel\\Desktop\\Technion\\Programming Files\\Matam\\mtm_hw3\\part_1\\base_event.cpp\"",
   "file": "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/base_event.cpp"
+},
+{
+  "directory": "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/build",
+  "command": "C:\\PROGRA~2\\MINGW-~1\\I686-8~1.0-P\\mingw32\\bin\\I686-W~2.EXE   -std=c++11 --pedantic-errors -Wall -Werror -L. -g -o CMakeFiles\\ex3.dir\\closed_event.cpp.obj -c \"C:\\Users\\Gabriel\\Desktop\\Technion\\Programming Files\\Matam\\mtm_hw3\\part_1\\closed_event.cpp\"",
+  "file": "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/closed_event.cpp"
+},
+{
+  "directory": "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/build",
+  "command": "C:\\PROGRA~2\\MINGW-~1\\I686-8~1.0-P\\mingw32\\bin\\I686-W~2.EXE   -std=c++11 --pedantic-errors -Wall -Werror -L. -g -o CMakeFiles\\ex3.dir\\date_wrap.cpp.obj -c \"C:\\Users\\Gabriel\\Desktop\\Technion\\Programming Files\\Matam\\mtm_hw3\\part_1\\date_wrap.cpp\"",
+  "file": "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date_wrap.cpp"
+},
+{
+  "directory": "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/build",
+  "command": "C:\\PROGRA~2\\MINGW-~1\\I686-8~1.0-P\\mingw32\\bin\\I6EEE3~1.EXE   -g -o CMakeFiles\\ex3.dir\\date\\date.c.obj -c \"C:\\Users\\Gabriel\\Desktop\\Technion\\Programming Files\\Matam\\mtm_hw3\\part_1\\date\\date.c\"",
+  "file": "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date/date.c"
 }
 ]
