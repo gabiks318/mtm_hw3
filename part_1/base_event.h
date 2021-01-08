@@ -19,6 +19,7 @@ namespace mtm{
         public:
         BaseEvent(DateWrap date, string name);
         BaseEvent(const BaseEvent& event);
+        bool operator==(const BaseEvent& event) const;
         virtual ~BaseEvent() {};
         virtual void registerParticipant(int student);
         virtual void unregisterParticpant(int student);

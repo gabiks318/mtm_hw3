@@ -1,6 +1,7 @@
 #include <iostream>
 #include "base_event.h"
 #include "exceptions.h"
+#include <string>
 #include "./linked_list/linked_list.h"
 
 using mtm::BaseEvent;
@@ -36,6 +37,9 @@ void BaseEvent::unregisterParticpant(int student){
     participants.remove(student);
 } 
 
+bool BaseEvent::operator==(const BaseEvent& event) const{
+    return name == event.getName() && date == event.getDate(); //TO DO: is this proper definition of equal events
+}
 ostream& BaseEvent::printShort(ostream& os){
     return os << name << " " << date << "\n";
 }
