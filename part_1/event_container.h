@@ -8,18 +8,21 @@ namespace mtm
 {
     class EventContainer
     {
-        List<BaseEvent> events;
+        List<BaseEvent*> events;
         class EventIterator
         {
-            typedef BaseEvent* iterator;
+            BaseEvent* event;
+            int index;
+            List<BaseEvent*> events;
             public:
-            EventIterator(BaseEvent* event);
-            EventIterator(const EventIterator& iterator);
-            EventIterator& operator=(const EventIterator& iterator);
-            EventIterator& operator*();
-            EventIterator operator++(int);
-            bool operator==(const EventIterator& iterator1) const;
-            bool operator!=(const EventIterator& iterator1) const;
+            int getIndex() const;
+            EventIterator(List<BaseEvent*> events, int index);
+            EventIterator(const EventIterator& event_iterator);
+            EventIterator& operator=(const EventIterator& event_iterator);
+            mtm::BaseEvent& operator*();
+            EventIterator& operator++();
+            bool operator==(const EventIterator& event_iterator) const;
+            bool operator!=(const EventIterator& event_iterator) const;
             friend class EventContainer;
         };
         public:
