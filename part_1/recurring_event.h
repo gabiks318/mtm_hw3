@@ -4,6 +4,7 @@
 #include "event_container.h"
 #include "base_event.h"
 #include "exceptions.h"
+#include "date_wrap.h"
 #include "./linked_list/linked_list.h"
 #include <string>
 
@@ -30,8 +31,9 @@ namespace mtm
         EventType event();
         
         for(int i = 0; i < num_occurrences; i++){
-            event(first_date + i*interval, name);
-            events.insert(event);
+            DateWrap date = first_date + i*interval;
+            EventType event(date, name);
+            events.insert(&event);
         }
     }
     template<class EventType>

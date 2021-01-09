@@ -30,7 +30,7 @@ void BaseEvent::registerParticipant(int student){
     participants.insert(student);
 }
 
-void BaseEvent::unregisterParticpant(int student){
+void BaseEvent::unregisterParticipant(int student){
     if(student < MIN_ID || student > MAX_ID){
         throw InvalidStudent();
     }

@@ -21,7 +21,7 @@ namespace mtm
     OneTimeEvent<EventType>::OneTimeEvent(DateWrap date, string name):EventContainer()
     {
         EventType event(date,name);
-        events.insert(event);
+        events.insert(&event);
     }
     template<class EventType>
     void OneTimeEvent<EventType>::add(const BaseEvent& event)

@@ -290,9 +290,9 @@ bool List<T>::exists(T key) //exists functions that searches for node that conta
 template <typename T>
 T List<T>::operator[](int index){
     int size = getSize();
-    if(index < 0 || index >= size){
+    /*if(index < 0 || index >= size){
         throw OutOfBoundaries();
-    }
+    }*/
     if(index == 0){
         return start_node->node_data;
     }

@@ -15,6 +15,7 @@ typedef mtm::EventContainer::EventIterator Iter;
 
 void printEventsShort(mtm::EventContainer& events) {
     for (Iter iter = events.begin(); iter != events.end(); ++iter) {
+
         mtm::BaseEvent& event = *iter;
         event.printShort(std::cout);
     }
@@ -36,6 +37,7 @@ void test1() {
     mtm::OneTimeEvent<mtm::OpenEvent> one_time(mtm::DateWrap(2, 3, 80),
                                                "A long time ago");
     printEventsShort(one_time);
+    std::cout<< "finished first test \n" << std::endl;
 }
 
 void test2_aux(mtm::BaseEvent& event) {

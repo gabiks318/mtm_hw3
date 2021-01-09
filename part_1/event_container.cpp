@@ -19,7 +19,7 @@ EventContainer::EventIterator& EventContainer::EventIterator::operator=(const Ev
         return *this;
     }
     delete &events;
-    delete event;
+    delete &event;
     event = event_iterator.event;
     index = event_iterator.index;
     events = event_iterator.events;
@@ -46,5 +46,5 @@ EventContainer::EventIterator EventContainer::begin(){
 }
 EventContainer::EventIterator EventContainer::end(){
     int size = events.getSize();
-    return EventIterator(events, size );
+    return EventIterator(events, size-1);
 }

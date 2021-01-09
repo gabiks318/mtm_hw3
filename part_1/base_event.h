@@ -22,7 +22,7 @@ namespace mtm{
         bool operator==(const BaseEvent& event) const;
         virtual ~BaseEvent() {};
         virtual void registerParticipant(int student);
-        virtual void unregisterParticpant(int student);
+        virtual void unregisterParticipant(int student);
         virtual ostream& printShort(ostream& os);
         virtual ostream& printLong(ostream& os);
         virtual BaseEvent* clone() const = 0;
