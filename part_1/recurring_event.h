@@ -29,7 +29,7 @@ namespace mtm
             throw InvalidInterval();
         }
         EventType event();
-        
+        DateWrap date();
         for(int i = 0; i < num_occurrences; i++){
             DateWrap date = first_date + i*interval;
             EventType event(date, name);

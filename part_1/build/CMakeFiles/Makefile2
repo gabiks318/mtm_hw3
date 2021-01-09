@@ -62,10 +62,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1
+CMAKE_SOURCE_DIR = "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build
+CMAKE_BINARY_DIR = "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\build"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -76,6 +76,7 @@ all: date/all
 all: linked_list/all
 all: provided/all
 all: tests/all
+all: dry/all
 
 .PHONY : all
 
@@ -84,6 +85,7 @@ preinstall: date/preinstall
 preinstall: linked_list/preinstall
 preinstall: provided/preinstall
 preinstall: tests/preinstall
+preinstall: dry/preinstall
 
 .PHONY : preinstall
 
@@ -93,6 +95,7 @@ clean: date/clean
 clean: linked_list/clean
 clean: provided/clean
 clean: tests/clean
+clean: dry/clean
 
 .PHONY : clean
 
@@ -113,6 +116,24 @@ date/preinstall:
 date/clean:
 
 .PHONY : date/clean
+
+#=============================================================================
+# Directory level rules for directory dry
+
+# Recursive "all" directory target.
+dry/all:
+
+.PHONY : dry/all
+
+# Recursive "preinstall" directory target.
+dry/preinstall:
+
+.PHONY : dry/preinstall
+
+# Recursive "clean" directory target.
+dry/clean:
+
+.PHONY : dry/clean
 
 #=============================================================================
 # Directory level rules for directory linked_list
@@ -175,14 +196,14 @@ tests/clean:
 CMakeFiles/ex3.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target ex3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\build\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8 "Built target ex3"
 .PHONY : CMakeFiles/ex3.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ex3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build\CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\build\CMakeFiles" 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/ex3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\build\CMakeFiles" 0
 .PHONY : CMakeFiles/ex3.dir/rule
 
 # Convenience name for target.

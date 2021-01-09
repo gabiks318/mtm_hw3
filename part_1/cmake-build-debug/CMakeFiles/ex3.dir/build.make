@@ -76,18 +76,18 @@ include CMakeFiles/ex3.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ex3.dir/flags.make
 
-CMakeFiles/ex3.dir/tests/event_tests.cpp.obj: CMakeFiles/ex3.dir/flags.make
-CMakeFiles/ex3.dir/tests/event_tests.cpp.obj: ../tests/event_tests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ex3.dir/tests/event_tests.cpp.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ex3.dir\tests\event_tests.cpp.obj -c "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\tests\event_tests.cpp"
+CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: CMakeFiles/ex3.dir/flags.make
+CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../provided/test_partB.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ex3.dir/provided/test_partB.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ex3.dir\provided\test_partB.cpp.obj -c "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\provided\test_partB.cpp"
 
-CMakeFiles/ex3.dir/tests/event_tests.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex3.dir/tests/event_tests.cpp.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\tests\event_tests.cpp" > CMakeFiles\ex3.dir\tests\event_tests.cpp.i
+CMakeFiles/ex3.dir/provided/test_partB.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex3.dir/provided/test_partB.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\provided\test_partB.cpp" > CMakeFiles\ex3.dir\provided\test_partB.cpp.i
 
-CMakeFiles/ex3.dir/tests/event_tests.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex3.dir/tests/event_tests.cpp.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\tests\event_tests.cpp" -o CMakeFiles\ex3.dir\tests\event_tests.cpp.s
+CMakeFiles/ex3.dir/provided/test_partB.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex3.dir/provided/test_partB.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\provided\test_partB.cpp" -o CMakeFiles\ex3.dir\provided\test_partB.cpp.s
 
 CMakeFiles/ex3.dir/base_event.cpp.obj: CMakeFiles/ex3.dir/flags.make
 CMakeFiles/ex3.dir/base_event.cpp.obj: ../base_event.cpp
@@ -141,27 +141,57 @@ CMakeFiles/ex3.dir/date/date.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ex3.dir/date/date.c.s"
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\date\date.c" -o CMakeFiles\ex3.dir\date\date.c.s
 
+CMakeFiles/ex3.dir/event_container.cpp.obj: CMakeFiles/ex3.dir/flags.make
+CMakeFiles/ex3.dir/event_container.cpp.obj: ../event_container.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ex3.dir/event_container.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ex3.dir\event_container.cpp.obj -c "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\event_container.cpp"
+
+CMakeFiles/ex3.dir/event_container.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex3.dir/event_container.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\event_container.cpp" > CMakeFiles\ex3.dir\event_container.cpp.i
+
+CMakeFiles/ex3.dir/event_container.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex3.dir/event_container.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\event_container.cpp" -o CMakeFiles\ex3.dir\event_container.cpp.s
+
+CMakeFiles/ex3.dir/festival.cpp.obj: CMakeFiles/ex3.dir/flags.make
+CMakeFiles/ex3.dir/festival.cpp.obj: ../festival.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ex3.dir/festival.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ex3.dir\festival.cpp.obj -c "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\festival.cpp"
+
+CMakeFiles/ex3.dir/festival.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex3.dir/festival.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\festival.cpp" > CMakeFiles\ex3.dir\festival.cpp.i
+
+CMakeFiles/ex3.dir/festival.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex3.dir/festival.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\festival.cpp" -o CMakeFiles\ex3.dir\festival.cpp.s
+
 # Object files for target ex3
 ex3_OBJECTS = \
-"CMakeFiles/ex3.dir/tests/event_tests.cpp.obj" \
+"CMakeFiles/ex3.dir/provided/test_partB.cpp.obj" \
 "CMakeFiles/ex3.dir/base_event.cpp.obj" \
 "CMakeFiles/ex3.dir/closed_event.cpp.obj" \
 "CMakeFiles/ex3.dir/date_wrap.cpp.obj" \
-"CMakeFiles/ex3.dir/date/date.c.obj"
+"CMakeFiles/ex3.dir/date/date.c.obj" \
+"CMakeFiles/ex3.dir/event_container.cpp.obj" \
+"CMakeFiles/ex3.dir/festival.cpp.obj"
 
 # External object files for target ex3
 ex3_EXTERNAL_OBJECTS =
 
-ex3.exe: CMakeFiles/ex3.dir/tests/event_tests.cpp.obj
+ex3.exe: CMakeFiles/ex3.dir/provided/test_partB.cpp.obj
 ex3.exe: CMakeFiles/ex3.dir/base_event.cpp.obj
 ex3.exe: CMakeFiles/ex3.dir/closed_event.cpp.obj
 ex3.exe: CMakeFiles/ex3.dir/date_wrap.cpp.obj
 ex3.exe: CMakeFiles/ex3.dir/date/date.c.obj
+ex3.exe: CMakeFiles/ex3.dir/event_container.cpp.obj
+ex3.exe: CMakeFiles/ex3.dir/festival.cpp.obj
 ex3.exe: CMakeFiles/ex3.dir/build.make
 ex3.exe: CMakeFiles/ex3.dir/linklibs.rsp
 ex3.exe: CMakeFiles/ex3.dir/objects1.rsp
 ex3.exe: CMakeFiles/ex3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ex3.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ex3.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ex3.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

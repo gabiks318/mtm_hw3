@@ -250,32 +250,86 @@ date_wrap.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/date_wrap.cpp.s
 .PHONY : date_wrap.cpp.s
 
-tests/event_tests.obj: tests/event_tests.cpp.obj
+event_container.obj: event_container.cpp.obj
 
-.PHONY : tests/event_tests.obj
+.PHONY : event_container.obj
 
 # target to build an object file
-tests/event_tests.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/event_tests.cpp.obj
-.PHONY : tests/event_tests.cpp.obj
+event_container.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/event_container.cpp.obj
+.PHONY : event_container.cpp.obj
 
-tests/event_tests.i: tests/event_tests.cpp.i
+event_container.i: event_container.cpp.i
 
-.PHONY : tests/event_tests.i
+.PHONY : event_container.i
 
 # target to preprocess a source file
-tests/event_tests.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/event_tests.cpp.i
-.PHONY : tests/event_tests.cpp.i
+event_container.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/event_container.cpp.i
+.PHONY : event_container.cpp.i
 
-tests/event_tests.s: tests/event_tests.cpp.s
+event_container.s: event_container.cpp.s
 
-.PHONY : tests/event_tests.s
+.PHONY : event_container.s
 
 # target to generate assembly for a file
-tests/event_tests.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/event_tests.cpp.s
-.PHONY : tests/event_tests.cpp.s
+event_container.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/event_container.cpp.s
+.PHONY : event_container.cpp.s
+
+festival.obj: festival.cpp.obj
+
+.PHONY : festival.obj
+
+# target to build an object file
+festival.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/festival.cpp.obj
+.PHONY : festival.cpp.obj
+
+festival.i: festival.cpp.i
+
+.PHONY : festival.i
+
+# target to preprocess a source file
+festival.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/festival.cpp.i
+.PHONY : festival.cpp.i
+
+festival.s: festival.cpp.s
+
+.PHONY : festival.s
+
+# target to generate assembly for a file
+festival.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/festival.cpp.s
+.PHONY : festival.cpp.s
+
+provided/test_partB.obj: provided/test_partB.cpp.obj
+
+.PHONY : provided/test_partB.obj
+
+# target to build an object file
+provided/test_partB.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.obj
+.PHONY : provided/test_partB.cpp.obj
+
+provided/test_partB.i: provided/test_partB.cpp.i
+
+.PHONY : provided/test_partB.i
+
+# target to preprocess a source file
+provided/test_partB.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.i
+.PHONY : provided/test_partB.cpp.i
+
+provided/test_partB.s: provided/test_partB.cpp.s
+
+.PHONY : provided/test_partB.s
+
+# target to generate assembly for a file
+provided/test_partB.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.s
+.PHONY : provided/test_partB.cpp.s
 
 # Help Target
 help:
@@ -298,9 +352,15 @@ help:
 	@echo ... date_wrap.obj
 	@echo ... date_wrap.i
 	@echo ... date_wrap.s
-	@echo ... tests/event_tests.obj
-	@echo ... tests/event_tests.i
-	@echo ... tests/event_tests.s
+	@echo ... event_container.obj
+	@echo ... event_container.i
+	@echo ... event_container.s
+	@echo ... festival.obj
+	@echo ... festival.i
+	@echo ... festival.s
+	@echo ... provided/test_partB.obj
+	@echo ... provided/test_partB.i
+	@echo ... provided/test_partB.s
 .PHONY : help
 
 

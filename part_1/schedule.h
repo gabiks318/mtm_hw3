@@ -4,11 +4,13 @@
 #include "event_container.h"
 #include "./linked_list/linked_list.h"
 
+using std::list;
+
 namespace mtm
 {
     class Schedule
     {
-        List<BaseEvent*> list;
+        std::list<BaseEvent*> list;
         public:
         
     };
