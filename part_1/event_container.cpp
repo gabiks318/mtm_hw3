@@ -38,9 +38,14 @@ mtm::BaseEvent& EventContainer::EventIterator::operator*(){
 
 EventContainer::EventIterator& EventContainer::EventIterator::operator++(){
     index++;
+    if(index == events.getSize()){
+        event = nullptr;
+        return *this;
+    }
     event = events[index];
     return *this;
 }
+
 bool EventContainer::EventIterator::operator==(const EventIterator& event_iterator) const{
     return *event == *event_iterator.event;
 }
