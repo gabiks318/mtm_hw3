@@ -12,4 +12,4 @@ add_subdirectory("${PROJECT_SOURCE_DIR}/linked_list")
 add_subdirectory("${PROJECT_SOURCE_DIR}/provided")
 add_subdirectory("${PROJECT_SOURCE_DIR}/tests")
 
-add_executable(ex3 tests/event_tests.cpp base_event.cpp closed_event.cpp date_wrap.cpp date/date.c)
+add_executable(ex3 provided/test_partB.cpp base_event.cpp closed_event.cpp date_wrap.cpp date/date.c event_container.cpp festival.cpp)

@@ -8,7 +8,10 @@ namespace mtm
 {
     class EventContainer
     {
+        protected:
         List<BaseEvent*> events;
+        
+        public:
         class EventIterator
         {
             BaseEvent* event;
@@ -25,11 +28,11 @@ namespace mtm
             bool operator!=(const EventIterator& event_iterator) const;
             friend class EventContainer;
         };
-        public:
         EventContainer(): events() {}
-        virtual void add(const BaseEvent& event) = 0;//TO DO: what does it mean blocked adding event not suported?
-        EventContainer::EventIterator begin();
-        EventContainer::EventIterator end(); 
+        virtual ~EventContainer() = default;
+        virtual void add(const BaseEvent& event) = 0;//TODO: what does it mean blocked adding event not suported?
+        EventIterator begin();
+        EventIterator end(); 
     };
 }
 

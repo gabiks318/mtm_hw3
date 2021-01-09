@@ -6,16 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/base_event.cpp
-iostream
--
-base_event.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/base_event.h
-exceptions.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/exceptions.h
-./linked_list/linked_list.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/linked_list/linked_list.h
-
 C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/base_event.h
 date_wrap.h
 C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date_wrap.h

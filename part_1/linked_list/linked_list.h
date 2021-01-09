@@ -68,13 +68,14 @@ List<T>& List<T>::operator=(const List& copy_list){
             current = current->next;
             delete temp;
         }
-        start_node = NULL;
-        end_node = NULL;
-        Node<T>* copy_node = copy_list.start_node;
-        while(copy_node != NULL){
-            insert(copy_node->node_data);
-            copy_node = copy_node->next;
-        }
+    }
+
+    start_node = NULL;
+    end_node = NULL;
+    Node<T>* copy_node = copy_list.start_node;
+    while(copy_node != NULL){
+        insert(copy_node->node_data);
+        copy_node = copy_node->next;
     }
 
     return *this;

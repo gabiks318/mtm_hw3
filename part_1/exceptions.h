@@ -13,5 +13,9 @@ namespace mtm{
     class AlreadyInvited: public Exception{};
     class RegistrationBlocked: public Exception{};
     class OutOfBoundaries: public Exception{};
+    class DateMismatch: public Exception{};
+    class InvalidNumber: public Exception{};
+    class InvalidInterval: public Exception{};
+    class NotSupported: public Exception{};
 }
 #endif

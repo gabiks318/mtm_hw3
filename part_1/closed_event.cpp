@@ -5,12 +5,18 @@
 
 using mtm::BaseEvent;
 using mtm::ClosedEvent;
+using mtm::List;
 
-ClosedEvent::ClosedEvent(const ClosedEvent& event): BaseEvent(event){
-    List<int> allowed_participants = event.allowed_participants;
+#define MIN_ID 1
+#define MAX_ID 20000
+
+ClosedEvent::ClosedEvent(const ClosedEvent& event): BaseEvent(event), allowed_participants(event.allowed_participants){
 }
 
 void ClosedEvent::addInvitee(int student){
+    if(student < MIN_ID || student > MAX_ID){
+        throw InvalidStudent();
+    }
     if(allowed_participants.exists(student)){
        throw AlreadyInvited();
     }
@@ -18,6 +24,9 @@ void ClosedEvent::addInvitee(int student){
 }
 
 void ClosedEvent::registerParticipant(int student){
+    if(student < MIN_ID || student > MAX_ID){
+        throw InvalidStudent();
+    }
     if(participants.exists(student)){
         throw AlreadyRegistered();
     }
@@ -30,4 +39,8 @@ void ClosedEvent::registerParticipant(int student){
 
 BaseEvent* ClosedEvent::clone() const{
     return new ClosedEvent(*this);
+}
+
+List<int> ClosedEvent::getInvitees() const{
+    return allowed_participants;
 }

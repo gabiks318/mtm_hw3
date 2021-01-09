@@ -31,6 +31,9 @@ void BaseEvent::registerParticipant(int student){
 }
 
 void BaseEvent::unregisterParticpant(int student){
+    if(student < MIN_ID || student > MAX_ID){
+        throw InvalidStudent();
+    }
     if(!participants.exists(student)){
         throw NotRegistered();
     }
