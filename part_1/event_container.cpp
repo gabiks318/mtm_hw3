@@ -36,10 +36,6 @@ mtm::BaseEvent& EventContainer::EventIterator::operator*(){
     return *event;
 }
 
-mtm::BaseEvent* EventContainer::EventIterator::getEvent() const {
-    return event;
- }
-
 EventContainer::EventIterator& EventContainer::EventIterator::operator++(){
     index++;
     if(index == events.getSize()){

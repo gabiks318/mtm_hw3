@@ -23,7 +23,7 @@ namespace mtm{
         virtual ~BaseEvent() = default;
 
         bool operator==(const BaseEvent& event) const;
-        
+        bool operator<(const BaseEvent& event) const;
         virtual void registerParticipant(int student);
         virtual void unregisterParticipant(int student);
         virtual ostream& printShort(ostream& os);
@@ -33,8 +33,7 @@ namespace mtm{
         DateWrap getDate() const;
         string getName() const;
         List<int> getParticipants() const;
-        };
-        
+    };
 }
 
 #endif

@@ -24,7 +24,6 @@ namespace mtm
             EventIterator& operator=(const EventIterator& event_iterator);
             ~EventIterator() = default;
 
-            mtm::BaseEvent* getEvent() const;
             mtm::BaseEvent& operator*();
             EventIterator& operator++();
             bool operator==(const EventIterator& event_iterator) const;

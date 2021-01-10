@@ -50,9 +50,14 @@ void BaseEvent::unregisterParticipant(int student){
     participants.remove(student);
 } 
 
-bool BaseEvent::operator==(const BaseEvent& event) const{
-    return name == event.getName() && date == event.getDate(); //TO DO: is this proper definition of equal events
+bool BaseEvent::operator<(const BaseEvent& event) const{
+    return date < event.date;
 }
+
+bool BaseEvent::operator==(const BaseEvent& event) const{
+    return name == event.getName() && date == event.getDate(); 
+}
+
 ostream& BaseEvent::printShort(ostream& os){
     return os << name << " " << date << "\n";
 }
