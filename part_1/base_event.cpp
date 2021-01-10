@@ -11,13 +11,23 @@ using std::ostream;
 #define MIN_ID 1
 #define MAX_ID 20000
 
-BaseEvent::BaseEvent(DateWrap date, string name): date(date), name(name), participants()
-{}
+BaseEvent::BaseEvent(DateWrap date, string name): date(date), name(name), participants(){
+}
 
-BaseEvent::BaseEvent(const BaseEvent& event){
+BaseEvent::BaseEvent(const BaseEvent& event):  date(event.date), name(event.name), participants(event.participants){
+}
+
+BaseEvent& BaseEvent::operator=(const BaseEvent& event){
+    if(this == &event){
+        return *this;
+    }
+    delete &name;
+    delete &date;
+    delete &participants;
     name = event.name;
     date = event.date;
     participants = event.participants;
+    return *this;
 }
 
 void BaseEvent::registerParticipant(int student){

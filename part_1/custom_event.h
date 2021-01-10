@@ -15,19 +15,39 @@ namespace mtm
         CanRegister check_condition;
         public:
         CustomEvent(DateWrap date, string name, CanRegister check_condition);
-        CustomEvent(const CustomEvent& event);
-        ~CustomEvent() override {}
+        CustomEvent(const CustomEvent&);
+        CustomEvent& operator=(const CustomEvent&);
+        ~CustomEvent() = default;
+
         void registerParticipant(int student) override;
         BaseEvent* clone() const override;
     };
     //==============Implementation==========//
     template <class CanRegister>
     CustomEvent<CanRegister>::CustomEvent(DateWrap date, string name, CanRegister check_condition) 
-                                            :BaseEvent(date,name), check_condition(check_condition){}
+                                            :BaseEvent(date,name), check_condition(check_condition){
+                                
+                                            }
 
     template <class CanRegister>                                                                                        
     CustomEvent<CanRegister>::CustomEvent(const CustomEvent& event): BaseEvent(event){
         check_condition = event.check_condition;
+    }
+
+    template <class CanRegister> 
+    CustomEvent<CanRegister>& CustomEvent<CanRegister>::operator=(const CustomEvent& event){
+        if(this == &event){
+        return *this;
+        }
+        delete &name;
+        delete &date;
+        delete &participants;
+        delete &check_condition;
+        name = event.name;
+        date = event.date;
+        participants = event.participants;
+        check_condition = event.check_condition;
+        return *this;
     }
 
     template <class CanRegister>
@@ -35,7 +55,7 @@ namespace mtm
     if(student < MIN_ID || student > MAX_ID){
         throw InvalidStudent();
     }
-    if (check_condition(student)){
+    if(check_condition(student)){
         if (participants.exists(student)){
             throw AlreadyRegistered();
         }

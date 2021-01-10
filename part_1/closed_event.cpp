@@ -10,7 +10,25 @@ using mtm::List;
 #define MIN_ID 1
 #define MAX_ID 20000
 
+ClosedEvent::ClosedEvent(DateWrap date, string name):BaseEvent(date, name), allowed_participants(){
+}
+
 ClosedEvent::ClosedEvent(const ClosedEvent& event): BaseEvent(event), allowed_participants(event.allowed_participants){
+}
+
+ClosedEvent& ClosedEvent::operator=(const ClosedEvent& event){
+    if(this == &event){
+        return *this;
+    }
+    delete &name;
+    delete &date;
+    delete &participants;
+    delete &allowed_participants;
+    name = event.name;
+    date = event.date;
+    participants = event.participants;
+    allowed_participants = event.allowed_participants;
+    return *this;
 }
 
 void ClosedEvent::addInvitee(int student){

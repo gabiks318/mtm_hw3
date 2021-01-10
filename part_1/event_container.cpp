@@ -6,8 +6,7 @@
 using mtm::EventContainer;
 
 
-EventContainer::EventIterator::EventIterator(List<BaseEvent*> events, int index): event(), index(index), events(events)
-{
+EventContainer::EventIterator::EventIterator(List<BaseEvent*> events, int index): event(), index(index), events(events){
     if(index == events.getSize())
     {
         event = nullptr;
@@ -46,9 +45,14 @@ EventContainer::EventIterator& EventContainer::EventIterator::operator++(){
     return *this;
 }
 
+EventContainer::EventContainer(): events() {
+
+}
+
 bool EventContainer::EventIterator::operator==(const EventIterator& event_iterator) const{
     return *event == *event_iterator.event;
 }
+
 bool EventContainer::EventIterator::operator!=(const EventIterator& event_iterator) const{
     return !(event == event_iterator.event);
 }
@@ -56,7 +60,7 @@ bool EventContainer::EventIterator::operator!=(const EventIterator& event_iterat
 EventContainer::EventIterator EventContainer::begin(){
     return EventIterator(events, 0);
 }
+
 EventContainer::EventIterator EventContainer::end(){
-    int size = events.getSize();
-    return EventIterator(events, size);
+    return EventIterator(events, events.getSize());
 }

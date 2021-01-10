@@ -5,7 +5,8 @@
 using mtm::Festival;
 
 
-Festival::Festival(DateWrap date): EventContainer(), date(date){}
+Festival::Festival(DateWrap date): EventContainer(), date(date){   
+}
 
 void Festival::add(const BaseEvent& event){
     if(event.getDate() != date){

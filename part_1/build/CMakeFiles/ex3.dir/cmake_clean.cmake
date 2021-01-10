@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ex3.dir/date_wrap.cpp.obj"
   "CMakeFiles/ex3.dir/event_container.cpp.obj"
   "CMakeFiles/ex3.dir/festival.cpp.obj"
+  "CMakeFiles/ex3.dir/open_event.cpp.obj"
   "CMakeFiles/ex3.dir/provided/test_partB.cpp.obj"
   "ex3.exe"
   "ex3.exe.manifest"

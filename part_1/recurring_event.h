@@ -16,9 +16,11 @@ namespace mtm
         public:
         RecurringEvent(DateWrap first_date, string name, int num_occurrences, int interval);
         ~RecurringEvent() = default;
+
         void add(const BaseEvent& event) override;
     };
     //==============Implementation==========//
+    
     template<class EventType>
     RecurringEvent<EventType>::RecurringEvent(DateWrap first_date, string name, int num_occurrences, int interval):EventContainer()
     {
@@ -36,6 +38,7 @@ namespace mtm
             events.insert(&event);
         }
     }
+
     template<class EventType>
     void RecurringEvent<EventType>::add(const BaseEvent& event)
     {

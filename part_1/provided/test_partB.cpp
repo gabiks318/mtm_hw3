@@ -30,9 +30,9 @@ void test1() {
     festival.add(closed);
     printEventsShort(festival);
 
-    //mtm::RecurringEvent<mtm::OpenEvent> recurring(mtm::DateWrap(21, 10, 2020),
-                                            //      "Wednesday Noon", 13, 7);
-    //printEventsShort(recurring);
+    mtm::RecurringEvent<mtm::OpenEvent> recurring(mtm::DateWrap(21, 10, 2020),
+                                               "Wednesday Noon", 13, 7);
+    printEventsShort(recurring);
 
     mtm::OneTimeEvent<mtm::OpenEvent> one_time(mtm::DateWrap(2, 3, 80),
                                                "A long time ago");

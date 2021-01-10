@@ -18,9 +18,12 @@ namespace mtm{
         List<int> participants;
         public:
         BaseEvent(DateWrap date, string name);
-        BaseEvent(const BaseEvent& event);
+        BaseEvent(const BaseEvent&);
+        BaseEvent& operator=(const BaseEvent&); 
+        virtual ~BaseEvent() = default;
+
         bool operator==(const BaseEvent& event) const;
-        virtual ~BaseEvent() {};
+        
         virtual void registerParticipant(int student);
         virtual void unregisterParticipant(int student);
         virtual ostream& printShort(ostream& os);

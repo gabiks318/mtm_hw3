@@ -6,14 +6,15 @@
 
 namespace mtm
 {
-    class OpenEvent: public BaseEvent{
+    class OpenEvent: public BaseEvent
+    {
         public:
-        OpenEvent(DateWrap date, string name):BaseEvent(date,name){}
-        OpenEvent(const OpenEvent& event):BaseEvent(event){}
-        virtual ~OpenEvent() {}
-        BaseEvent* clone() const override {
-            return new OpenEvent(*this);
-        }
+        OpenEvent(DateWrap date, string name);
+        OpenEvent(const OpenEvent&);
+        OpenEvent& operator=(const OpenEvent&);
+        virtual ~OpenEvent() = default;
+
+        BaseEvent* clone() const override;
     };
 }
 #endif

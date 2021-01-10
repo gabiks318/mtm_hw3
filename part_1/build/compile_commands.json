@@ -6,6 +6,11 @@
 },
 {
   "directory": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build",
+  "command": "C:\\PROGRA~2\\gcc\\bin\\X8E3D3~1.EXE   -std=c++11 --pedantic-errors -Wall -Werror -L. -g -o CMakeFiles\\ex3.dir\\open_event.cpp.obj -c C:\\Users\\yan11\\OneDrive\\Desktop\\MATAM\\hw3\\mtm_hw3\\part_1\\open_event.cpp",
+  "file": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/open_event.cpp"
+},
+{
+  "directory": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build",
   "command": "C:\\PROGRA~2\\gcc\\bin\\X8E3D3~1.EXE   -std=c++11 --pedantic-errors -Wall -Werror -L. -g -o CMakeFiles\\ex3.dir\\base_event.cpp.obj -c C:\\Users\\yan11\\OneDrive\\Desktop\\MATAM\\hw3\\mtm_hw3\\part_1\\base_event.cpp",
   "file": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/base_event.cpp"
 },

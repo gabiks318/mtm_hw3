@@ -11,9 +11,11 @@ namespace mtm
     {
         List<int> allowed_participants;
         public:
-        ClosedEvent(DateWrap date, string name):BaseEvent(date, name), allowed_participants(){}
-        ClosedEvent(const ClosedEvent& event);
-        ~ClosedEvent() override {}
+        ClosedEvent(DateWrap date, string name);
+        ClosedEvent(const ClosedEvent&);
+        ClosedEvent& operator=(const ClosedEvent&);
+        ~ClosedEvent() = default;
+
         void addInvitee(int student);
         void registerParticipant(int student) override;
         BaseEvent* clone() const override;

@@ -14,15 +14,18 @@ namespace mtm
     public:
         OneTimeEvent(DateWrap date, string name);
         ~OneTimeEvent() = default;
+        
         void add(const BaseEvent& event) override;
     };
     //==============Implementation==========//
+
     template<class EventType>
     OneTimeEvent<EventType>::OneTimeEvent(DateWrap date, string name):EventContainer()
     {
         EventType event(date,name);
         events.insert(&event);
     }
+
     template<class EventType>
     void OneTimeEvent<EventType>::add(const BaseEvent& event)
     {
