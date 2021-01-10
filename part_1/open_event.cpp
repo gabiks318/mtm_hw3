@@ -14,20 +14,21 @@ OpenEvent::OpenEvent(const OpenEvent& event):BaseEvent(event){
 
 }
 
-OpenEvent& OpenEvent::operator=(const OpenEvent& event){
+OpenEvent& OpenEvent::operator=(const OpenEvent& event)
+{
    if(this == &event){
         return *this;
     }
     delete &name;
     delete &date;
     delete &participants;
-    name = event.name;
-    date = event.date;
-    participants = event.participants;
+    name = *(new string(event.name));
+    date = *(new DateWrap(event.date));
+    participants = *(new List<int>(event.participants));
     return *this;
 }
 
-BaseEvent* OpenEvent::clone() const{
-
+BaseEvent* OpenEvent::clone() const
+{
     return new OpenEvent(*this);
 }

@@ -11,10 +11,28 @@ namespace mtm
 {
     class Schedule
     {
-        list<BaseEvent*> list;
+        list<BaseEvent*> events_list;
         public:
-        
+        Schedule();
+       
+
+        void addEvents(EventContainer&);
+        void registerToEvent(DateWrap date, string name, int student);
+        void unregisterFromEvent(DateWrap date, string name, int student);
+        void printAllEvents();
+        template<typename predict>
+        void printSomeEvents(predict, bool verbose = false);
+        void printMonthEvents(int month, int year);
+        void printEventDetails(string name, DateWrap date); 
+
+        bool eventExists(const BaseEvent& event) const;       
     };
+    template<typename predict>
+    void printSomeEvents(predict, bool verbose = false)
+    {
+
+    }
+
 }
 
 #endif

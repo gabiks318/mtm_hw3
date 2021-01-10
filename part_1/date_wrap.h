@@ -17,6 +17,7 @@ namespace mtm
     DateWrap(const DateWrap& date2);
     DateWrap& operator=(const DateWrap& date_wrap);
     ~DateWrap();
+
     int day() const;
     int month() const;
     int year() const;

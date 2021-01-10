@@ -27,7 +27,7 @@ namespace mtm
     CustomEvent<CanRegister>::CustomEvent(DateWrap date, string name, CanRegister check_condition) 
                                             :BaseEvent(date,name), check_condition(check_condition){
                                 
-                                            }
+    }
 
     template <class CanRegister>                                                                                        
     CustomEvent<CanRegister>::CustomEvent(const CustomEvent& event): BaseEvent(event){

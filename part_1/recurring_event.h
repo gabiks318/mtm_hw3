@@ -30,12 +30,12 @@ namespace mtm
         if(interval <= 0){
             throw InvalidInterval();
         }
-        EventType event();
-        DateWrap date();
+        DateWrap* date = new DateWrap(first_date);
+        EventType* current_event = new EventType(*date, name);
         for(int i = 0; i < num_occurrences; i++){
-            DateWrap date = first_date + i*interval;
-            EventType event(date, name);
-            events.insert(&event);
+            events.insert(current_event);
+            date = new DateWrap(first_date + (i+1)*interval);
+            current_event = new EventType(*date, name);
         }
     }
 

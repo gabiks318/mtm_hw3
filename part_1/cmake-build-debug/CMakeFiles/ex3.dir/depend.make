@@ -45,6 +45,15 @@ CMakeFiles/ex3.dir/festival.cpp.obj: ../festival.h
 CMakeFiles/ex3.dir/festival.cpp.obj: ../linked_list/linked_list.h
 CMakeFiles/ex3.dir/festival.cpp.obj: ../linked_list/node.h
 
+CMakeFiles/ex3.dir/open_event.cpp.obj: ../base_event.h
+CMakeFiles/ex3.dir/open_event.cpp.obj: ../date/date.h
+CMakeFiles/ex3.dir/open_event.cpp.obj: ../date_wrap.h
+CMakeFiles/ex3.dir/open_event.cpp.obj: ../exceptions.h
+CMakeFiles/ex3.dir/open_event.cpp.obj: ../linked_list/linked_list.h
+CMakeFiles/ex3.dir/open_event.cpp.obj: ../linked_list/node.h
+CMakeFiles/ex3.dir/open_event.cpp.obj: ../open_event.cpp
+CMakeFiles/ex3.dir/open_event.cpp.obj: ../open_event.h
+
 CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../base_event.h
 CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../closed_event.h
 CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../custom_event.h

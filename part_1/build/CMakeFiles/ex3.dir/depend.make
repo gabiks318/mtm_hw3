@@ -69,3 +69,13 @@ CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../open_event.h
 CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../provided/test_partB.cpp
 CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../recurring_event.h
 
+CMakeFiles/ex3.dir/schedule.cpp.obj: ../base_event.h
+CMakeFiles/ex3.dir/schedule.cpp.obj: ../date/date.h
+CMakeFiles/ex3.dir/schedule.cpp.obj: ../date_wrap.h
+CMakeFiles/ex3.dir/schedule.cpp.obj: ../event_container.h
+CMakeFiles/ex3.dir/schedule.cpp.obj: ../exceptions.h
+CMakeFiles/ex3.dir/schedule.cpp.obj: ../linked_list/linked_list.h
+CMakeFiles/ex3.dir/schedule.cpp.obj: ../linked_list/node.h
+CMakeFiles/ex3.dir/schedule.cpp.obj: ../schedule.cpp
+CMakeFiles/ex3.dir/schedule.cpp.obj: ../schedule.h
+

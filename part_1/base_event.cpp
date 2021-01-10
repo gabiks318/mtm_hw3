@@ -9,7 +9,7 @@ using mtm::List;
 using std::ostream;
 
 #define MIN_ID 1
-#define MAX_ID 20000
+#define MAX_ID 1234567890
 
 BaseEvent::BaseEvent(DateWrap date, string name): date(date), name(name), participants(){
 }
@@ -24,9 +24,9 @@ BaseEvent& BaseEvent::operator=(const BaseEvent& event){
     delete &name;
     delete &date;
     delete &participants;
-    name = event.name;
-    date = event.date;
-    participants = event.participants;
+    name = *(new string(event.name));
+    date = *(new DateWrap(event.date));
+    participants = *(new List<int>(event.participants));
     return *this;
 }
 

@@ -22,8 +22,8 @@ namespace mtm
     template<class EventType>
     OneTimeEvent<EventType>::OneTimeEvent(DateWrap date, string name):EventContainer()
     {
-        EventType event(date,name);
-        events.insert(&event);
+        EventType* current_event = new EventType(date,name);
+        events.insert(current_event);
     }
 
     template<class EventType>

@@ -17,7 +17,7 @@ void printEventsShort(mtm::EventContainer& events) {
     for (Iter iter = events.begin(); iter != events.end(); ++iter) {
 
         mtm::BaseEvent& event = *iter;
-        event.printShort(std::cout);
+        event.printLong(std::cout);
     }
 }
 
@@ -27,11 +27,16 @@ void test1() {
     mtm::ClosedEvent closed(mtm::DateWrap(21, 10, 2020), "Performance 2");
     closed.addInvitee(1);
     closed.addInvitee(500);
+    closed.registerParticipant(1);
+    closed.registerParticipant(500);
+
+
     festival.add(closed);
     printEventsShort(festival);
-
+    
     mtm::RecurringEvent<mtm::OpenEvent> recurring(mtm::DateWrap(21, 10, 2020),
                                                "Wednesday Noon", 13, 7);
+    
     printEventsShort(recurring);
 
     mtm::OneTimeEvent<mtm::OpenEvent> one_time(mtm::DateWrap(2, 3, 80),

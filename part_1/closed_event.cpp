@@ -8,7 +8,7 @@ using mtm::ClosedEvent;
 using mtm::List;
 
 #define MIN_ID 1
-#define MAX_ID 20000
+#define MAX_ID 1234567890
 
 ClosedEvent::ClosedEvent(DateWrap date, string name):BaseEvent(date, name), allowed_participants(){
 }
@@ -24,10 +24,10 @@ ClosedEvent& ClosedEvent::operator=(const ClosedEvent& event){
     delete &date;
     delete &participants;
     delete &allowed_participants;
-    name = event.name;
-    date = event.date;
-    participants = event.participants;
-    allowed_participants = event.allowed_participants;
+    name = *(new string(event.name));
+    date = *(new DateWrap(event.date));
+    participants = *(new List<int>(event.participants));
+    allowed_participants = *(new List<int>(event.allowed_participants));
     return *this;
 }
 
@@ -52,7 +52,7 @@ void ClosedEvent::registerParticipant(int student){
         participants.insert(student); //TODO : what if student not allowed to register?
     }else{ 
             throw RegistrationBlocked();
-        }
+    }
 }
 
 BaseEvent* ClosedEvent::clone() const{

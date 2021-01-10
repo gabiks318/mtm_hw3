@@ -9,3 +9,5 @@ C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/cmake-b
 C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/cmake-build-debug/provided/CMakeFiles/rebuild_cache.dir
 C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/cmake-build-debug/tests/CMakeFiles/edit_cache.dir
 C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/cmake-build-debug/tests/CMakeFiles/rebuild_cache.dir
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/cmake-build-debug/dry/CMakeFiles/edit_cache.dir
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/cmake-build-debug/dry/CMakeFiles/rebuild_cache.dir

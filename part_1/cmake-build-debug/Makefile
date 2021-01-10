@@ -304,6 +304,33 @@ festival.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/festival.cpp.s
 .PHONY : festival.cpp.s
 
+open_event.obj: open_event.cpp.obj
+
+.PHONY : open_event.obj
+
+# target to build an object file
+open_event.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/open_event.cpp.obj
+.PHONY : open_event.cpp.obj
+
+open_event.i: open_event.cpp.i
+
+.PHONY : open_event.i
+
+# target to preprocess a source file
+open_event.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/open_event.cpp.i
+.PHONY : open_event.cpp.i
+
+open_event.s: open_event.cpp.s
+
+.PHONY : open_event.s
+
+# target to generate assembly for a file
+open_event.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/open_event.cpp.s
+.PHONY : open_event.cpp.s
+
 provided/test_partB.obj: provided/test_partB.cpp.obj
 
 .PHONY : provided/test_partB.obj
@@ -358,6 +385,9 @@ help:
 	@echo ... festival.obj
 	@echo ... festival.i
 	@echo ... festival.s
+	@echo ... open_event.obj
+	@echo ... open_event.i
+	@echo ... open_event.s
 	@echo ... provided/test_partB.obj
 	@echo ... provided/test_partB.i
 	@echo ... provided/test_partB.s
