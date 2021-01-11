@@ -19,12 +19,9 @@ BaseEvent::BaseEvent(const BaseEvent& event):  date(event.date), name(event.name
 }
 
 BaseEvent& BaseEvent::operator=(const BaseEvent& event){
-    if(this == &event){
+    if(*this == event){
         return *this;
     }
-    delete &name;
-    delete &date;
-    delete &participants;
     name = event.name;
     date = event.date;
     participants = event.participants;

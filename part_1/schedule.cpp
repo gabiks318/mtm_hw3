@@ -10,7 +10,7 @@ using mtm::Schedule;
 
 Schedule::Schedule(): events_list(){}
 
-void Schedule::addEvents(EventContainer& events)
+void Schedule::addEvents(const EventContainer& events) 
 {
     for(mtm::EventContainer::EventIterator events_iterator = events.begin(); events_iterator!= events.end(); ++events_iterator){
         mtm::BaseEvent& event = *events_iterator;
@@ -24,7 +24,6 @@ void Schedule::addEvents(EventContainer& events)
 
 void Schedule::registerToEvent(DateWrap date, string name, int student)
 { 
-    // TODO: Should the function catch the student id exceptions or let event class handle it
     for(mtm::BaseEvent* event : events_list){
         if(event->getName() == name && event->getDate() == date){
             event->registerParticipant(student);
@@ -45,7 +44,7 @@ void Schedule::unregisterFromEvent(DateWrap date, string name, int student)
     throw EventDoesNotExists(); 
 }
 
-void Schedule::printAllEvents()
+void Schedule::printAllEvents() const
 {
     for(mtm::BaseEvent* event : events_list){
         event->printShort(std::cout);
@@ -54,7 +53,7 @@ void Schedule::printAllEvents()
 
 
 
-void Schedule::printMonthEvents(int month, int year)
+void Schedule::printMonthEvents(int month, int year) const
 {
     if(month < MIN_MONTH || month > MAX_MONTH){
         // TODO: check what to do here
@@ -70,7 +69,7 @@ void Schedule::printMonthEvents(int month, int year)
     }  
 }
 
-void Schedule::printEventDetails(string name, DateWrap date)
+void Schedule::printEventDetails(DateWrap date,string name) const
 {
     for(mtm::BaseEvent* event : events_list){
         if(event->getName() == name && event->getDate() == date){

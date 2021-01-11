@@ -29,14 +29,24 @@ void test1() {
     closed.addInvitee(500);
     closed.registerParticipant(1);
     closed.registerParticipant(500);
-
-
     festival.add(closed);
     printEventsShort(festival);
-    
+    // assume `ec` in an EventContainer with 2 events
+    mtm::EventContainer& ec = festival;
+    mtm::EventContainer::EventIterator it = ec.begin();
+    mtm::EventContainer::EventIterator it_end = ec.end();
+    mtm::BaseEvent& ev = *it; // `ev` is the first event stored in `ec`
+    ev.printShort(std::cout); // print short description of 1st event
+    (*it).printShort(std::cout); // same output as previous line
+    ++it;
+    (*it).printShort(std::cout); // print short description of 2nd event
+    std::cout << (it == it_end) << std::endl; // print "0"
+    std::cout << (it != it_end) << std::endl; // print "1"
+    ++it;
+    std::cout << (it == it_end) << std::endl; // print "1"
+    std::cout << (it != it_end) << std::endl;
     mtm::RecurringEvent<mtm::OpenEvent> recurring(mtm::DateWrap(21, 10, 2020),
                                                "Wednesday Noon", 13, 7);
-    
     printEventsShort(recurring);
 
     mtm::OneTimeEvent<mtm::OpenEvent> one_time(mtm::DateWrap(2, 3, 80),

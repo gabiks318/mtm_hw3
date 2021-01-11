@@ -15,21 +15,21 @@ namespace mtm
         public:
         Schedule();
        
-        void addEvents(EventContainer&);
+        void addEvents(const EventContainer&);
         void registerToEvent(DateWrap date, string name, int student);
         void unregisterFromEvent(DateWrap date, string name, int student);
-        void printAllEvents();
+        void printAllEvents() const;
         template<typename Predicate>
-        void printSomeEvents(Predicate predicate, bool verbose = false);
-        void printMonthEvents(int month, int year);
-        void printEventDetails(string name, DateWrap date); 
+        void printSomeEvents(Predicate predicate, bool verbose = false) const;
+        void printMonthEvents(int month, int year) const;
+        void printEventDetails(DateWrap date, string name) const; 
     };
 
     template<typename Predicate>
-    void printSomeEvents(Predicate predicate, bool verbose = false)
+    void Schedule::printSomeEvents(Predicate predicate, bool verbose) const
     {
         for(mtm::BaseEvent* event : events_list){
-            if(predicate(event)){
+            if(predicate(*event)){
                 if(verbose){
                     event->printLong(std::cout);
                 } else {

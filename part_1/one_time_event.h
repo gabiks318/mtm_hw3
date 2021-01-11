@@ -17,6 +17,7 @@ namespace mtm
         
         void add(const BaseEvent& event) override;
     };
+
     //==============Implementation==========//
 
     template<class EventType>

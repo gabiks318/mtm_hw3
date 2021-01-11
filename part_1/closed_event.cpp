@@ -17,13 +17,9 @@ ClosedEvent::ClosedEvent(const ClosedEvent& event): BaseEvent(event), allowed_pa
 }
 
 ClosedEvent& ClosedEvent::operator=(const ClosedEvent& event){
-    if(this == &event){
+    if(*this == event){
         return *this;
     }
-    delete &name;
-    delete &date;
-    delete &participants;
-    delete &allowed_participants;
     name = event.name;
     date = event.date;
     participants = event.participants;

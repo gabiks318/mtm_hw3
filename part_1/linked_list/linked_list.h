@@ -29,11 +29,11 @@ class List //linked list of Node objects
 	void insert(T data); //fucntion used to insert new node in order in the list
     void remove(T data);
     
-    int getSize();
-    bool isEmpty(); //utility functions used to see if the list contains no elements
-	void print(); //prints the contents of the linked list
-	bool exists(T data); //searches for a value in the linked list and returns the point to object that contains that value
-    T operator[](int index);	
+    int getSize() const;
+    bool isEmpty() const; //utility functions used to see if the list contains no elements
+	void print() const; //prints the contents of the linked list
+	bool exists(T data) const; //searches for a value in the linked list and returns the point to object that contains that value
+    T operator[](int index) const;	
 };
 
 
@@ -68,7 +68,7 @@ List<T>& List<T>::operator=(const List& copy_list){
             current = current->next;
             delete temp;
         }
-    }
+}
 
     start_node = NULL;
     end_node = NULL;
@@ -99,7 +99,7 @@ List<T>::~List()
 }
 
 template <typename T>
-bool List<T>::isEmpty()
+bool List<T>::isEmpty() const
 {
 	if(start_node == NULL && end_node == NULL){   //if the start_node pointer and end_node pointer are NULL then the list is empty
         return true;
@@ -179,7 +179,8 @@ void List<T>::insert(T data) //general funtionn to insert new node the proper or
 }
 
 template <typename T>
-int List<T>::getSize(){
+int List<T>::getSize() const
+{
     if(isEmpty()){
         return 0;
     }
@@ -250,7 +251,7 @@ void List<T>::remove(T key)
 }
 
 template <typename T>
-void List<T>::print()
+void List<T>::print() const
 {
 	if(isEmpty())
 	{
@@ -271,7 +272,7 @@ void List<T>::print()
 }
 
 template <typename T>
-bool List<T>::exists(T key) //exists functions that searches for node that contains data equal to the key
+bool List<T>::exists(T key) const //exists functions that searches for node that contains data equal to the key
 {
 	Node<T>* node_ptr;
 	node_ptr = start_node;
@@ -288,7 +289,8 @@ bool List<T>::exists(T key) //exists functions that searches for node that conta
 }
 
 template <typename T>
-T List<T>::operator[](int index){
+T List<T>::operator[](int index) const
+{
     int size = getSize();
     if(index < 0 || index >= size){
         throw OutOfBoundaries();

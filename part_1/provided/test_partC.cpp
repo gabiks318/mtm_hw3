@@ -12,17 +12,21 @@
 #include <cstdlib>
 #include <iostream>
 
-void test1(const mtm::Schedule& schedule) { schedule.printAllEvents(); }
+void test1(const mtm::Schedule& schedule) { schedule.printAllEvents(); cout<<"test 1"<<endl; }
 
 void test2(const mtm::Schedule& schedule) {
     schedule.printEventDetails(mtm::DateWrap(27, 12, 2020), "Publish Test");
+    cout<<"test 2"<<endl;
+
 }
 
 void test3(const mtm::Schedule& schedule) {
     schedule.printEventDetails(mtm::DateWrap(5, 1, 2021), "Update Q&A");
+    cout<<"test 3"<<endl;
 }
 
-void test4(const mtm::Schedule& schedule) { schedule.printMonthEvents(12, 2020); }
+void test4(const mtm::Schedule& schedule) { schedule.printMonthEvents(12, 2020); 
+cout<<"test 4"<<endl;}
 
 class MutatingPredicate {
     int counter = 0;
@@ -55,7 +59,7 @@ int main(int argc, char* argv[]) {
         closed_event.addInvitee(1500);
     }
     schedule.addEvents(closed);
-
+    //schedule.registerToEvent(mtm::DateWrap(27, 12, 2020), "Publish Test", 1500);
     schedule.registerToEvent(mtm::DateWrap(20, 12, 2020), "Update Q&A", 850);
     schedule.registerToEvent(mtm::DateWrap(20, 12, 2020), "Update Q&A", 1500);
     schedule.registerToEvent(mtm::DateWrap(5, 1, 2021), "Update Q&A", 850);

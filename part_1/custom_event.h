@@ -36,13 +36,9 @@ namespace mtm
 
     template <class CanRegister> 
     CustomEvent<CanRegister>& CustomEvent<CanRegister>::operator=(const CustomEvent& event){
-        if(this == &event){
+        if(*this == event){
         return *this;
         }
-        delete &name;
-        delete &date;
-        delete &participants;
-        delete &check_condition;
         name = event.name;
         date = event.date;
         participants = event.participants;

@@ -16,12 +16,9 @@ OpenEvent::OpenEvent(const OpenEvent& event):BaseEvent(event){
 
 OpenEvent& OpenEvent::operator=(const OpenEvent& event)
 {
-   if(this == &event){
+   if(*this == event){
         return *this;
     }
-    delete &name;
-    delete &date;
-    delete &participants;
     name = event.name;
     date = event.date;
     participants = event.participants;
