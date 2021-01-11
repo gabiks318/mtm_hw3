@@ -4,6 +4,7 @@
 #include "event_container.h"
 #include "./linked_list/linked_list.h"
 #include <list> 
+#include <queue>
 
 using std::list;
 
@@ -24,6 +25,11 @@ namespace mtm
         void printMonthEvents(int month, int year) const;
         void printEventDetails(DateWrap date, string name) const; 
     };
+    class CompareEvents
+    {
+    public:
+    bool operator()(const BaseEvent*, const BaseEvent*);
+    };
 
     template<typename Predicate>
     void Schedule::printSomeEvents(Predicate predicate, bool verbose) const
@@ -32,8 +38,10 @@ namespace mtm
             if(predicate(*event)){
                 if(verbose){
                     event->printLong(std::cout);
+                    std::cout<<std::endl;
                 } else {
                     event->printLong(std::cout);
+                    std::cout<<std::endl;
                 }
             }
         }

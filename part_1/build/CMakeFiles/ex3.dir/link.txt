@@ -1,3 +1,1 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\ex3.dir/objects.a
-C:\PROGRA~2\gcc\bin\ar.exe cr CMakeFiles\ex3.dir/objects.a @CMakeFiles\ex3.dir\objects1.rsp
-C:\PROGRA~2\gcc\bin\X8E3D3~1.EXE -std=c++11 --pedantic-errors -Wall -Werror -L. -g -Wl,--whole-archive CMakeFiles\ex3.dir/objects.a -Wl,--no-whole-archive -o ex3.exe -Wl,--out-implib,libex3.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ex3.dir\linklibs.rsp
+/usr/bin/x86_64-redhat-linux-g++  -std=c++11 --pedantic-errors -Wall -Werror -L. -g  -rdynamic CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o CMakeFiles/ex3.dir/schedule.cpp.o CMakeFiles/ex3.dir/open_event.cpp.o CMakeFiles/ex3.dir/base_event.cpp.o CMakeFiles/ex3.dir/closed_event.cpp.o CMakeFiles/ex3.dir/date_wrap.cpp.o CMakeFiles/ex3.dir/date/date.c.o CMakeFiles/ex3.dir/event_container.cpp.o CMakeFiles/ex3.dir/festival.cpp.o  -o ex3 

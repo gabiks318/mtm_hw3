@@ -4,6 +4,7 @@
 #include "event_container.h"
 #include "base_event.h"
 #include "exceptions.h"
+#include "./linked_list/linked_list.h"
 #include <string>
 
 namespace mtm
@@ -13,18 +14,26 @@ namespace mtm
     {
     public:
         OneTimeEvent(DateWrap date, string name);
-        ~OneTimeEvent() = default;
+        ~OneTimeEvent();
         
         void add(const BaseEvent& event) override;
     };
 
     //==============Implementation==========//
 
+
     template<class EventType>
     OneTimeEvent<EventType>::OneTimeEvent(DateWrap date, string name):EventContainer()
     {
         EventType* current_event = new EventType(date,name);
         events.insert(current_event);
+    }
+
+    
+    template<class EventType>
+    OneTimeEvent<EventType>::~OneTimeEvent()
+    {
+        events.ListPointerDelete();
     }
 
     template<class EventType>

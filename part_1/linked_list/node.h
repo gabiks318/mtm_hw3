@@ -16,8 +16,14 @@ class Node //nodes to be contained with a list
     public:
 	Node(T node_data);
 	T getData();
+	void dataDelete(T node);
 	
 };
+template <typename T>
+void Node<T>::dataDelete(T node_data)
+{
+	delete node_data;
+}
 
 template <typename T>
 Node<T>::Node(T data)

@@ -1,47 +1,47 @@
 [
 {
-  "directory": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build",
-  "command": "C:\\PROGRA~2\\gcc\\bin\\X8E3D3~1.EXE   -std=c++11 --pedantic-errors -Wall -Werror -L. -g -o CMakeFiles\\ex3.dir\\provided\\test_partC.cpp.obj -c C:\\Users\\yan11\\OneDrive\\Desktop\\MATAM\\hw3\\mtm_hw3\\part_1\\provided\\test_partC.cpp",
-  "file": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/provided/test_partC.cpp"
+  "directory": "/home/yant/mtm/mtm_hw3/part_1/build",
+  "command": "/usr/bin/x86_64-redhat-linux-g++    -std=c++11 --pedantic-errors -Wall -Werror -L. -g   -o CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o -c /home/yant/mtm/mtm_hw3/part_1/tests/schedule_tests.cpp",
+  "file": "/home/yant/mtm/mtm_hw3/part_1/tests/schedule_tests.cpp"
 },
 {
-  "directory": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build",
-  "command": "C:\\PROGRA~2\\gcc\\bin\\X8E3D3~1.EXE   -std=c++11 --pedantic-errors -Wall -Werror -L. -g -o CMakeFiles\\ex3.dir\\schedule.cpp.obj -c C:\\Users\\yan11\\OneDrive\\Desktop\\MATAM\\hw3\\mtm_hw3\\part_1\\schedule.cpp",
-  "file": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/schedule.cpp"
+  "directory": "/home/yant/mtm/mtm_hw3/part_1/build",
+  "command": "/usr/bin/x86_64-redhat-linux-g++    -std=c++11 --pedantic-errors -Wall -Werror -L. -g   -o CMakeFiles/ex3.dir/schedule.cpp.o -c /home/yant/mtm/mtm_hw3/part_1/schedule.cpp",
+  "file": "/home/yant/mtm/mtm_hw3/part_1/schedule.cpp"
 },
 {
-  "directory": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build",
-  "command": "C:\\PROGRA~2\\gcc\\bin\\X8E3D3~1.EXE   -std=c++11 --pedantic-errors -Wall -Werror -L. -g -o CMakeFiles\\ex3.dir\\open_event.cpp.obj -c C:\\Users\\yan11\\OneDrive\\Desktop\\MATAM\\hw3\\mtm_hw3\\part_1\\open_event.cpp",
-  "file": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/open_event.cpp"
+  "directory": "/home/yant/mtm/mtm_hw3/part_1/build",
+  "command": "/usr/bin/x86_64-redhat-linux-g++    -std=c++11 --pedantic-errors -Wall -Werror -L. -g   -o CMakeFiles/ex3.dir/open_event.cpp.o -c /home/yant/mtm/mtm_hw3/part_1/open_event.cpp",
+  "file": "/home/yant/mtm/mtm_hw3/part_1/open_event.cpp"
 },
 {
-  "directory": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build",
-  "command": "C:\\PROGRA~2\\gcc\\bin\\X8E3D3~1.EXE   -std=c++11 --pedantic-errors -Wall -Werror -L. -g -o CMakeFiles\\ex3.dir\\base_event.cpp.obj -c C:\\Users\\yan11\\OneDrive\\Desktop\\MATAM\\hw3\\mtm_hw3\\part_1\\base_event.cpp",
-  "file": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/base_event.cpp"
+  "directory": "/home/yant/mtm/mtm_hw3/part_1/build",
+  "command": "/usr/bin/x86_64-redhat-linux-g++    -std=c++11 --pedantic-errors -Wall -Werror -L. -g   -o CMakeFiles/ex3.dir/base_event.cpp.o -c /home/yant/mtm/mtm_hw3/part_1/base_event.cpp",
+  "file": "/home/yant/mtm/mtm_hw3/part_1/base_event.cpp"
 },
 {
-  "directory": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build",
-  "command": "C:\\PROGRA~2\\gcc\\bin\\X8E3D3~1.EXE   -std=c++11 --pedantic-errors -Wall -Werror -L. -g -o CMakeFiles\\ex3.dir\\closed_event.cpp.obj -c C:\\Users\\yan11\\OneDrive\\Desktop\\MATAM\\hw3\\mtm_hw3\\part_1\\closed_event.cpp",
-  "file": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/closed_event.cpp"
+  "directory": "/home/yant/mtm/mtm_hw3/part_1/build",
+  "command": "/usr/bin/x86_64-redhat-linux-g++    -std=c++11 --pedantic-errors -Wall -Werror -L. -g   -o CMakeFiles/ex3.dir/closed_event.cpp.o -c /home/yant/mtm/mtm_hw3/part_1/closed_event.cpp",
+  "file": "/home/yant/mtm/mtm_hw3/part_1/closed_event.cpp"
 },
 {
-  "directory": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build",
-  "command": "C:\\PROGRA~2\\gcc\\bin\\X8E3D3~1.EXE   -std=c++11 --pedantic-errors -Wall -Werror -L. -g -o CMakeFiles\\ex3.dir\\date_wrap.cpp.obj -c C:\\Users\\yan11\\OneDrive\\Desktop\\MATAM\\hw3\\mtm_hw3\\part_1\\date_wrap.cpp",
-  "file": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/date_wrap.cpp"
+  "directory": "/home/yant/mtm/mtm_hw3/part_1/build",
+  "command": "/usr/bin/x86_64-redhat-linux-g++    -std=c++11 --pedantic-errors -Wall -Werror -L. -g   -o CMakeFiles/ex3.dir/date_wrap.cpp.o -c /home/yant/mtm/mtm_hw3/part_1/date_wrap.cpp",
+  "file": "/home/yant/mtm/mtm_hw3/part_1/date_wrap.cpp"
 },
 {
-  "directory": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build",
-  "command": "C:\\PROGRA~2\\gcc\\bin\\X8EAA8~1.EXE   -g -o CMakeFiles\\ex3.dir\\date\\date.c.obj -c C:\\Users\\yan11\\OneDrive\\Desktop\\MATAM\\hw3\\mtm_hw3\\part_1\\date\\date.c",
-  "file": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/date/date.c"
+  "directory": "/home/yant/mtm/mtm_hw3/part_1/build",
+  "command": "/usr/bin/x86_64-redhat-linux-gcc   -g   -o CMakeFiles/ex3.dir/date/date.c.o   -c /home/yant/mtm/mtm_hw3/part_1/date/date.c",
+  "file": "/home/yant/mtm/mtm_hw3/part_1/date/date.c"
 },
 {
-  "directory": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build",
-  "command": "C:\\PROGRA~2\\gcc\\bin\\X8E3D3~1.EXE   -std=c++11 --pedantic-errors -Wall -Werror -L. -g -o CMakeFiles\\ex3.dir\\event_container.cpp.obj -c C:\\Users\\yan11\\OneDrive\\Desktop\\MATAM\\hw3\\mtm_hw3\\part_1\\event_container.cpp",
-  "file": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/event_container.cpp"
+  "directory": "/home/yant/mtm/mtm_hw3/part_1/build",
+  "command": "/usr/bin/x86_64-redhat-linux-g++    -std=c++11 --pedantic-errors -Wall -Werror -L. -g   -o CMakeFiles/ex3.dir/event_container.cpp.o -c /home/yant/mtm/mtm_hw3/part_1/event_container.cpp",
+  "file": "/home/yant/mtm/mtm_hw3/part_1/event_container.cpp"
 },
 {
-  "directory": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build",
-  "command": "C:\\PROGRA~2\\gcc\\bin\\X8E3D3~1.EXE   -std=c++11 --pedantic-errors -Wall -Werror -L. -g -o CMakeFiles\\ex3.dir\\festival.cpp.obj -c C:\\Users\\yan11\\OneDrive\\Desktop\\MATAM\\hw3\\mtm_hw3\\part_1\\festival.cpp",
-  "file": "C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/festival.cpp"
+  "directory": "/home/yant/mtm/mtm_hw3/part_1/build",
+  "command": "/usr/bin/x86_64-redhat-linux-g++    -std=c++11 --pedantic-errors -Wall -Werror -L. -g   -o CMakeFiles/ex3.dir/festival.cpp.o -c /home/yant/mtm/mtm_hw3/part_1/festival.cpp",
+  "file": "/home/yant/mtm/mtm_hw3/part_1/festival.cpp"
 }
 ]

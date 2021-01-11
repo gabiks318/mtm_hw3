@@ -30,13 +30,12 @@ namespace mtm
         if(interval <= 0){
             throw InvalidInterval();
         }
-        DateWrap* date = new DateWrap(first_date);
-        EventType* current_event = new EventType(*date, name);
+        EventType* current_event = new EventType(first_date, name);
         for(int i = 0; i < num_occurrences; i++){
             events.insert(current_event);
-            date = new DateWrap(first_date + (i+1)*interval);
-            current_event = new EventType(*date, name);
+            current_event = new EventType(DateWrap(first_date + (i+1)*interval), name);
         }
+        delete current_event;
     }
 
     template<class EventType>

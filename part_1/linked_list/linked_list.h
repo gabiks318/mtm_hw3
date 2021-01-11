@@ -29,6 +29,7 @@ class List //linked list of Node objects
 	void insert(T data); //fucntion used to insert new node in order in the list
     void remove(T data);
     
+    void ListPointerDelete();
     int getSize() const;
     bool isEmpty() const; //utility functions used to see if the list contains no elements
 	void print() const; //prints the contents of the linked list
@@ -79,6 +80,24 @@ List<T>& List<T>::operator=(const List& copy_list){
     }
 
     return *this;
+}
+
+template <typename T>
+void List<T>::ListPointerDelete()
+{
+	if (!isEmpty()) // List is not empty
+   {    
+      Node<T>* current = start_node;
+      Node<T>* temp;
+
+      while (current != NULL ) // delete remaining nodes
+      {  
+         temp = current;
+         current = current->next;
+         T data(temp.getData());
+         delete data;
+      }
+   }
 }
 
 template <typename T>
