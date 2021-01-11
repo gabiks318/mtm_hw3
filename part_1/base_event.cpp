@@ -7,6 +7,7 @@
 using mtm::BaseEvent;
 using mtm::List;
 using std::ostream;
+using std::endl;
 
 #define MIN_ID 1
 #define MAX_ID 1234567890
@@ -24,9 +25,9 @@ BaseEvent& BaseEvent::operator=(const BaseEvent& event){
     delete &name;
     delete &date;
     delete &participants;
-    name = *(new string(event.name));
-    date = *(new DateWrap(event.date));
-    participants = *(new List<int>(event.participants));
+    name = event.name;
+    date = event.date;
+    participants = event.participants;
     return *this;
 }
 
@@ -59,13 +60,13 @@ bool BaseEvent::operator==(const BaseEvent& event) const{
 }
 
 ostream& BaseEvent::printShort(ostream& os){
-    return os << name << " " << date << "\n";
+    return os << name << " " << date << endl;
 }
 
 ostream& BaseEvent::printLong(ostream& os){
     ostream& os_2 = printShort(os);
     for(int i = 0; i < participants.getSize(); i++){
-            os_2<< participants[i] << "\n";
+            os_2<< participants[i] << endl;
         
     }
     return os_2;

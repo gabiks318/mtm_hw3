@@ -358,6 +358,33 @@ provided/test_partB.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.s
 .PHONY : provided/test_partB.cpp.s
 
+schedule.obj: schedule.cpp.obj
+
+.PHONY : schedule.obj
+
+# target to build an object file
+schedule.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/schedule.cpp.obj
+.PHONY : schedule.cpp.obj
+
+schedule.i: schedule.cpp.i
+
+.PHONY : schedule.i
+
+# target to preprocess a source file
+schedule.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/schedule.cpp.i
+.PHONY : schedule.cpp.i
+
+schedule.s: schedule.cpp.s
+
+.PHONY : schedule.s
+
+# target to generate assembly for a file
+schedule.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/schedule.cpp.s
+.PHONY : schedule.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -391,6 +418,9 @@ help:
 	@echo ... provided/test_partB.obj
 	@echo ... provided/test_partB.i
 	@echo ... provided/test_partB.s
+	@echo ... schedule.obj
+	@echo ... schedule.i
+	@echo ... schedule.s
 .PHONY : help
 
 

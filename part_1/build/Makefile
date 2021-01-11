@@ -66,10 +66,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1
+CMAKE_SOURCE_DIR = "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build
+CMAKE_BINARY_DIR = "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -98,9 +98,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build\CMakeFiles C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\build\CMakeFiles" "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\build\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\part_1\build\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -330,32 +330,32 @@ open_event.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/open_event.cpp.s
 .PHONY : open_event.cpp.s
 
-provided/test_partB.obj: provided/test_partB.cpp.obj
+provided/test_partC.obj: provided/test_partC.cpp.obj
 
-.PHONY : provided/test_partB.obj
+.PHONY : provided/test_partC.obj
 
 # target to build an object file
-provided/test_partB.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.obj
-.PHONY : provided/test_partB.cpp.obj
+provided/test_partC.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partC.cpp.obj
+.PHONY : provided/test_partC.cpp.obj
 
-provided/test_partB.i: provided/test_partB.cpp.i
+provided/test_partC.i: provided/test_partC.cpp.i
 
-.PHONY : provided/test_partB.i
+.PHONY : provided/test_partC.i
 
 # target to preprocess a source file
-provided/test_partB.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.i
-.PHONY : provided/test_partB.cpp.i
+provided/test_partC.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partC.cpp.i
+.PHONY : provided/test_partC.cpp.i
 
-provided/test_partB.s: provided/test_partB.cpp.s
+provided/test_partC.s: provided/test_partC.cpp.s
 
-.PHONY : provided/test_partB.s
+.PHONY : provided/test_partC.s
 
 # target to generate assembly for a file
-provided/test_partB.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.s
-.PHONY : provided/test_partB.cpp.s
+provided/test_partC.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partC.cpp.s
+.PHONY : provided/test_partC.cpp.s
 
 schedule.obj: schedule.cpp.obj
 
@@ -414,9 +414,9 @@ help:
 	@echo ... open_event.obj
 	@echo ... open_event.i
 	@echo ... open_event.s
-	@echo ... provided/test_partB.obj
-	@echo ... provided/test_partB.i
-	@echo ... provided/test_partB.s
+	@echo ... provided/test_partC.obj
+	@echo ... provided/test_partC.i
+	@echo ... provided/test_partC.s
 	@echo ... schedule.obj
 	@echo ... schedule.i
 	@echo ... schedule.s

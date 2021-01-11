@@ -2,9 +2,11 @@
 #include "date_wrap.h"
 #include "exceptions.h"
 
-
+#define MIN_DAY 1
 #define MAX_DAY 30
+#define MIN_MONTH 1
 #define MAX_MONTH 12
+
 
 using mtm::DateWrap;
 using std::ostream;
@@ -16,7 +18,7 @@ extern "C"
  
 static bool isDateLegal(int day, int month , int year)
 {
-    if(day > MAX_DAY || day < 1 || month > MAX_MONTH || month < 1)
+    if(day > MAX_DAY || day < MIN_DAY || month > MAX_MONTH || month < MIN_MONTH)
     {
         return false;
     }

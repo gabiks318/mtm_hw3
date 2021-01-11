@@ -5,6 +5,8 @@
 #include <algorithm>
 using mtm::Schedule;
 
+#define MIN_MONTH 1
+#define MAX_MONTH 12
 
 Schedule::Schedule(): events_list(){}
 
@@ -46,17 +48,34 @@ void Schedule::unregisterFromEvent(DateWrap date, string name, int student)
 void Schedule::printAllEvents()
 {
     for(mtm::BaseEvent* event : events_list){
-        std::ostream & os();
-        std::cout<< event->printShort(os); << std::endl;
+        event->printShort(std::cout);
     }    
 }
 
+
+
 void Schedule::printMonthEvents(int month, int year)
 {
+    if(month < MIN_MONTH || month > MAX_MONTH){
+        // TODO: check what to do here
+        throw InvalidDate();
+    }
 
+    
+    for(mtm::BaseEvent* event : events_list){
+        DateWrap date = event->getDate();
+        if(date.month() == month && date.year() == year){
+            event->printShort(std::cout);
+        }
+    }  
 }
 
 void Schedule::printEventDetails(string name, DateWrap date)
 {
-
+    for(mtm::BaseEvent* event : events_list){
+        if(event->getName() == name && event->getDate() == date){
+            event->printLong(std::cout);
+            break;
+        }
+    }    
 }

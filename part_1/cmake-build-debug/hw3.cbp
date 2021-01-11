@@ -125,6 +125,12 @@
 		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/provided/test_partB.cpp">
 			<Option target="ex3"/>
 		</Unit>
+		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/schedule.cpp">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/schedule.h">
+			<Option target="ex3"/>
+		</Unit>
 		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -22,9 +22,9 @@ OpenEvent& OpenEvent::operator=(const OpenEvent& event)
     delete &name;
     delete &date;
     delete &participants;
-    name = *(new string(event.name));
-    date = *(new DateWrap(event.date));
-    participants = *(new List<int>(event.participants));
+    name = event.name;
+    date = event.date;
+    participants = event.participants;
     return *this;
 }
 

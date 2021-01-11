@@ -24,10 +24,10 @@ ClosedEvent& ClosedEvent::operator=(const ClosedEvent& event){
     delete &date;
     delete &participants;
     delete &allowed_participants;
-    name = *(new string(event.name));
-    date = *(new DateWrap(event.date));
-    participants = *(new List<int>(event.participants));
-    allowed_participants = *(new List<int>(event.allowed_participants));
+    name = event.name;
+    date = event.date;
+    participants = event.participants;
+    allowed_participants = event.allowed_participants;
     return *this;
 }
 
