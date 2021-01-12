@@ -15,6 +15,8 @@ namespace mtm
         list<BaseEvent*> events_list;
         public:
         Schedule();
+        ~Schedule();
+    
        
         void addEvents(const EventContainer&);
         void registerToEvent(DateWrap date, string name, int student);

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "../exceptions.h"
+#include <typeinfo>
 
 using std::cout;
 using std::endl;
@@ -28,11 +29,9 @@ class List //linked list of Node objects
 	~List();
 	void insert(T data); //fucntion used to insert new node in order in the list
     void remove(T data);
-    
-    void ListPointerDelete();
+    void insertPointer(T data);
     int getSize() const;
     bool isEmpty() const; //utility functions used to see if the list contains no elements
-	void print() const; //prints the contents of the linked list
 	bool exists(T data) const; //searches for a value in the linked list and returns the point to object that contains that value
     T operator[](int index) const;	
 };
@@ -80,24 +79,6 @@ List<T>& List<T>::operator=(const List& copy_list){
     }
 
     return *this;
-}
-
-template <typename T>
-void List<T>::ListPointerDelete()
-{
-	if (!isEmpty()) // List is not empty
-   {    
-      Node<T>* current = start_node;
-      Node<T>* temp;
-
-      while (current != NULL ) // delete remaining nodes
-      {  
-         temp = current;
-         current = current->next;
-         T data(temp.getData());
-         delete data;
-      }
-   }
 }
 
 template <typename T>
@@ -197,6 +178,44 @@ void List<T>::insert(T data) //general funtionn to insert new node the proper or
 	
 }
 
+
+template <typename T>
+void List<T>::insertPointer(T data) //general funtionn to insert new node the proper order in the list
+{
+	if(isEmpty()) //if there is no nodes in the list simply insert at beginning
+	{
+		insertStart(data);
+        return;
+	}
+
+	if(*data < *start_node->node_data) //if the data of the new object is less than than the data of first node in list insert at beginning
+	{
+		insertStart(data);
+        return;
+	}
+	if(*data >= *end_node->node_data) //if the data of the new object is greater than than the data of last node in list insert at end_node
+	{
+		insertEnd(data);
+        return;
+	}
+		
+	Node<T>* current = start_node;
+	Node<T>* new_node = new Node<T>(data); //creates new node
+	while(current != end_node) //runs until the end_node of the list is reached
+	{
+		if((*new_node->node_data < *current->next->node_data) && (*new_node->node_data >= *current->node_data)) //if the data of the new node is less the data in the next node and greater than the data in the current node, insert after current node 
+		{
+			Node<T>* next = current->next; 
+			current->next = new_node; //current nodes next pointer now points to the new node
+			new_node->next = next; //the new nodes next pointer now points the node previously after the current node
+			break;
+		}
+		current = current->next; //moves to the next node in the list
+		
+	}
+	
+}
+
 template <typename T>
 int List<T>::getSize() const
 {
@@ -269,26 +288,6 @@ void List<T>::remove(T key)
     delete node_ptr;
 }
 
-template <typename T>
-void List<T>::print() const
-{
-	if(isEmpty())
-	{
-		cout << "The list is empty" << endl;
-	
-	}else
-	{
-		Node<T> * current = start_node;
-
-		cout << "The contents of the list is: ";
-		while(current != NULL) //prints until the end_node of the list is reached
-		{
-			cout << current->node_data << ' ';
-			current = current->next; //moves to next node in list
-		}
-		cout << endl;
-	}
-}
 
 template <typename T>
 bool List<T>::exists(T key) const //exists functions that searches for node that contains data equal to the key

@@ -43,7 +43,7 @@ returnLabel:
 }
 
  bool testListSubscriptOperator(){
-    bool result = true;
+    bool result = true, passed = true;
 
     List<int> list;
     list.insert(10);
@@ -59,20 +59,20 @@ returnLabel:
     ASSERT_TEST(list[2] == 20, returnLabel);
 
     try{
-         list[-1];
+        passed = false;
+        list[-1];
     } catch(mtm::OutOfBoundaries& e){
-
-    } catch (std::exception& e){
-        ASSERT_TEST(false, returnLabel);
+        passed = true;
     }
+    ASSERT_TEST(passed, returnLabel);
 
     try{
-         list[18];
+        passed = false;
+        list[18];
     } catch(mtm::OutOfBoundaries& e){
-
-    } catch (std::exception& e){
-        ASSERT_TEST(false, returnLabel);
+        passed = true;
     }
+    ASSERT_TEST(passed, returnLabel);
 
 returnLabel:
     return result;
@@ -127,8 +127,10 @@ bool testListCopyConstructorAssignment(){
     }
 
     List<int> list2 = list;
+    List<int> list3(list);
     for(int i = 0; i < 10; i++){
         ASSERT_TEST(list2.exists(i) == true, returnLabel);
+        ASSERT_TEST(list3.exists(i) == true, returnLabel);
     }
     list2.remove(3);
     list2.remove(6);

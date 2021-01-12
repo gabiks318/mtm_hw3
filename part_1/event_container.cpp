@@ -51,11 +51,10 @@ EventContainer::EventIterator& EventContainer::EventIterator::operator++()
 }
 
 EventContainer::EventContainer(): events() {
-
 }
 
 bool EventContainer::EventIterator::operator==(const EventIterator& event_iterator) const
-{//check this
+{
     if((event == nullptr && event_iterator.event != nullptr) || (event != nullptr && event_iterator.event == nullptr)){
         return false;
     }
@@ -78,4 +77,11 @@ EventContainer::EventIterator EventContainer::begin() const
 EventContainer::EventIterator EventContainer::end() const
 {
     return EventIterator(events, events.getSize());
+}
+
+EventContainer::~EventContainer()
+{
+    for(int i = 0; i < events.getSize(); i++){
+        delete events[i];
+    }
 }

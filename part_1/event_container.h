@@ -32,7 +32,7 @@ namespace mtm
         };
 
         EventContainer();
-        virtual ~EventContainer() = default;
+        virtual ~EventContainer();
 
         virtual void add(const BaseEvent& event) = 0;//TODO: what does it mean blocked adding event not suported?
         EventIterator begin() const;

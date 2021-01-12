@@ -7,8 +7,6 @@ using mtm::BaseEvent;
 using mtm::ClosedEvent;
 using mtm::List;
 
-#define MIN_ID 1
-#define MAX_ID 1234567890
 
 ClosedEvent::ClosedEvent(DateWrap date, string name):BaseEvent(date, name), allowed_participants(){
 }
@@ -28,7 +26,7 @@ ClosedEvent& ClosedEvent::operator=(const ClosedEvent& event){
 }
 
 void ClosedEvent::addInvitee(int student){
-    if(student < MIN_ID || student > MAX_ID){
+    if(student < min_id || student > max_id){
         throw InvalidStudent();
     }
     if(allowed_participants.exists(student)){
@@ -38,7 +36,7 @@ void ClosedEvent::addInvitee(int student){
 }
 
 void ClosedEvent::registerParticipant(int student){
-    if(student < MIN_ID || student > MAX_ID){
+    if(student < min_id || student > max_id){
         throw InvalidStudent();
     }
     if(participants.exists(student)){

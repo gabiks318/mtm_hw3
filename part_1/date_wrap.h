@@ -11,7 +11,12 @@ namespace mtm
 {
   class DateWrap{
     Date date;
-
+    const int min_day = 1;
+    const int max_day = 30;
+    const int min_month = 1;
+    const int max_month = 12;
+    bool isDateLegal(int day, int month , int year);
+    
     public:
     DateWrap(int day = 1, int month = 1, int year = 2021);
     DateWrap(const DateWrap& date2);

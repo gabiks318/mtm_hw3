@@ -22,9 +22,11 @@ void testYan3();
 void testYan4();
 
 int main(){
-    //testYan1();
-    //testYan2();
+    testYan1();
+    testYan2();
+    testYan3();
     testYan4();
+
     return 0;
 }
 void testYan1()

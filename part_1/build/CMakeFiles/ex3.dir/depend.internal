@@ -54,17 +54,7 @@ CMakeFiles/ex3.dir/open_event.cpp.o
  /home/yant/mtm/mtm_hw3/part_1/linked_list/node.h
  /home/yant/mtm/mtm_hw3/part_1/open_event.cpp
  /home/yant/mtm/mtm_hw3/part_1/open_event.h
-CMakeFiles/ex3.dir/schedule.cpp.o
- /home/yant/mtm/mtm_hw3/part_1/base_event.h
- /home/yant/mtm/mtm_hw3/part_1/date/date.h
- /home/yant/mtm/mtm_hw3/part_1/date_wrap.h
- /home/yant/mtm/mtm_hw3/part_1/event_container.h
- /home/yant/mtm/mtm_hw3/part_1/exceptions.h
- /home/yant/mtm/mtm_hw3/part_1/linked_list/linked_list.h
- /home/yant/mtm/mtm_hw3/part_1/linked_list/node.h
- /home/yant/mtm/mtm_hw3/part_1/schedule.cpp
- /home/yant/mtm/mtm_hw3/part_1/schedule.h
-CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o
+CMakeFiles/ex3.dir/provided/test_partB.cpp.o
  /home/yant/mtm/mtm_hw3/part_1/base_event.h
  /home/yant/mtm/mtm_hw3/part_1/closed_event.h
  /home/yant/mtm/mtm_hw3/part_1/custom_event.h
@@ -77,6 +67,15 @@ CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o
  /home/yant/mtm/mtm_hw3/part_1/linked_list/node.h
  /home/yant/mtm/mtm_hw3/part_1/one_time_event.h
  /home/yant/mtm/mtm_hw3/part_1/open_event.h
+ /home/yant/mtm/mtm_hw3/part_1/provided/test_partB.cpp
  /home/yant/mtm/mtm_hw3/part_1/recurring_event.h
+CMakeFiles/ex3.dir/schedule.cpp.o
+ /home/yant/mtm/mtm_hw3/part_1/base_event.h
+ /home/yant/mtm/mtm_hw3/part_1/date/date.h
+ /home/yant/mtm/mtm_hw3/part_1/date_wrap.h
+ /home/yant/mtm/mtm_hw3/part_1/event_container.h
+ /home/yant/mtm/mtm_hw3/part_1/exceptions.h
+ /home/yant/mtm/mtm_hw3/part_1/linked_list/linked_list.h
+ /home/yant/mtm/mtm_hw3/part_1/linked_list/node.h
+ /home/yant/mtm/mtm_hw3/part_1/schedule.cpp
  /home/yant/mtm/mtm_hw3/part_1/schedule.h
- /home/yant/mtm/mtm_hw3/part_1/tests/schedule_tests.cpp

@@ -19,8 +19,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/yant/mtm/mtm_hw3/part_1/event_container.cpp" "/home/yant/mtm/mtm_hw3/part_1/build/CMakeFiles/ex3.dir/event_container.cpp.o"
   "/home/yant/mtm/mtm_hw3/part_1/festival.cpp" "/home/yant/mtm/mtm_hw3/part_1/build/CMakeFiles/ex3.dir/festival.cpp.o"
   "/home/yant/mtm/mtm_hw3/part_1/open_event.cpp" "/home/yant/mtm/mtm_hw3/part_1/build/CMakeFiles/ex3.dir/open_event.cpp.o"
+  "/home/yant/mtm/mtm_hw3/part_1/provided/test_partB.cpp" "/home/yant/mtm/mtm_hw3/part_1/build/CMakeFiles/ex3.dir/provided/test_partB.cpp.o"
   "/home/yant/mtm/mtm_hw3/part_1/schedule.cpp" "/home/yant/mtm/mtm_hw3/part_1/build/CMakeFiles/ex3.dir/schedule.cpp.o"
-  "/home/yant/mtm/mtm_hw3/part_1/tests/schedule_tests.cpp" "/home/yant/mtm/mtm_hw3/part_1/build/CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

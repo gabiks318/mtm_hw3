@@ -30,10 +30,19 @@ namespace mtm
         if(interval <= 0){
             throw InvalidInterval();
         }
+        
         EventType* current_event = new EventType(first_date, name);
+        
         for(int i = 0; i < num_occurrences; i++){
-            events.insert(current_event);
-            current_event = new EventType(DateWrap(first_date + (i+1)*interval), name);
+            events.insertPointer(current_event);
+            try{
+                current_event = new EventType(DateWrap(first_date + (i+1)*interval), name);
+            } catch(std::bad_alloc& e){
+                for(int i = 0; i < events.getSize(); i++){
+                    delete events[i];
+                }
+                throw e;      
+            }
         }
         delete current_event;
     }

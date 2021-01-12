@@ -1,6 +1,7 @@
 #ifndef EXCEPTIONS_H
 #define EXCEPTIONS_H
 #include <exception>
+#include <new>
 
 namespace mtm{
     class Exception: public std::exception{};

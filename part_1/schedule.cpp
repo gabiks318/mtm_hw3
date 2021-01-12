@@ -16,12 +16,37 @@ void Schedule::addEvents(const EventContainer& events)
         mtm::BaseEvent& event = *events_iterator;
         if((std::find(events_list.begin(), events_list.end(), &event) != events_list.end())){
             throw EventAlreadyExists();
-        }
+        } 
     }
+    mtm::BaseEvent* event_clone;
     for(mtm::EventContainer::EventIterator events_iterator = events.begin(); events_iterator!= events.end(); ++events_iterator){
         mtm::BaseEvent& event = *events_iterator;
-        events_list.push_back(&event);    
-        events_list.sort(mtm::CompareEvents());
+        try{
+        event_clone = event.clone();
+        } catch(std::bad_alloc& e){
+            for(mtm::BaseEvent* event : events_list){
+                delete event;
+            }
+            throw e;
+        }
+
+        try{
+        events_list.push_back(event_clone);
+        } catch(std::bad_alloc& e){
+            delete event_clone;
+            for(mtm::BaseEvent* event : events_list){
+                delete event;
+            }
+            throw e;
+        }     
+    }
+    events_list.sort(mtm::CompareEvents());
+}
+
+Schedule::~Schedule()
+{
+    for(mtm::BaseEvent* event : events_list){
+        delete event;
     }
 }
 
@@ -73,8 +98,7 @@ void Schedule::printAllEvents() const
 void Schedule::printMonthEvents(int month, int year) const
 {
     if(month < MIN_MONTH || month > MAX_MONTH){
-        // TODO: check what to do here
-        throw InvalidDate();
+        throw InvalidNumber();
     }
     for(mtm::BaseEvent* event : events_list){
         DateWrap date = event->getDate();

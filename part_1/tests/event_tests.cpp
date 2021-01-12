@@ -13,7 +13,7 @@ using std::cout;
 using std::endl;
 using namespace mtm;
 
-#define NUMBER_TESTS 8
+#define NUMBER_TESTS 9
 
 template <class T> void print(const T& x) { cout << x << endl; }
 
@@ -64,8 +64,6 @@ bool testOpenEventRegister(){
     event.registerParticipant(18);
 
     List<int> participants = event.getParticipants();
-    event.printShort(cout);
-    event.printLong(cout);
 
     ASSERT_TEST(participants.exists(6) == true, returnLabel);
     ASSERT_TEST(participants.exists(18) == true, returnLabel);
@@ -90,7 +88,7 @@ bool testOpenEventRegister(){
 
     try{
         passed = false;
-        event.registerParticipant(2000000);
+        event.registerParticipant(1234567891);
     } catch(mtm::InvalidStudent& e){
         passed = true;
     } 
@@ -111,7 +109,7 @@ bool testOpenEventUnregister(){
     event.registerParticipant(6);
     event.registerParticipant(18);
 
-    event.unregisterParticpant(6);
+    event.unregisterParticipant(6);
     List<int> participants = event.getParticipants();
 
     ASSERT_TEST(participants.exists(6) == false, returnLabel);
@@ -120,7 +118,7 @@ bool testOpenEventUnregister(){
 
     try{
         passed = false;
-        event.unregisterParticpant(6);
+        event.unregisterParticipant(6);
     } catch(mtm::NotRegistered& e){
         passed = true;
     } 
@@ -129,7 +127,7 @@ bool testOpenEventUnregister(){
 
     try{
         passed = false;
-        event.unregisterParticpant(-1);
+        event.unregisterParticipant(-1);
     } catch(mtm::InvalidStudent& e){
         passed = true;
     } 
@@ -137,7 +135,7 @@ bool testOpenEventUnregister(){
 
     try{
         passed = false;
-        event.unregisterParticpant(200000);
+        event.unregisterParticipant(1234567891);
     } catch(mtm::InvalidStudent& e){
         passed = true;
     } 
@@ -202,7 +200,7 @@ bool testClosedEventRegister(){
 
     try{
         passed = false;
-        event.addInvitee(1500000);
+        event.addInvitee(1234567891);
     } catch(mtm::InvalidStudent&){
         passed = true;
     }
@@ -240,7 +238,7 @@ bool testClosedEventRegister(){
     ASSERT_TEST(passed, returnLabel);
 
     try{
-        event.registerParticipant(1500000);
+        event.registerParticipant(1234567891);
         passed = false;
     } catch(mtm::InvalidStudent& e){
         passed = true;
@@ -316,7 +314,7 @@ bool testCustomEventRegister(){
     ASSERT_TEST(passed, returnLabel);
 
     try{
-        event.registerParticipant(1500000);
+        event.registerParticipant(1234567891);
         passed = false;
     } catch(mtm::InvalidStudent& e){
         passed = true;
@@ -332,6 +330,36 @@ bool testCustomEventRegister(){
     ASSERT_TEST(passed, returnLabel);
 
 
+returnLabel:
+    return result;
+}
+
+bool testOpenEventPrints(){
+    bool result = true;
+    string expected = "../tests/outputs/event_output1_short.txt";
+    string expected2 = "../tests/outputs/event_output1_long.txt";
+    string tested = "../tests/outputs/output.txt";
+    string tested2 = "../tests/outputs/output2.txt";
+    clearFile(tested);
+    clearFile(tested2);
+    ofstream output_file(tested);
+    ofstream output_file2(tested2);
+
+    string name = "Hot event";
+    DateWrap date(8,1,2021);
+    OpenEvent event(date, name);
+    event.registerParticipant(6);
+    event.registerParticipant(18);
+
+    event.printShort(output_file);
+    output_file.close();
+
+    ASSERT_TEST(compareFiles(tested, expected), returnLabel);
+
+    event.printLong(output_file2);
+    
+    output_file2.close();
+    ASSERT_TEST(compareFiles(tested2, expected2), returnLabel);
 returnLabel:
     return result;
 }
@@ -352,7 +380,8 @@ bool (*tests[]) (void) = {
         testClosedEventGeneral,
         testClosedEventRegister,
         testCustomEventGeneral,
-        testCustomEventRegister     
+        testCustomEventRegister,
+        testOpenEventPrints     
 };
 
 const char* testNames[] = {
@@ -363,7 +392,8 @@ const char* testNames[] = {
         "testClosedEventGeneral",
         "testClosedEventRegister",
         "testCustomEventGeneral",
-        "testCustomEventRegister"
+        "testCustomEventRegister",
+        "testOpenEventPrints"
         
 };
 

@@ -6,8 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ex3.dir/event_container.cpp.o"
   "CMakeFiles/ex3.dir/festival.cpp.o"
   "CMakeFiles/ex3.dir/open_event.cpp.o"
+  "CMakeFiles/ex3.dir/provided/test_partB.cpp.o"
   "CMakeFiles/ex3.dir/schedule.cpp.o"
-  "CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o"
   "ex3"
   "ex3.pdb"
 )

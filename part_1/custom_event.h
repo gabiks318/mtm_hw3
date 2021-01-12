@@ -4,8 +4,6 @@
 #include "base_event.h"
 #include <string>
 
-#define MIN_ID 1
-#define MAX_ID 20000
 
 namespace mtm
 {
@@ -48,7 +46,7 @@ namespace mtm
 
     template <class CanRegister>
     void CustomEvent<CanRegister>::registerParticipant(int student){
-    if(student < MIN_ID || student > MAX_ID){
+    if(student < min_id || student > max_id){
         throw InvalidStudent();
     }
     if(check_condition(student)){

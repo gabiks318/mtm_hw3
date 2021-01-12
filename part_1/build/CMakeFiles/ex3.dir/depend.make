@@ -54,6 +54,21 @@ CMakeFiles/ex3.dir/open_event.cpp.o: ../linked_list/node.h
 CMakeFiles/ex3.dir/open_event.cpp.o: ../open_event.cpp
 CMakeFiles/ex3.dir/open_event.cpp.o: ../open_event.h
 
+CMakeFiles/ex3.dir/provided/test_partB.cpp.o: ../base_event.h
+CMakeFiles/ex3.dir/provided/test_partB.cpp.o: ../closed_event.h
+CMakeFiles/ex3.dir/provided/test_partB.cpp.o: ../custom_event.h
+CMakeFiles/ex3.dir/provided/test_partB.cpp.o: ../date/date.h
+CMakeFiles/ex3.dir/provided/test_partB.cpp.o: ../date_wrap.h
+CMakeFiles/ex3.dir/provided/test_partB.cpp.o: ../event_container.h
+CMakeFiles/ex3.dir/provided/test_partB.cpp.o: ../exceptions.h
+CMakeFiles/ex3.dir/provided/test_partB.cpp.o: ../festival.h
+CMakeFiles/ex3.dir/provided/test_partB.cpp.o: ../linked_list/linked_list.h
+CMakeFiles/ex3.dir/provided/test_partB.cpp.o: ../linked_list/node.h
+CMakeFiles/ex3.dir/provided/test_partB.cpp.o: ../one_time_event.h
+CMakeFiles/ex3.dir/provided/test_partB.cpp.o: ../open_event.h
+CMakeFiles/ex3.dir/provided/test_partB.cpp.o: ../provided/test_partB.cpp
+CMakeFiles/ex3.dir/provided/test_partB.cpp.o: ../recurring_event.h
+
 CMakeFiles/ex3.dir/schedule.cpp.o: ../base_event.h
 CMakeFiles/ex3.dir/schedule.cpp.o: ../date/date.h
 CMakeFiles/ex3.dir/schedule.cpp.o: ../date_wrap.h
@@ -63,20 +78,4 @@ CMakeFiles/ex3.dir/schedule.cpp.o: ../linked_list/linked_list.h
 CMakeFiles/ex3.dir/schedule.cpp.o: ../linked_list/node.h
 CMakeFiles/ex3.dir/schedule.cpp.o: ../schedule.cpp
 CMakeFiles/ex3.dir/schedule.cpp.o: ../schedule.h
-
-CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o: ../base_event.h
-CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o: ../closed_event.h
-CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o: ../custom_event.h
-CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o: ../date/date.h
-CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o: ../date_wrap.h
-CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o: ../event_container.h
-CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o: ../exceptions.h
-CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o: ../festival.h
-CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o: ../linked_list/linked_list.h
-CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o: ../linked_list/node.h
-CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o: ../one_time_event.h
-CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o: ../open_event.h
-CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o: ../recurring_event.h
-CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o: ../schedule.h
-CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o: ../tests/schedule_tests.cpp
 

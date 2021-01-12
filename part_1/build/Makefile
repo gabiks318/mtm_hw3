@@ -329,6 +329,33 @@ open_event.cpp.s:
 	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/open_event.cpp.s
 .PHONY : open_event.cpp.s
 
+provided/test_partB.o: provided/test_partB.cpp.o
+
+.PHONY : provided/test_partB.o
+
+# target to build an object file
+provided/test_partB.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.o
+.PHONY : provided/test_partB.cpp.o
+
+provided/test_partB.i: provided/test_partB.cpp.i
+
+.PHONY : provided/test_partB.i
+
+# target to preprocess a source file
+provided/test_partB.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.i
+.PHONY : provided/test_partB.cpp.i
+
+provided/test_partB.s: provided/test_partB.cpp.s
+
+.PHONY : provided/test_partB.s
+
+# target to generate assembly for a file
+provided/test_partB.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.s
+.PHONY : provided/test_partB.cpp.s
+
 schedule.o: schedule.cpp.o
 
 .PHONY : schedule.o
@@ -355,33 +382,6 @@ schedule.s: schedule.cpp.s
 schedule.cpp.s:
 	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/schedule.cpp.s
 .PHONY : schedule.cpp.s
-
-tests/schedule_tests.o: tests/schedule_tests.cpp.o
-
-.PHONY : tests/schedule_tests.o
-
-# target to build an object file
-tests/schedule_tests.cpp.o:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o
-.PHONY : tests/schedule_tests.cpp.o
-
-tests/schedule_tests.i: tests/schedule_tests.cpp.i
-
-.PHONY : tests/schedule_tests.i
-
-# target to preprocess a source file
-tests/schedule_tests.cpp.i:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/tests/schedule_tests.cpp.i
-.PHONY : tests/schedule_tests.cpp.i
-
-tests/schedule_tests.s: tests/schedule_tests.cpp.s
-
-.PHONY : tests/schedule_tests.s
-
-# target to generate assembly for a file
-tests/schedule_tests.cpp.s:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/tests/schedule_tests.cpp.s
-.PHONY : tests/schedule_tests.cpp.s
 
 # Help Target
 help:
@@ -413,12 +413,12 @@ help:
 	@echo "... open_event.o"
 	@echo "... open_event.i"
 	@echo "... open_event.s"
+	@echo "... provided/test_partB.o"
+	@echo "... provided/test_partB.i"
+	@echo "... provided/test_partB.s"
 	@echo "... schedule.o"
 	@echo "... schedule.i"
 	@echo "... schedule.s"
-	@echo "... tests/schedule_tests.o"
-	@echo "... tests/schedule_tests.i"
-	@echo "... tests/schedule_tests.s"
 .PHONY : help
 
 

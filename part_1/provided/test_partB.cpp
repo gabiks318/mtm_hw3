@@ -23,13 +23,14 @@ void printEventsShort(mtm::EventContainer& events) {
 
 void test1() {
     mtm::Festival festival(mtm::DateWrap(21, 10, 2020));
-    festival.add(mtm::OpenEvent(mtm::DateWrap(21, 10, 2020), "Performance 1"));
-    mtm::ClosedEvent closed(mtm::DateWrap(21, 10, 2020), "Performance 2");
+    festival.add(mtm::OpenEvent(mtm::DateWrap(21, 10, 2020), "YanB"));
+    mtm::ClosedEvent closed(mtm::DateWrap(21, 10, 2020), "YanA");
+    festival.add(closed);
     closed.addInvitee(1);
     closed.addInvitee(500);
     closed.registerParticipant(1);
     closed.registerParticipant(500);
-    festival.add(closed);
+    //festival.add(closed);
     printEventsShort(festival);
     // assume `ec` in an EventContainer with 2 events
     mtm::EventContainer& ec = festival;

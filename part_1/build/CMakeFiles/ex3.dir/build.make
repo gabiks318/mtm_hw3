@@ -74,18 +74,18 @@ include CMakeFiles/ex3.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ex3.dir/flags.make
 
-CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o: CMakeFiles/ex3.dir/flags.make
-CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o: ../tests/schedule_tests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yant/mtm/mtm_hw3/part_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o"
-	/usr/bin/x86_64-redhat-linux-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o -c /home/yant/mtm/mtm_hw3/part_1/tests/schedule_tests.cpp
+CMakeFiles/ex3.dir/provided/test_partB.cpp.o: CMakeFiles/ex3.dir/flags.make
+CMakeFiles/ex3.dir/provided/test_partB.cpp.o: ../provided/test_partB.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yant/mtm/mtm_hw3/part_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ex3.dir/provided/test_partB.cpp.o"
+	/usr/bin/x86_64-redhat-linux-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex3.dir/provided/test_partB.cpp.o -c /home/yant/mtm/mtm_hw3/part_1/provided/test_partB.cpp
 
-CMakeFiles/ex3.dir/tests/schedule_tests.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex3.dir/tests/schedule_tests.cpp.i"
-	/usr/bin/x86_64-redhat-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yant/mtm/mtm_hw3/part_1/tests/schedule_tests.cpp > CMakeFiles/ex3.dir/tests/schedule_tests.cpp.i
+CMakeFiles/ex3.dir/provided/test_partB.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex3.dir/provided/test_partB.cpp.i"
+	/usr/bin/x86_64-redhat-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yant/mtm/mtm_hw3/part_1/provided/test_partB.cpp > CMakeFiles/ex3.dir/provided/test_partB.cpp.i
 
-CMakeFiles/ex3.dir/tests/schedule_tests.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex3.dir/tests/schedule_tests.cpp.s"
-	/usr/bin/x86_64-redhat-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yant/mtm/mtm_hw3/part_1/tests/schedule_tests.cpp -o CMakeFiles/ex3.dir/tests/schedule_tests.cpp.s
+CMakeFiles/ex3.dir/provided/test_partB.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex3.dir/provided/test_partB.cpp.s"
+	/usr/bin/x86_64-redhat-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yant/mtm/mtm_hw3/part_1/provided/test_partB.cpp -o CMakeFiles/ex3.dir/provided/test_partB.cpp.s
 
 CMakeFiles/ex3.dir/schedule.cpp.o: CMakeFiles/ex3.dir/flags.make
 CMakeFiles/ex3.dir/schedule.cpp.o: ../schedule.cpp
@@ -193,7 +193,7 @@ CMakeFiles/ex3.dir/festival.cpp.s: cmake_force
 
 # Object files for target ex3
 ex3_OBJECTS = \
-"CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o" \
+"CMakeFiles/ex3.dir/provided/test_partB.cpp.o" \
 "CMakeFiles/ex3.dir/schedule.cpp.o" \
 "CMakeFiles/ex3.dir/open_event.cpp.o" \
 "CMakeFiles/ex3.dir/base_event.cpp.o" \
@@ -206,7 +206,7 @@ ex3_OBJECTS = \
 # External object files for target ex3
 ex3_EXTERNAL_OBJECTS =
 
-ex3: CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o
+ex3: CMakeFiles/ex3.dir/provided/test_partB.cpp.o
 ex3: CMakeFiles/ex3.dir/schedule.cpp.o
 ex3: CMakeFiles/ex3.dir/open_event.cpp.o
 ex3: CMakeFiles/ex3.dir/base_event.cpp.o

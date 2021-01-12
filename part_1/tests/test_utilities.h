@@ -3,6 +3,69 @@
 
 #include <stdbool.h>
 #include <stdio.h>
+#include <string.h>
+#include <string>
+#include <fstream>
+using std::ofstream;
+
+
+void writeOutputToFile(char *file_name, char *file_content) {
+    char *new_name = (char * )malloc(strlen(file_name) + strlen("expected_") + 1);
+    strcpy(new_name, "expected_");
+    strcat(new_name, file_name);
+    FILE *file = fopen(new_name, "w");
+    if (!file) {
+        return;
+    }
+
+    fprintf(file, "%s", file_content);
+    free(new_name);
+    fclose(file);
+}
+
+bool isFilePrintOutputCorrect(char *file_name, char *expected_output) {
+    FILE *infile;
+    char *buffer;
+    long numbytes;
+
+    infile = fopen(file_name, "r");
+
+    if (infile == NULL) {
+        return false;
+    }
+
+    fseek(infile, 0L, SEEK_END);
+    numbytes = ftell(infile);
+    fseek(infile, 0L, SEEK_SET);
+
+    buffer = (char *) calloc(numbytes + 1, sizeof(char));
+
+    if (buffer == NULL) {
+        return false;
+    }
+
+    fread(buffer, sizeof(char), numbytes, infile);
+    fclose(infile);
+
+    if (numbytes == 0 && strlen(expected_output) != 0) {
+        free(buffer);
+        return false;
+    }
+
+    writeOutputToFile(file_name, expected_output);
+    printf("<br>&nbsp;&nbsp;&nbsp;&nbsp;> Printing output: <a href='/staging/{STAGING_ID}/%s'>%s</a> | Expected output: <a href='/staging/{STAGING_ID}/expected_%s'>expected_%s</a> (Might be correct)",
+           file_name, file_name, file_name, file_name);
+    bool result = (strncmp(buffer, expected_output, numbytes) == 0);
+    free(buffer);
+    return result;
+}
+
+void clearFile(std::string file_name){
+    std::ifstream ifs (file_name);
+    ifs.close ();
+    ofstream ofs(file_name, ofstream::out | ofstream::trunc);
+    ofs.close();
+}
 
 /**
  * These macros are here to help you create tests more easily and keep them

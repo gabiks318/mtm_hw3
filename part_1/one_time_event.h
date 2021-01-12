@@ -14,7 +14,7 @@ namespace mtm
     {
     public:
         OneTimeEvent(DateWrap date, string name);
-        ~OneTimeEvent();
+        ~OneTimeEvent() = default;
         
         void add(const BaseEvent& event) override;
     };
@@ -26,14 +26,12 @@ namespace mtm
     OneTimeEvent<EventType>::OneTimeEvent(DateWrap date, string name):EventContainer()
     {
         EventType* current_event = new EventType(date,name);
-        events.insert(current_event);
-    }
-
-    
-    template<class EventType>
-    OneTimeEvent<EventType>::~OneTimeEvent()
-    {
-        events.ListPointerDelete();
+        try{
+        events.insertPointer(current_event);
+        } catch(std::bad_alloc& e){
+            delete current_event;
+            throw e;
+        }  
     }
 
     template<class EventType>

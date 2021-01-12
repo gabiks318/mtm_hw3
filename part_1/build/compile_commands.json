@@ -1,8 +1,8 @@
 [
 {
   "directory": "/home/yant/mtm/mtm_hw3/part_1/build",
-  "command": "/usr/bin/x86_64-redhat-linux-g++    -std=c++11 --pedantic-errors -Wall -Werror -L. -g   -o CMakeFiles/ex3.dir/tests/schedule_tests.cpp.o -c /home/yant/mtm/mtm_hw3/part_1/tests/schedule_tests.cpp",
-  "file": "/home/yant/mtm/mtm_hw3/part_1/tests/schedule_tests.cpp"
+  "command": "/usr/bin/x86_64-redhat-linux-g++    -std=c++11 --pedantic-errors -Wall -Werror -L. -g   -o CMakeFiles/ex3.dir/provided/test_partB.cpp.o -c /home/yant/mtm/mtm_hw3/part_1/provided/test_partB.cpp",
+  "file": "/home/yant/mtm/mtm_hw3/part_1/provided/test_partB.cpp"
 },
 {
   "directory": "/home/yant/mtm/mtm_hw3/part_1/build",

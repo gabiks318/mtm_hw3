@@ -9,9 +9,6 @@ using mtm::List;
 using std::ostream;
 using std::endl;
 
-#define MIN_ID 1
-#define MAX_ID 1234567890
-
 BaseEvent::BaseEvent(DateWrap date, string name): date(date), name(name), participants(){
 }
 
@@ -29,7 +26,7 @@ BaseEvent& BaseEvent::operator=(const BaseEvent& event){
 }
 
 void BaseEvent::registerParticipant(int student){
-    if(student < MIN_ID || student > MAX_ID){
+    if(student < min_id || student > max_id){
         throw InvalidStudent();
     }
     if(participants.exists(student)){
@@ -38,8 +35,12 @@ void BaseEvent::registerParticipant(int student){
     participants.insert(student);
 }
 
+bool BaseEvent::operator>=(const BaseEvent& event) const{
+    return !(*this < event);
+}
+
 void BaseEvent::unregisterParticipant(int student){
-    if(student < MIN_ID || student > MAX_ID){
+    if(student < min_id || student > max_id){
         throw InvalidStudent();
     }
     if(!participants.exists(student)){
@@ -48,8 +49,27 @@ void BaseEvent::unregisterParticipant(int student){
     participants.remove(student);
 } 
 
+/*bool mtm::operator<(const BaseEvent* event1,const BaseEvent* event2){
+     if(event1->getDate() < event2->getDate()){
+        return true;
+    }
+    if(event1->getDate() == event2->getDate()){
+        if(event1->getName() < event2->getName())
+            return true;
+    }
+   // *event1 < *event2
+    return false;
+}*/
+
 bool BaseEvent::operator<(const BaseEvent& event) const{
-    return date < event.date;
+    if(date < event.getDate()){
+        return true;
+    }
+    if(date == event.getDate()){
+        if(name < event.getName())
+            return true;
+    }
+    return false;
 }
 
 bool BaseEvent::operator==(const BaseEvent& event) const{
@@ -63,8 +83,7 @@ ostream& BaseEvent::printShort(ostream& os){
 ostream& BaseEvent::printLong(ostream& os){
     ostream& os_2 = printShort(os);
     for(int i = 0; i < participants.getSize(); i++){
-            os_2<< participants[i] << endl;
-        
+        os_2<< participants[i] << endl; 
     }
     return os_2;
 }
