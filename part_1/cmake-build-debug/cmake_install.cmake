@@ -38,7 +38,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/cmake-build-debug/linked_list/cmake_install.cmake")
   include("C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/cmake-build-debug/provided/cmake_install.cmake")
   include("C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/cmake-build-debug/tests/cmake_install.cmake")
-  include("C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/cmake-build-debug/dry/cmake_install.cmake")
 
 endif()
 

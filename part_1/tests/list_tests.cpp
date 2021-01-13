@@ -20,7 +20,7 @@ class CompareInt{
 bool testListCreateDestroy() {
     bool result = true;
 
-    List<int, CompareInt> list(CompareInt());
+    List<int, CompareInt> list((CompareInt()));
     ASSERT_TEST(list.isEmpty() == true, returnListCreateDestroy);
     
 returnListCreateDestroy:
@@ -30,7 +30,7 @@ returnListCreateDestroy:
 bool testListInsertSize(){
     bool result = true;
 
-    List<int, CompareInt> list(CompareInt());
+    List<int, CompareInt> list((CompareInt()));
     list.insert(1);
     ASSERT_TEST(list.isEmpty() == false, returnLabel);
     ASSERT_TEST(list.getSize() == 1, returnLabel);
@@ -52,7 +52,7 @@ returnLabel:
  bool testListSubscriptOperator(){
     bool result = true, passed = true;
 
-    List<int, CompareInt> list(CompareInt());
+    List<int, CompareInt> list((CompareInt()));
     list.insert(10);
     list.insert(20);
     list.insert(30);
@@ -88,7 +88,7 @@ returnLabel:
 bool testListRemove(){
     bool result = true;
 
-    List<int, CompareInt> list(CompareInt());
+    List<int, CompareInt> list((CompareInt()));
     for(int i = 0; i < 10; i++){
         list.insert(i);
     }
@@ -110,7 +110,7 @@ returnLabel:
 bool testListExists(){
     bool result = true;
 
-    List<int,CompareInt> list(CompareInt());
+    List<int,CompareInt> list((CompareInt()));
     for(int i = 0; i < 10; i++){
         list.insert(i);
     }
@@ -128,7 +128,7 @@ returnLabel:
 
 bool testListCopyConstructorAssignment(){
     bool result = true;
-    List<int, CompareInt> list(CompareInt());
+    List<int, CompareInt> list((CompareInt()));
     for(int i = 0; i < 10; i++){
         list.insert(i);
     }

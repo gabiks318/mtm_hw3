@@ -5,21 +5,29 @@
 #include "base_event.h"
 
 namespace mtm
-{
+{   
+    
     class EventContainer
     {
         protected:
-        List<BaseEvent*> events;
         
+        class CompareEvents{
+        public:
+        bool operator()(const BaseEvent* event1, const BaseEvent* event2){
+            return *event1 < *event2;
+            }
+        };
+        List<BaseEvent*, CompareEvents> events;
+
         public:
         class EventIterator
         {
             BaseEvent* event;
             int index;
-            List<BaseEvent*> events;
+            List<BaseEvent*, CompareEvents> events;
             
             public:
-            EventIterator(List<BaseEvent*> events, int index);
+            EventIterator(List<BaseEvent*, CompareEvents> events, int index);
             EventIterator(const EventIterator& event_iterator);
             EventIterator& operator=(const EventIterator& event_iterator);
             ~EventIterator() = default;

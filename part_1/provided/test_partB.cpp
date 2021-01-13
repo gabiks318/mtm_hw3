@@ -58,9 +58,9 @@ void test1() {
 
 void test2_aux(mtm::BaseEvent& event) {
     event.registerParticipant(1);
-    event.registerParticipant(20000);
+    /* event.registerParticipant(20000); */
     event.unregisterParticipant(1);
-    event.registerParticipant(3);
+    /* event.registerParticipant(3); */
     mtm::BaseEvent* clone = event.clone();
     clone->printShort(std::cout);
     clone->printLong(std::cout);
@@ -74,16 +74,20 @@ struct StudentFilter {
 };
 
 void test2() {
-    mtm::OpenEvent open(mtm::DateWrap(21, 10, 2020), "An Open Event");
-    test2_aux(open);
+    /* mtm::OpenEvent open(mtm::DateWrap(21, 10, 2020), "An Open Event");
+    test2_aux(open); */
     mtm::ClosedEvent closed(mtm::DateWrap(21, 10, 2020), "A Closed Event");
     closed.addInvitee(2);
     closed.addInvitee(4);
     closed.addInvitee(1);
-    test2_aux(closed);
-    mtm::CustomEvent<StudentFilter> custom(mtm::DateWrap(21, 10, 2020),
+    closed.registerParticipant(2);
+    closed.registerParticipant(4);
+    closed.registerParticipant(1);
+    closed.printLong(cout);
+    /* test2_aux(closed); */
+    /* mtm::CustomEvent<StudentFilter> custom(mtm::DateWrap(21, 10, 2020),
                                            "A Custom Event", StudentFilter());
-    test2_aux(custom);
+    test2_aux(custom); */
 }
 
 typedef void (*Test)();

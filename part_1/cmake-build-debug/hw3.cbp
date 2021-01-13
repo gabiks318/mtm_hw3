@@ -5,7 +5,7 @@
 		<Option title="hw3"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\date\;CMake Files\linked_list\;CMake Files\provided\;CMake Files\tests\;CMake Files\dry\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\date\;CMake Files\linked_list\;CMake Files\provided\;CMake Files\tests\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/cmake-build-debug"/>
@@ -125,12 +125,6 @@
 		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/provided/test_partB.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/schedule.cpp">
-			<Option target="ex3"/>
-		</Unit>
-		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/schedule.h">
-			<Option target="ex3"/>
-		</Unit>
 		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
@@ -145,9 +139,6 @@
 		</Unit>
 		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/tests/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\"/>
-		</Unit>
-		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/dry/CmakeLists.txt">
-			<Option virtualFolder="CMake Files\dry\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
