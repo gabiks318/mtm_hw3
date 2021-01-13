@@ -3,7 +3,7 @@
 #include "date_wrap.h"
 #include <string>
 #include "./linked_list/linked_list.h"
-
+#include "compare_functions.h"
 
 using std::string;
 using mtm::DateWrap;
@@ -15,7 +15,7 @@ namespace mtm{
         protected:
         DateWrap date;
         string name;
-        List<int> participants;
+        List<int,mtm::CompareInt> participants;
         const int min_id = 1;
         const int max_id = 1234567890;
 
@@ -33,12 +33,16 @@ namespace mtm{
         virtual ostream& printShort(ostream& os);
         virtual ostream& printLong(ostream& os);
         virtual BaseEvent* clone() const = 0;
-        //friend bool operator<(const BaseEvent*,const BaseEvent*);
         DateWrap getDate() const;
         string getName() const;
-        List<int> getParticipants() const;
-    };
-    //bool operator<(const BaseEvent* event1,const BaseEvent* event2);
+        List<int,mtm::CompareInt> getParticipants() const;
+
+        /*class CompareInt{
+        public:
+        bool operator()(int,int);
+        };*/
+    };      
 }
+   
 
 #endif

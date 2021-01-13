@@ -54,6 +54,7 @@
         "xutility": "cpp",
         "list": "cpp",
         "compare": "cpp",
-        "iterator": "cpp"
+        "iterator": "cpp",
+        "queue": "cpp"
     }
 }

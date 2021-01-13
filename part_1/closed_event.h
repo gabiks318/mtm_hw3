@@ -4,12 +4,13 @@
 #include "base_event.h"
 #include <string>
 #include "./linked_list/linked_list.h"
+#include "compare_functions.h"
 
 namespace mtm
 {
     class ClosedEvent: public BaseEvent
     {
-        List<int> allowed_participants;
+        List<int,mtm::CompareInt> allowed_participants;
         public:
         ClosedEvent(DateWrap date, string name);
         ClosedEvent(const ClosedEvent&);
@@ -19,7 +20,7 @@ namespace mtm
         void addInvitee(int student);
         void registerParticipant(int student) override;
         BaseEvent* clone() const override;
-        List<int> getInvitees() const;
+        List<int,mtm::CompareInt> getInvitees() const;
     };
 }
 #endif

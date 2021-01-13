@@ -6,6 +6,7 @@
 #include "exceptions.h"
 #include "./linked_list/linked_list.h"
 #include <string>
+#include "compare_functions.h"
 
 namespace mtm
 {

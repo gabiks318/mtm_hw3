@@ -3,15 +3,15 @@
 
 namespace mtm
 {
-template <typename T> 
+template <typename T,typename S> 
 class List;
 
-template <typename T>
+template <typename T,typename S>
 class Node //nodes to be contained with a list
 {
     T node_data; //templatized data stored in node
 	Node* next; //pointer to the next node in list
-    friend class List<T>;
+    friend class List<T,S>;
 
     public:
 	Node(T node_data);
@@ -19,21 +19,21 @@ class Node //nodes to be contained with a list
 	void dataDelete(T node);
 	
 };
-template <typename T>
-void Node<T>::dataDelete(T node_data)
+template <typename T,typename S>
+void Node<T,S>::dataDelete(T node_data)
 {
 	delete node_data;
 }
 
-template <typename T>
-Node<T>::Node(T data)
+template <typename T,typename S>
+Node<T,S>::Node(T data)
 {
 	node_data = data; //stores data in node
 	next = NULL; //initializes point to next node to null
 }
 
-template <typename T>
-T Node<T>::getData() //returns data stored in node
+template <typename T,typename S>
+T Node<T,S>::getData() //returns data stored in node
 {
 	return node_data;
 }

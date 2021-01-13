@@ -3,13 +3,14 @@
 #include "exceptions.h"
 #include <string>
 #include "./linked_list/linked_list.h"
+#include "compare_functions.h"
 
 using mtm::BaseEvent;
 using mtm::List;
 using std::ostream;
 using std::endl;
 
-BaseEvent::BaseEvent(DateWrap date, string name): date(date), name(name), participants(){
+BaseEvent::BaseEvent(DateWrap date, string name): date(date), name(name), participants(mtm::CompareInt::CompareInt()){
 }
 
 BaseEvent::BaseEvent(const BaseEvent& event):  date(event.date), name(event.name), participants(event.participants){
@@ -49,18 +50,6 @@ void BaseEvent::unregisterParticipant(int student){
     participants.remove(student);
 } 
 
-/*bool mtm::operator<(const BaseEvent* event1,const BaseEvent* event2){
-     if(event1->getDate() < event2->getDate()){
-        return true;
-    }
-    if(event1->getDate() == event2->getDate()){
-        if(event1->getName() < event2->getName())
-            return true;
-    }
-   // *event1 < *event2
-    return false;
-}*/
-
 bool BaseEvent::operator<(const BaseEvent& event) const{
     if(date < event.getDate()){
         return true;
@@ -96,6 +85,9 @@ string BaseEvent::getName() const {
     return name;
 }
 
-List<int> BaseEvent::getParticipants() const{
+List<int,mtm::CompareInt> BaseEvent::getParticipants() const{
     return participants;
 }
+/*bool mtm::CompareInt::operator()(const int first,const int second){
+    return first < second;
+}*/
