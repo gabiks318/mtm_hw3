@@ -249,6 +249,60 @@ date_wrap.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/date_wrap.cpp.s
 .PHONY : date_wrap.cpp.s
 
+event_container.obj: event_container.cpp.obj
+
+.PHONY : event_container.obj
+
+# target to build an object file
+event_container.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/event_container.cpp.obj
+.PHONY : event_container.cpp.obj
+
+event_container.i: event_container.cpp.i
+
+.PHONY : event_container.i
+
+# target to preprocess a source file
+event_container.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/event_container.cpp.i
+.PHONY : event_container.cpp.i
+
+event_container.s: event_container.cpp.s
+
+.PHONY : event_container.s
+
+# target to generate assembly for a file
+event_container.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/event_container.cpp.s
+.PHONY : event_container.cpp.s
+
+festival.obj: festival.cpp.obj
+
+.PHONY : festival.obj
+
+# target to build an object file
+festival.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/festival.cpp.obj
+.PHONY : festival.cpp.obj
+
+festival.i: festival.cpp.i
+
+.PHONY : festival.i
+
+# target to preprocess a source file
+festival.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/festival.cpp.i
+.PHONY : festival.cpp.i
+
+festival.s: festival.cpp.s
+
+.PHONY : festival.s
+
+# target to generate assembly for a file
+festival.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/festival.cpp.s
+.PHONY : festival.cpp.s
+
 open_event.obj: open_event.cpp.obj
 
 .PHONY : open_event.obj
@@ -276,32 +330,59 @@ open_event.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/open_event.cpp.s
 .PHONY : open_event.cpp.s
 
-tests/list_tests.obj: tests/list_tests.cpp.obj
+provided/test_partB.obj: provided/test_partB.cpp.obj
 
-.PHONY : tests/list_tests.obj
+.PHONY : provided/test_partB.obj
 
 # target to build an object file
-tests/list_tests.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/list_tests.cpp.obj
-.PHONY : tests/list_tests.cpp.obj
+provided/test_partB.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.obj
+.PHONY : provided/test_partB.cpp.obj
 
-tests/list_tests.i: tests/list_tests.cpp.i
+provided/test_partB.i: provided/test_partB.cpp.i
 
-.PHONY : tests/list_tests.i
+.PHONY : provided/test_partB.i
 
 # target to preprocess a source file
-tests/list_tests.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/list_tests.cpp.i
-.PHONY : tests/list_tests.cpp.i
+provided/test_partB.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.i
+.PHONY : provided/test_partB.cpp.i
 
-tests/list_tests.s: tests/list_tests.cpp.s
+provided/test_partB.s: provided/test_partB.cpp.s
 
-.PHONY : tests/list_tests.s
+.PHONY : provided/test_partB.s
 
 # target to generate assembly for a file
-tests/list_tests.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/list_tests.cpp.s
-.PHONY : tests/list_tests.cpp.s
+provided/test_partB.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.s
+.PHONY : provided/test_partB.cpp.s
+
+schedule.obj: schedule.cpp.obj
+
+.PHONY : schedule.obj
+
+# target to build an object file
+schedule.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/schedule.cpp.obj
+.PHONY : schedule.cpp.obj
+
+schedule.i: schedule.cpp.i
+
+.PHONY : schedule.i
+
+# target to preprocess a source file
+schedule.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/schedule.cpp.i
+.PHONY : schedule.cpp.i
+
+schedule.s: schedule.cpp.s
+
+.PHONY : schedule.s
+
+# target to generate assembly for a file
+schedule.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/schedule.cpp.s
+.PHONY : schedule.cpp.s
 
 # Help Target
 help:
@@ -324,12 +405,21 @@ help:
 	@echo ... date_wrap.obj
 	@echo ... date_wrap.i
 	@echo ... date_wrap.s
+	@echo ... event_container.obj
+	@echo ... event_container.i
+	@echo ... event_container.s
+	@echo ... festival.obj
+	@echo ... festival.i
+	@echo ... festival.s
 	@echo ... open_event.obj
 	@echo ... open_event.i
 	@echo ... open_event.s
-	@echo ... tests/list_tests.obj
-	@echo ... tests/list_tests.i
-	@echo ... tests/list_tests.s
+	@echo ... provided/test_partB.obj
+	@echo ... provided/test_partB.i
+	@echo ... provided/test_partB.s
+	@echo ... schedule.obj
+	@echo ... schedule.i
+	@echo ... schedule.s
 .PHONY : help
 
 

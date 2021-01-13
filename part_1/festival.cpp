@@ -23,7 +23,7 @@ void Festival::add(const BaseEvent& event)
         throw e;
     }
     try{
-        events.insertPointer(event_clone);
+        events.insert(event_clone);
     } catch(std::bad_alloc& e){
         delete event_clone;
         for(int i = 0; i < events.getSize(); i++){

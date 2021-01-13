@@ -25,15 +25,16 @@ void test1() {
     mtm::Festival festival(mtm::DateWrap(21, 10, 2020));
     festival.add(mtm::OpenEvent(mtm::DateWrap(21, 10, 2020), "YanB"));
     mtm::ClosedEvent closed(mtm::DateWrap(21, 10, 2020), "YanA");
-    festival.add(closed);
+ 
     closed.addInvitee(1);
     closed.addInvitee(500);
     closed.registerParticipant(1);
     closed.registerParticipant(500);
+    festival.add(closed);
     //festival.add(closed);
     printEventsShort(festival);
     // assume `ec` in an EventContainer with 2 events
-    mtm::EventContainer& ec = festival;
+    /*mtm::EventContainer& ec = festival;
     mtm::EventContainer::EventIterator it = ec.begin();
     mtm::EventContainer::EventIterator it_end = ec.end();
     mtm::BaseEvent& ev = *it; // `ev` is the first event stored in `ec`
@@ -45,7 +46,7 @@ void test1() {
     std::cout << (it != it_end) << std::endl; // print "1"
     ++it;
     std::cout << (it == it_end) << std::endl; // print "1"
-    std::cout << (it != it_end) << std::endl;
+    std::cout << (it != it_end) << std::endl;*/
     mtm::RecurringEvent<mtm::OpenEvent> recurring(mtm::DateWrap(21, 10, 2020),
                                                "Wednesday Noon", 13, 7);
     printEventsShort(recurring);
@@ -58,18 +59,18 @@ void test1() {
 
 void test2_aux(mtm::BaseEvent& event) {
     event.registerParticipant(1);
-    event.registerParticipant(20000);
-    event.unregisterParticipant(1);
-    event.registerParticipant(3);
+    event.registerParticipant(4);
+    //event.unregisterParticipant(1);
+    event.registerParticipant(2);
     mtm::BaseEvent* clone = event.clone();
     clone->printShort(std::cout);
     clone->printLong(std::cout);
     delete clone;
 }
 
-struct StudentFilter {
+struct StudentFilter{
     bool operator()(int student) {
-        return student == 1 || student == 3 || student == 20000;
+        return student == 1 || student == 4 || student == 2;
     }
 };
 

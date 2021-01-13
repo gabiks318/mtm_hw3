@@ -9,17 +9,21 @@ namespace mtm
     class EventContainer
     {
         protected:
-        List<BaseEvent*> events;
+        class ComparePointerToEvents{
+            public:
+            bool operator()(const BaseEvent*,const BaseEvent*);
+        };
+        List<BaseEvent*,ComparePointerToEvents> events;
         
         public:
         class EventIterator
         {
             BaseEvent* event;
             int index;
-            List<BaseEvent*> events;
+            List<BaseEvent*,ComparePointerToEvents> events;
             
             public:
-            EventIterator(List<BaseEvent*> events, int index);
+            EventIterator(List<BaseEvent*,ComparePointerToEvents> events, int index);
             EventIterator(const EventIterator& event_iterator);
             EventIterator& operator=(const EventIterator& event_iterator);
             ~EventIterator() = default;
