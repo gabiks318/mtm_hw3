@@ -75,35 +75,22 @@ include CMakeFiles/ex3.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ex3.dir/flags.make
 
-CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: CMakeFiles/ex3.dir/flags.make
-CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../provided/test_partB.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ex3.dir/provided/test_partB.cpp.obj"
-	C:\PROGRA~2\gcc\bin\X8E3D3~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ex3.dir\provided\test_partB.cpp.obj -c C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\provided\test_partB.cpp
+CMakeFiles/ex3.dir/tests/list_tests.cpp.obj: CMakeFiles/ex3.dir/flags.make
+CMakeFiles/ex3.dir/tests/list_tests.cpp.obj: ../tests/list_tests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ex3.dir/tests/list_tests.cpp.obj"
+	C:\PROGRA~2\gcc\bin\X8E3D3~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ex3.dir\tests\list_tests.cpp.obj -c C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\tests\list_tests.cpp
 
-CMakeFiles/ex3.dir/provided/test_partB.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex3.dir/provided/test_partB.cpp.i"
-	C:\PROGRA~2\gcc\bin\X8E3D3~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\provided\test_partB.cpp > CMakeFiles\ex3.dir\provided\test_partB.cpp.i
+CMakeFiles/ex3.dir/tests/list_tests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex3.dir/tests/list_tests.cpp.i"
+	C:\PROGRA~2\gcc\bin\X8E3D3~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\tests\list_tests.cpp > CMakeFiles\ex3.dir\tests\list_tests.cpp.i
 
-CMakeFiles/ex3.dir/provided/test_partB.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex3.dir/provided/test_partB.cpp.s"
-	C:\PROGRA~2\gcc\bin\X8E3D3~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\provided\test_partB.cpp -o CMakeFiles\ex3.dir\provided\test_partB.cpp.s
-
-CMakeFiles/ex3.dir/compare_functions.cpp.obj: CMakeFiles/ex3.dir/flags.make
-CMakeFiles/ex3.dir/compare_functions.cpp.obj: ../compare_functions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ex3.dir/compare_functions.cpp.obj"
-	C:\PROGRA~2\gcc\bin\X8E3D3~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ex3.dir\compare_functions.cpp.obj -c C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\compare_functions.cpp
-
-CMakeFiles/ex3.dir/compare_functions.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex3.dir/compare_functions.cpp.i"
-	C:\PROGRA~2\gcc\bin\X8E3D3~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\compare_functions.cpp > CMakeFiles\ex3.dir\compare_functions.cpp.i
-
-CMakeFiles/ex3.dir/compare_functions.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex3.dir/compare_functions.cpp.s"
-	C:\PROGRA~2\gcc\bin\X8E3D3~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\compare_functions.cpp -o CMakeFiles\ex3.dir\compare_functions.cpp.s
+CMakeFiles/ex3.dir/tests/list_tests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex3.dir/tests/list_tests.cpp.s"
+	C:\PROGRA~2\gcc\bin\X8E3D3~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\tests\list_tests.cpp -o CMakeFiles\ex3.dir\tests\list_tests.cpp.s
 
 CMakeFiles/ex3.dir/open_event.cpp.obj: CMakeFiles/ex3.dir/flags.make
 CMakeFiles/ex3.dir/open_event.cpp.obj: ../open_event.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ex3.dir/open_event.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ex3.dir/open_event.cpp.obj"
 	C:\PROGRA~2\gcc\bin\X8E3D3~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ex3.dir\open_event.cpp.obj -c C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\open_event.cpp
 
 CMakeFiles/ex3.dir/open_event.cpp.i: cmake_force
@@ -116,7 +103,7 @@ CMakeFiles/ex3.dir/open_event.cpp.s: cmake_force
 
 CMakeFiles/ex3.dir/base_event.cpp.obj: CMakeFiles/ex3.dir/flags.make
 CMakeFiles/ex3.dir/base_event.cpp.obj: ../base_event.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ex3.dir/base_event.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ex3.dir/base_event.cpp.obj"
 	C:\PROGRA~2\gcc\bin\X8E3D3~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ex3.dir\base_event.cpp.obj -c C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\base_event.cpp
 
 CMakeFiles/ex3.dir/base_event.cpp.i: cmake_force
@@ -129,7 +116,7 @@ CMakeFiles/ex3.dir/base_event.cpp.s: cmake_force
 
 CMakeFiles/ex3.dir/closed_event.cpp.obj: CMakeFiles/ex3.dir/flags.make
 CMakeFiles/ex3.dir/closed_event.cpp.obj: ../closed_event.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ex3.dir/closed_event.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ex3.dir/closed_event.cpp.obj"
 	C:\PROGRA~2\gcc\bin\X8E3D3~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ex3.dir\closed_event.cpp.obj -c C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\closed_event.cpp
 
 CMakeFiles/ex3.dir/closed_event.cpp.i: cmake_force
@@ -142,7 +129,7 @@ CMakeFiles/ex3.dir/closed_event.cpp.s: cmake_force
 
 CMakeFiles/ex3.dir/date_wrap.cpp.obj: CMakeFiles/ex3.dir/flags.make
 CMakeFiles/ex3.dir/date_wrap.cpp.obj: ../date_wrap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ex3.dir/date_wrap.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ex3.dir/date_wrap.cpp.obj"
 	C:\PROGRA~2\gcc\bin\X8E3D3~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ex3.dir\date_wrap.cpp.obj -c C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\date_wrap.cpp
 
 CMakeFiles/ex3.dir/date_wrap.cpp.i: cmake_force
@@ -155,7 +142,7 @@ CMakeFiles/ex3.dir/date_wrap.cpp.s: cmake_force
 
 CMakeFiles/ex3.dir/date/date.c.obj: CMakeFiles/ex3.dir/flags.make
 CMakeFiles/ex3.dir/date/date.c.obj: ../date/date.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ex3.dir/date/date.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ex3.dir/date/date.c.obj"
 	C:\PROGRA~2\gcc\bin\X8EAA8~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\ex3.dir\date\date.c.obj -c C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\date\date.c
 
 CMakeFiles/ex3.dir/date/date.c.i: cmake_force
@@ -168,8 +155,7 @@ CMakeFiles/ex3.dir/date/date.c.s: cmake_force
 
 # Object files for target ex3
 ex3_OBJECTS = \
-"CMakeFiles/ex3.dir/provided/test_partB.cpp.obj" \
-"CMakeFiles/ex3.dir/compare_functions.cpp.obj" \
+"CMakeFiles/ex3.dir/tests/list_tests.cpp.obj" \
 "CMakeFiles/ex3.dir/open_event.cpp.obj" \
 "CMakeFiles/ex3.dir/base_event.cpp.obj" \
 "CMakeFiles/ex3.dir/closed_event.cpp.obj" \
@@ -179,8 +165,7 @@ ex3_OBJECTS = \
 # External object files for target ex3
 ex3_EXTERNAL_OBJECTS =
 
-ex3.exe: CMakeFiles/ex3.dir/provided/test_partB.cpp.obj
-ex3.exe: CMakeFiles/ex3.dir/compare_functions.cpp.obj
+ex3.exe: CMakeFiles/ex3.dir/tests/list_tests.cpp.obj
 ex3.exe: CMakeFiles/ex3.dir/open_event.cpp.obj
 ex3.exe: CMakeFiles/ex3.dir/base_event.cpp.obj
 ex3.exe: CMakeFiles/ex3.dir/closed_event.cpp.obj
@@ -190,7 +175,7 @@ ex3.exe: CMakeFiles/ex3.dir/build.make
 ex3.exe: CMakeFiles/ex3.dir/linklibs.rsp
 ex3.exe: CMakeFiles/ex3.dir/objects1.rsp
 ex3.exe: CMakeFiles/ex3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ex3.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ex3.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ex3.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

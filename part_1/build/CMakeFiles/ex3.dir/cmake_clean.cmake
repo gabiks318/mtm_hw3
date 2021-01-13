@@ -1,11 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ex3.dir/base_event.cpp.obj"
   "CMakeFiles/ex3.dir/closed_event.cpp.obj"
-  "CMakeFiles/ex3.dir/compare_functions.cpp.obj"
   "CMakeFiles/ex3.dir/date/date.c.obj"
   "CMakeFiles/ex3.dir/date_wrap.cpp.obj"
   "CMakeFiles/ex3.dir/open_event.cpp.obj"
-  "CMakeFiles/ex3.dir/provided/test_partB.cpp.obj"
+  "CMakeFiles/ex3.dir/tests/list_tests.cpp.obj"
   "ex3.exe"
   "ex3.exe.manifest"
   "ex3.pdb"

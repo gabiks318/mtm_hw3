@@ -195,33 +195,6 @@ closed_event.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/closed_event.cpp.s
 .PHONY : closed_event.cpp.s
 
-compare_functions.obj: compare_functions.cpp.obj
-
-.PHONY : compare_functions.obj
-
-# target to build an object file
-compare_functions.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/compare_functions.cpp.obj
-.PHONY : compare_functions.cpp.obj
-
-compare_functions.i: compare_functions.cpp.i
-
-.PHONY : compare_functions.i
-
-# target to preprocess a source file
-compare_functions.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/compare_functions.cpp.i
-.PHONY : compare_functions.cpp.i
-
-compare_functions.s: compare_functions.cpp.s
-
-.PHONY : compare_functions.s
-
-# target to generate assembly for a file
-compare_functions.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/compare_functions.cpp.s
-.PHONY : compare_functions.cpp.s
-
 date/date.obj: date/date.c.obj
 
 .PHONY : date/date.obj
@@ -303,32 +276,32 @@ open_event.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/open_event.cpp.s
 .PHONY : open_event.cpp.s
 
-provided/test_partB.obj: provided/test_partB.cpp.obj
+tests/list_tests.obj: tests/list_tests.cpp.obj
 
-.PHONY : provided/test_partB.obj
+.PHONY : tests/list_tests.obj
 
 # target to build an object file
-provided/test_partB.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.obj
-.PHONY : provided/test_partB.cpp.obj
+tests/list_tests.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/list_tests.cpp.obj
+.PHONY : tests/list_tests.cpp.obj
 
-provided/test_partB.i: provided/test_partB.cpp.i
+tests/list_tests.i: tests/list_tests.cpp.i
 
-.PHONY : provided/test_partB.i
+.PHONY : tests/list_tests.i
 
 # target to preprocess a source file
-provided/test_partB.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.i
-.PHONY : provided/test_partB.cpp.i
+tests/list_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/list_tests.cpp.i
+.PHONY : tests/list_tests.cpp.i
 
-provided/test_partB.s: provided/test_partB.cpp.s
+tests/list_tests.s: tests/list_tests.cpp.s
 
-.PHONY : provided/test_partB.s
+.PHONY : tests/list_tests.s
 
 # target to generate assembly for a file
-provided/test_partB.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.s
-.PHONY : provided/test_partB.cpp.s
+tests/list_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/list_tests.cpp.s
+.PHONY : tests/list_tests.cpp.s
 
 # Help Target
 help:
@@ -345,9 +318,6 @@ help:
 	@echo ... closed_event.obj
 	@echo ... closed_event.i
 	@echo ... closed_event.s
-	@echo ... compare_functions.obj
-	@echo ... compare_functions.i
-	@echo ... compare_functions.s
 	@echo ... date/date.obj
 	@echo ... date/date.i
 	@echo ... date/date.s
@@ -357,9 +327,9 @@ help:
 	@echo ... open_event.obj
 	@echo ... open_event.i
 	@echo ... open_event.s
-	@echo ... provided/test_partB.obj
-	@echo ... provided/test_partB.i
-	@echo ... provided/test_partB.s
+	@echo ... tests/list_tests.obj
+	@echo ... tests/list_tests.i
+	@echo ... tests/list_tests.s
 .PHONY : help
 
 

@@ -77,9 +77,9 @@ void test2() {
     mtm::OpenEvent open(mtm::DateWrap(21, 10, 2020), "An Open Event");
     test2_aux(open);
     mtm::ClosedEvent closed(mtm::DateWrap(21, 10, 2020), "A Closed Event");
+    closed.addInvitee(2);
+    closed.addInvitee(4);
     closed.addInvitee(1);
-    closed.addInvitee(3);
-    closed.addInvitee(20000);
     test2_aux(closed);
     mtm::CustomEvent<StudentFilter> custom(mtm::DateWrap(21, 10, 2020),
                                            "A Custom Event", StudentFilter());

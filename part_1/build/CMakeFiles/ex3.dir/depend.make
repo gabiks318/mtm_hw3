@@ -6,7 +6,6 @@ CMakeFiles/ex3.dir/date/date.c.obj: ../date/date.h
 
 CMakeFiles/ex3.dir/base_event.cpp.obj: ../base_event.cpp
 CMakeFiles/ex3.dir/base_event.cpp.obj: ../base_event.h
-CMakeFiles/ex3.dir/base_event.cpp.obj: ../compare_functions.h
 CMakeFiles/ex3.dir/base_event.cpp.obj: ../date/date.h
 CMakeFiles/ex3.dir/base_event.cpp.obj: ../date_wrap.h
 CMakeFiles/ex3.dir/base_event.cpp.obj: ../exceptions.h
@@ -16,21 +15,11 @@ CMakeFiles/ex3.dir/base_event.cpp.obj: ../linked_list/node.h
 CMakeFiles/ex3.dir/closed_event.cpp.obj: ../base_event.h
 CMakeFiles/ex3.dir/closed_event.cpp.obj: ../closed_event.cpp
 CMakeFiles/ex3.dir/closed_event.cpp.obj: ../closed_event.h
-CMakeFiles/ex3.dir/closed_event.cpp.obj: ../compare_functions.h
 CMakeFiles/ex3.dir/closed_event.cpp.obj: ../date/date.h
 CMakeFiles/ex3.dir/closed_event.cpp.obj: ../date_wrap.h
 CMakeFiles/ex3.dir/closed_event.cpp.obj: ../exceptions.h
 CMakeFiles/ex3.dir/closed_event.cpp.obj: ../linked_list/linked_list.h
 CMakeFiles/ex3.dir/closed_event.cpp.obj: ../linked_list/node.h
-
-CMakeFiles/ex3.dir/compare_functions.cpp.obj: ../base_event.h
-CMakeFiles/ex3.dir/compare_functions.cpp.obj: ../compare_functions.cpp
-CMakeFiles/ex3.dir/compare_functions.cpp.obj: ../compare_functions.h
-CMakeFiles/ex3.dir/compare_functions.cpp.obj: ../date/date.h
-CMakeFiles/ex3.dir/compare_functions.cpp.obj: ../date_wrap.h
-CMakeFiles/ex3.dir/compare_functions.cpp.obj: ../exceptions.h
-CMakeFiles/ex3.dir/compare_functions.cpp.obj: ../linked_list/linked_list.h
-CMakeFiles/ex3.dir/compare_functions.cpp.obj: ../linked_list/node.h
 
 CMakeFiles/ex3.dir/date_wrap.cpp.obj: ../date/date.h
 CMakeFiles/ex3.dir/date_wrap.cpp.obj: ../date_wrap.cpp
@@ -38,7 +27,6 @@ CMakeFiles/ex3.dir/date_wrap.cpp.obj: ../date_wrap.h
 CMakeFiles/ex3.dir/date_wrap.cpp.obj: ../exceptions.h
 
 CMakeFiles/ex3.dir/open_event.cpp.obj: ../base_event.h
-CMakeFiles/ex3.dir/open_event.cpp.obj: ../compare_functions.h
 CMakeFiles/ex3.dir/open_event.cpp.obj: ../date/date.h
 CMakeFiles/ex3.dir/open_event.cpp.obj: ../date_wrap.h
 CMakeFiles/ex3.dir/open_event.cpp.obj: ../exceptions.h
@@ -47,19 +35,9 @@ CMakeFiles/ex3.dir/open_event.cpp.obj: ../linked_list/node.h
 CMakeFiles/ex3.dir/open_event.cpp.obj: ../open_event.cpp
 CMakeFiles/ex3.dir/open_event.cpp.obj: ../open_event.h
 
-CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../base_event.h
-CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../closed_event.h
-CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../compare_functions.h
-CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../custom_event.h
-CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../date/date.h
-CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../date_wrap.h
-CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../event_container.h
-CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../exceptions.h
-CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../festival.h
-CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../linked_list/linked_list.h
-CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../linked_list/node.h
-CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../one_time_event.h
-CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../open_event.h
-CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../provided/test_partB.cpp
-CMakeFiles/ex3.dir/provided/test_partB.cpp.obj: ../recurring_event.h
+CMakeFiles/ex3.dir/tests/list_tests.cpp.obj: ../exceptions.h
+CMakeFiles/ex3.dir/tests/list_tests.cpp.obj: ../linked_list/linked_list.h
+CMakeFiles/ex3.dir/tests/list_tests.cpp.obj: ../linked_list/node.h
+CMakeFiles/ex3.dir/tests/list_tests.cpp.obj: ../tests/list_tests.cpp
+CMakeFiles/ex3.dir/tests/list_tests.cpp.obj: ../tests/test_utilities.h
 

@@ -167,7 +167,8 @@ void List<T,S>::insert(T data) //general funtionn to insert new node the proper 
 	Node<T,S>* new_node = new Node<T,S>(data); //creates new node
 	while(current != end_node) //runs until the end_node of the list is reached
 	{
-		if((compare_function(new_node->node_data,current->next->node_data)) && (compare_function(new_node->node_data,current->node_data))) //if the data of the new node is less the data in the next node and greater than the data in the current node, insert after current node 
+        // (new data < next data) && (new data >= current data)
+		if((compare_function(new_node->node_data,current->next->node_data)) && (!compare_function(new_node->node_data, current->node_data))) //if the data of the new node is less the data in the next node and greater than the data in the current node, insert after current node 
 		{
 			Node<T,S>* next = current->next; 
 			current->next = new_node; //current nodes next pointer now points to the new node

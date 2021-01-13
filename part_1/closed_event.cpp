@@ -2,14 +2,14 @@
 #include "exceptions.h"
 #include "closed_event.h"
 #include "./linked_list/linked_list.h"
-#include "compare_functions.h"
+
 
 using mtm::BaseEvent;
 using mtm::ClosedEvent;
 using mtm::List;
 
 
-ClosedEvent::ClosedEvent(DateWrap date, string name):BaseEvent(date, name), allowed_participants(mtm::CompareInt()){
+ClosedEvent::ClosedEvent(DateWrap date, string name):BaseEvent(date, name), allowed_participants(CompareInt()){
 }
 
 ClosedEvent::ClosedEvent(const ClosedEvent& event): BaseEvent(event), allowed_participants(event.allowed_participants){
@@ -54,6 +54,6 @@ BaseEvent* ClosedEvent::clone() const{
     return new ClosedEvent(*this);
 }
 
-List<int,mtm::CompareInt> ClosedEvent::getInvitees() const{
+List<int,BaseEvent::CompareInt> ClosedEvent::getInvitees() const{
     return allowed_participants;
 }
