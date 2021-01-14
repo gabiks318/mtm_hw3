@@ -13,15 +13,17 @@ using std::cout;
 using std::endl;
 using namespace mtm;
 
-#define NUMBER_TESTS 9
+#define NUMBER_TESTS 11
 
 template <class T> void print(const T& x) { cout << x << endl; }
 
 struct StudentFilter {
     bool operator()(int student) {
-        return student == 1 || student == 3 || student == 20000;
+        return student == 1 || student == 3 || student == 20000 || student == 60 || student == 150000;
     }
 };
+
+
 
 bool testEventCreateDestroy() {
     bool result = true;
@@ -63,11 +65,10 @@ bool testOpenEventRegister(){
     event.registerParticipant(6);
     event.registerParticipant(18);
 
-    List<int> participants = event.getParticipants();
 
-    ASSERT_TEST(participants.exists(6) == true, returnLabel);
-    ASSERT_TEST(participants.exists(18) == true, returnLabel);
-
+    ASSERT_TEST(event.participantRegistered(6) == true, returnLabel);
+    ASSERT_TEST(event.participantRegistered(18) == true, returnLabel);
+    ASSERT_TEST(event.participantRegistered(24) == false, returnLabel);
 
     try{
         passed = false;
@@ -110,10 +111,10 @@ bool testOpenEventUnregister(){
     event.registerParticipant(18);
 
     event.unregisterParticipant(6);
-    List<int> participants = event.getParticipants();
 
-    ASSERT_TEST(participants.exists(6) == false, returnLabel);
-    ASSERT_TEST(participants.exists(18) == true, returnLabel);
+    ASSERT_TEST(event.participantRegistered(6) == false, returnLabel);
+    ASSERT_TEST(event.participantRegistered(18) == true, returnLabel);
+    ASSERT_TEST(event.participantRegistered(24) == false, returnLabel);
 
 
     try{
@@ -169,17 +170,14 @@ bool testClosedEventRegister(){
     string name = "Cold event";
     DateWrap date(8,1,2021);
     ClosedEvent event(date, name);
-    List<int> invitees;
-    List<int> participants;
 
     // Invitee tests
     for(int i = 1; i < 10; i++){
         event.addInvitee(i);
     }
     
-    invitees = event.getInvitees();
     for(int i = 1; i < 10; i++){
-        ASSERT_TEST(invitees.exists(i), returnLabel);
+        ASSERT_TEST(event.isInvited(i), returnLabel);
     }
     
     try{
@@ -214,11 +212,10 @@ bool testClosedEventRegister(){
         event.registerParticipant(i);
     }
 
-    participants = event.getParticipants();
 
 
     for(int i = 1; i < 10; i++){
-        ASSERT_TEST(participants.exists(i), returnLabel);
+        ASSERT_TEST(event.participantRegistered(i), returnLabel);
     }
 
     try{
@@ -286,16 +283,16 @@ bool testCustomEventRegister(){
     string name = "Lukewarm event";
     DateWrap date(5,5,2021);
     CustomEvent<StudentFilter> event(DateWrap(), name, StudentFilter());
-    List<int> participants;
 
     event.registerParticipant(1);
     event.registerParticipant(3);
     event.registerParticipant(20000);
-    participants = event.getParticipants();
+    
 
-    ASSERT_TEST(participants.exists(1), returnLabel);
-    ASSERT_TEST(participants.exists(3), returnLabel);
-    ASSERT_TEST(participants.exists(20000), returnLabel);
+    ASSERT_TEST(event.participantRegistered(1), returnLabel);
+    ASSERT_TEST(event.participantRegistered(3), returnLabel);
+    ASSERT_TEST(event.participantRegistered(20000), returnLabel);
+    ASSERT_TEST(!event.participantRegistered(1050), returnLabel);
 
     try{
         event.registerParticipant(55);
@@ -353,13 +350,78 @@ bool testOpenEventPrints(){
 
     event.printShort(output_file);
     output_file.close();
-
     ASSERT_TEST(compareFiles(tested, expected), returnLabel);
 
     event.printLong(output_file2);
-    
     output_file2.close();
     ASSERT_TEST(compareFiles(tested2, expected2), returnLabel);
+
+    
+returnLabel:
+    return result;
+}
+
+bool testClosedEventPrints(){
+    bool result = true;
+    string expected = "../tests/outputs/event_output2_short.txt";
+    string expected2 = "../tests/outputs/event_output2_long.txt";
+    string tested = "../tests/outputs/output.txt";
+    string tested2 = "../tests/outputs/output2.txt";
+    clearFile(tested);
+    clearFile(tested2);
+    ofstream output_file(tested);
+    ofstream output_file2(tested2);
+
+    string name = "Mediocore event";
+    DateWrap date(8,1,2021);
+
+    ClosedEvent event(date, name);
+    for(int i = 100; i > 0; i--){
+        event.addInvitee(i*i);
+        event.registerParticipant(i*i);
+    }
+
+    event.printShort(output_file);
+    output_file.close();
+    ASSERT_TEST(compareFiles(tested, expected), returnLabel);
+
+    event.printLong(output_file2);
+    output_file2.close();
+    ASSERT_TEST(compareFiles(tested2, expected2), returnLabel);
+
+returnLabel:
+    return result;
+}
+
+bool testCustomEventPrints(){
+    bool result = true;
+    string expected = "../tests/outputs/event_output3_short.txt";
+    string expected2 = "../tests/outputs/event_output3_long.txt";
+    string tested = "../tests/outputs/output.txt";
+    string tested2 = "../tests/outputs/output2.txt";
+    clearFile(tested);
+    clearFile(tested2);
+    ofstream output_file(tested);
+    ofstream output_file2(tested2);
+
+    string name = "Very interesting event";
+    DateWrap date(8,1,2021);
+
+    CustomEvent<StudentFilter> event(date, name, StudentFilter());
+    event.registerParticipant(20000);
+    event.registerParticipant(1);
+    event.registerParticipant(3);
+    event.registerParticipant(60);
+    event.registerParticipant(150000);
+
+    event.printShort(output_file);
+    output_file.close();
+    ASSERT_TEST(compareFiles(tested, expected), returnLabel);
+
+    event.printLong(output_file2);
+    output_file2.close();
+    ASSERT_TEST(compareFiles(tested2, expected2), returnLabel);
+
 returnLabel:
     return result;
 }
@@ -381,7 +443,9 @@ bool (*tests[]) (void) = {
         testClosedEventRegister,
         testCustomEventGeneral,
         testCustomEventRegister,
-        testOpenEventPrints     
+        testOpenEventPrints,
+        testClosedEventPrints,
+        testCustomEventPrints     
 };
 
 const char* testNames[] = {
@@ -393,7 +457,9 @@ const char* testNames[] = {
         "testClosedEventRegister",
         "testCustomEventGeneral",
         "testCustomEventRegister",
-        "testOpenEventPrints"
+        "testOpenEventPrints",
+        "testClosedEventPrints",
+        "testCustomEventPrints"
         
 };
 

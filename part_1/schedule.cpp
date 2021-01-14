@@ -5,9 +5,6 @@
 #include <algorithm>
 using mtm::Schedule;
 
-#define MIN_MONTH 1
-#define MAX_MONTH 12
-
 Schedule::Schedule(): events_list(){}
 
 void Schedule::addEvents(const EventContainer& events) 
@@ -21,22 +18,11 @@ void Schedule::addEvents(const EventContainer& events)
     mtm::BaseEvent* event_clone;
     for(mtm::EventContainer::EventIterator events_iterator = events.begin(); events_iterator!= events.end(); ++events_iterator){
         mtm::BaseEvent& event = *events_iterator;
-        try{
         event_clone = event.clone();
-        } catch(std::bad_alloc& e){
-            for(mtm::BaseEvent* event : events_list){
-                delete event;
-            }
-            throw e;
-        }
-
         try{
         events_list.push_back(event_clone);
         } catch(std::bad_alloc& e){
             delete event_clone;
-            for(mtm::BaseEvent* event : events_list){
-                delete event;
-            }
             throw e;
         }     
     }
@@ -97,7 +83,7 @@ void Schedule::printAllEvents() const
 
 void Schedule::printMonthEvents(int month, int year) const
 {
-    if(month < MIN_MONTH || month > MAX_MONTH){
+    if(month < min_month || month > max_month){
         throw InvalidNumber();
     }
     for(mtm::BaseEvent* event : events_list){

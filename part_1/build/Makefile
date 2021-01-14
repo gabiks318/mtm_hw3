@@ -330,32 +330,32 @@ open_event.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/open_event.cpp.s
 .PHONY : open_event.cpp.s
 
-provided/test_partB.obj: provided/test_partB.cpp.obj
+tests/event_tests.obj: tests/event_tests.cpp.obj
 
-.PHONY : provided/test_partB.obj
+.PHONY : tests/event_tests.obj
 
 # target to build an object file
-provided/test_partB.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.obj
-.PHONY : provided/test_partB.cpp.obj
+tests/event_tests.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/event_tests.cpp.obj
+.PHONY : tests/event_tests.cpp.obj
 
-provided/test_partB.i: provided/test_partB.cpp.i
+tests/event_tests.i: tests/event_tests.cpp.i
 
-.PHONY : provided/test_partB.i
+.PHONY : tests/event_tests.i
 
 # target to preprocess a source file
-provided/test_partB.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.i
-.PHONY : provided/test_partB.cpp.i
+tests/event_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/event_tests.cpp.i
+.PHONY : tests/event_tests.cpp.i
 
-provided/test_partB.s: provided/test_partB.cpp.s
+tests/event_tests.s: tests/event_tests.cpp.s
 
-.PHONY : provided/test_partB.s
+.PHONY : tests/event_tests.s
 
 # target to generate assembly for a file
-provided/test_partB.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.s
-.PHONY : provided/test_partB.cpp.s
+tests/event_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/event_tests.cpp.s
+.PHONY : tests/event_tests.cpp.s
 
 # Help Target
 help:
@@ -387,9 +387,9 @@ help:
 	@echo ... open_event.obj
 	@echo ... open_event.i
 	@echo ... open_event.s
-	@echo ... provided/test_partB.obj
-	@echo ... provided/test_partB.i
-	@echo ... provided/test_partB.s
+	@echo ... tests/event_tests.obj
+	@echo ... tests/event_tests.i
+	@echo ... tests/event_tests.s
 .PHONY : help
 
 

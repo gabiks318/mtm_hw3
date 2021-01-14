@@ -9,6 +9,7 @@
 #include "../custom_event.h"
 #include "../festival.h"
 
+
 using std::string;
 using std::cout;
 using std::endl;
@@ -45,6 +46,15 @@ bool testFestivalCreateDestroy() {
     CustomEvent<StudentFilter> event3(DateWrap(), name, StudentFilter());
     
     return result;
+}
+
+bool testRecurring(){
+    bool result = true;
+    mtm::RecurringEvent<mtm::OpenEvent> recurring(mtm::DateWrap(21, 10, 2020),
+                                               "movie night", 13, 7);
+    for (Iter iter = recurring.begin(); iter != recurring.end(); ++iter) {
+
+
 }
 
 

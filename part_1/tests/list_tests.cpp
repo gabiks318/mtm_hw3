@@ -8,7 +8,7 @@ using std::cout;
 using std::endl;
 using namespace mtm;
 
-#define NUMBER_TESTS 6
+#define NUMBER_TESTS 8
 
 class CompareInt{
             public:
@@ -16,6 +16,25 @@ class CompareInt{
                 return num_1 < num_2;
             }
 };
+
+class TestEvent{
+    public:
+    int num;
+    string name;
+    TestEvent(int num=0, string name=""): num(num), name(name){}
+};
+
+class CompareTestEvent{
+    public:
+    bool operator()(TestEvent event_1, TestEvent event_2){
+        if(event_1.name == event_2.name){
+            return event_1.num < event_2.num;
+        } else {
+            return event_1.name < event_2.name;
+        }
+    }
+};
+
 
 bool testListCreateDestroy() {
     bool result = true;
@@ -151,6 +170,45 @@ returnLabel:
     return result;
 }
 
+bool testListSortInt(){
+    bool result = true;
+    List<int, CompareInt> list((CompareInt()));
+    list.insert(18);
+    list.insert(28);
+    list.insert(25);
+    list.insert(16);
+
+    ASSERT_TEST(list[0] == 16, returnLabel);
+    ASSERT_TEST(list[1] == 18, returnLabel);
+    ASSERT_TEST(list[2] == 25, returnLabel);
+    ASSERT_TEST(list[3] == 28, returnLabel);
+
+returnLabel:
+    return result;
+}
+
+
+bool testListSortEvent(){
+    bool result = true;
+    List<TestEvent, CompareTestEvent> list((CompareTestEvent()));
+    list.insert(TestEvent(6, "Small Event"));
+    list.insert(TestEvent(6, "Big Event"));
+    list.insert(TestEvent(4, "Small Event"));
+    list.insert(TestEvent(9, "Big Event"));
+
+    ASSERT_TEST(list[0].name == "Big Event", returnLabel);
+    ASSERT_TEST(list[0].num == 6, returnLabel);
+    ASSERT_TEST(list[1].name == "Big Event", returnLabel);
+    ASSERT_TEST(list[1].num == 9, returnLabel);
+    ASSERT_TEST(list[2].name == "Small Event", returnLabel);
+    ASSERT_TEST(list[2].num == 4, returnLabel);
+    ASSERT_TEST(list[3].name == "Small Event", returnLabel);
+    ASSERT_TEST(list[3].num == 6, returnLabel);
+
+returnLabel:
+    return result;
+} 
+
 /* bool test(){
     bool result = true;
 
@@ -164,8 +222,9 @@ bool (*tests[]) (void) = {
         testListSubscriptOperator,
         testListRemove,
         testListExists,
-        testListCopyConstructorAssignment
-        
+        testListCopyConstructorAssignment,
+        testListSortInt,
+        testListSortEvent       
 };
 
 const char* testNames[] = {
@@ -174,7 +233,9 @@ const char* testNames[] = {
         "testListSubscriptOperator",
         "testListRemove",
         "testListExists",
-        "testListCopyConstructorAssignment"
+        "testListCopyConstructorAssignment",
+        "testListSortInt",
+        "testListSortEvent"
 };
 
 int main(int argc, char *argv[]) {

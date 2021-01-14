@@ -1,63 +1,31 @@
 #ifndef TEST_UTILITIES_H_
 #define TEST_UTILITIES_H_
 
-#include <stdbool.h>
-#include <stdio.h>
-#include <string.h>
-#include <string>
 #include <fstream>
+#include <iterator>
+#include <string>
+#include <algorithm>
 using std::ofstream;
 
 
-void writeOutputToFile(char *file_name, char *file_content) {
-    char *new_name = (char * )malloc(strlen(file_name) + strlen("expected_") + 1);
-    strcpy(new_name, "expected_");
-    strcat(new_name, file_name);
-    FILE *file = fopen(new_name, "w");
-    if (!file) {
-        return;
-    }
+bool compareFiles(const std::string& p1, const std::string& p2) {
+  std::ifstream f1(p1, std::ifstream::binary|std::ifstream::ate);
+  std::ifstream f2(p2, std::ifstream::binary|std::ifstream::ate);
 
-    fprintf(file, "%s", file_content);
-    free(new_name);
-    fclose(file);
-}
+  if (f1.fail() || f2.fail()) {
+    return false; //file problem
+  }
 
-bool isFilePrintOutputCorrect(char *file_name, char *expected_output) {
-    FILE *infile;
-    char *buffer;
-    long numbytes;
+  if (f1.tellg() != f2.tellg()) {
+    return false; //size mismatch
+  }
 
-    infile = fopen(file_name, "r");
-
-    if (infile == NULL) {
-        return false;
-    }
-
-    fseek(infile, 0L, SEEK_END);
-    numbytes = ftell(infile);
-    fseek(infile, 0L, SEEK_SET);
-
-    buffer = (char *) calloc(numbytes + 1, sizeof(char));
-
-    if (buffer == NULL) {
-        return false;
-    }
-
-    fread(buffer, sizeof(char), numbytes, infile);
-    fclose(infile);
-
-    if (numbytes == 0 && strlen(expected_output) != 0) {
-        free(buffer);
-        return false;
-    }
-
-    writeOutputToFile(file_name, expected_output);
-    printf("<br>&nbsp;&nbsp;&nbsp;&nbsp;> Printing output: <a href='/staging/{STAGING_ID}/%s'>%s</a> | Expected output: <a href='/staging/{STAGING_ID}/expected_%s'>expected_%s</a> (Might be correct)",
-           file_name, file_name, file_name, file_name);
-    bool result = (strncmp(buffer, expected_output, numbytes) == 0);
-    free(buffer);
-    return result;
+  //seek back to beginning and use std::equal to compare contents
+  f1.seekg(0, std::ifstream::beg);
+  f2.seekg(0, std::ifstream::beg);
+  return std::equal(std::istreambuf_iterator<char>(f1.rdbuf()),
+                    std::istreambuf_iterator<char>(),
+                    std::istreambuf_iterator<char>(f2.rdbuf()));
 }
 
 void clearFile(std::string file_name){

@@ -57,3 +57,7 @@ BaseEvent* ClosedEvent::clone() const{
 List<int,BaseEvent::CompareInt> ClosedEvent::getInvitees() const{
     return allowed_participants;
 }
+
+bool ClosedEvent::isInvited(int student){
+    return allowed_participants.exists(student);
+}

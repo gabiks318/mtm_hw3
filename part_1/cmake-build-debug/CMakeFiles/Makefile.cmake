@@ -39,6 +39,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.17.5/CMakeRCCompiler.cmake"
   "CMakeFiles/3.17.5/CMakeSystem.cmake"
   "../date/CMakeLists.txt"
+  "../dry/CMakeLists.txt"
   "../linked_list/CMakeLists.txt"
   "../provided/CMakeLists.txt"
   "../tests/CMakeLists.txt"
@@ -54,6 +55,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "date/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "dry/CMakeFiles/CMakeDirectoryInformation.cmake"
   "linked_list/CMakeFiles/CMakeDirectoryInformation.cmake"
   "provided/CMakeFiles/CMakeDirectoryInformation.cmake"
   "tests/CMakeFiles/CMakeDirectoryInformation.cmake"

@@ -6,67 +6,13 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/base_event.h
-date_wrap.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date_wrap.h
-string
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/dry/q1.cpp
+vector
 -
-./linked_list/linked_list.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/linked_list/linked_list.h
-
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date/date.h
-stdbool.h
+algorithm
 -
-
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date_wrap.h
 iostream
 -
-date/date.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date/date.h
-
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/event_container.cpp
-event_container.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/event_container.h
-./linked_list/linked_list.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/linked_list/linked_list.h
-exceptions.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/exceptions.h
-base_event.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/base_event.h
-
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/event_container.h
-date_wrap.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date_wrap.h
-base_event.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/base_event.h
-
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/exceptions.h
-exception
+memory
 -
-new
--
-
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/festival.cpp
-festival.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/festival.h
-exceptions.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/exceptions.h
-./linked_list/linked_list.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/linked_list/linked_list.h
-
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/festival.h
-event_container.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/event_container.h
-base_event.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/base_event.h
-
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/linked_list/linked_list.h
-iostream
--
-../exceptions.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/exceptions.h
-node.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/linked_list/node.h
-
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/linked_list/node.h
 

@@ -55,6 +55,7 @@
         "list": "cpp",
         "compare": "cpp",
         "iterator": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "valarray": "cpp"
     }
 }

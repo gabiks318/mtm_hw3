@@ -5,7 +5,7 @@
 		<Option title="hw3"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\date\;CMake Files\linked_list\;CMake Files\provided\;CMake Files\tests\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\date\;CMake Files\dry\;CMake Files\linked_list\;CMake Files\provided\;CMake Files\tests\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/cmake-build-debug"/>
@@ -80,49 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/base_event.cpp">
-			<Option target="ex3"/>
-		</Unit>
-		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/base_event.h">
-			<Option target="ex3"/>
-		</Unit>
-		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/closed_event.cpp">
-			<Option target="ex3"/>
-		</Unit>
-		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/closed_event.h">
-			<Option target="ex3"/>
-		</Unit>
-		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date/date.c">
-			<Option target="ex3"/>
-		</Unit>
-		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date/date.h">
-			<Option target="ex3"/>
-		</Unit>
-		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date_wrap.cpp">
-			<Option target="ex3"/>
-		</Unit>
-		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date_wrap.h">
-			<Option target="ex3"/>
-		</Unit>
-		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/event_container.cpp">
-			<Option target="ex3"/>
-		</Unit>
-		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/event_container.h">
-			<Option target="ex3"/>
-		</Unit>
-		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/festival.cpp">
-			<Option target="ex3"/>
-		</Unit>
-		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/festival.h">
-			<Option target="ex3"/>
-		</Unit>
-		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/open_event.cpp">
-			<Option target="ex3"/>
-		</Unit>
-		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/open_event.h">
-			<Option target="ex3"/>
-		</Unit>
-		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/provided/test_partB.cpp">
+		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/dry/q1.cpp">
 			<Option target="ex3"/>
 		</Unit>
 		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/CMakeLists.txt">
@@ -130,6 +88,9 @@
 		</Unit>
 		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/date/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\date\"/>
+		</Unit>
+		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/dry/CmakeLists.txt">
+			<Option virtualFolder="CMake Files\dry\"/>
 		</Unit>
 		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/part_1/linked_list/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\linked_list\"/>

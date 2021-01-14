@@ -142,221 +142,32 @@ ex3/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/build
 .PHONY : ex3/fast
 
-base_event.obj: base_event.cpp.obj
+dry/q1.obj: dry/q1.cpp.obj
 
-.PHONY : base_event.obj
-
-# target to build an object file
-base_event.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/base_event.cpp.obj
-.PHONY : base_event.cpp.obj
-
-base_event.i: base_event.cpp.i
-
-.PHONY : base_event.i
-
-# target to preprocess a source file
-base_event.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/base_event.cpp.i
-.PHONY : base_event.cpp.i
-
-base_event.s: base_event.cpp.s
-
-.PHONY : base_event.s
-
-# target to generate assembly for a file
-base_event.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/base_event.cpp.s
-.PHONY : base_event.cpp.s
-
-closed_event.obj: closed_event.cpp.obj
-
-.PHONY : closed_event.obj
+.PHONY : dry/q1.obj
 
 # target to build an object file
-closed_event.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/closed_event.cpp.obj
-.PHONY : closed_event.cpp.obj
+dry/q1.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/dry/q1.cpp.obj
+.PHONY : dry/q1.cpp.obj
 
-closed_event.i: closed_event.cpp.i
+dry/q1.i: dry/q1.cpp.i
 
-.PHONY : closed_event.i
-
-# target to preprocess a source file
-closed_event.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/closed_event.cpp.i
-.PHONY : closed_event.cpp.i
-
-closed_event.s: closed_event.cpp.s
-
-.PHONY : closed_event.s
-
-# target to generate assembly for a file
-closed_event.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/closed_event.cpp.s
-.PHONY : closed_event.cpp.s
-
-date/date.obj: date/date.c.obj
-
-.PHONY : date/date.obj
-
-# target to build an object file
-date/date.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/date/date.c.obj
-.PHONY : date/date.c.obj
-
-date/date.i: date/date.c.i
-
-.PHONY : date/date.i
+.PHONY : dry/q1.i
 
 # target to preprocess a source file
-date/date.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/date/date.c.i
-.PHONY : date/date.c.i
+dry/q1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/dry/q1.cpp.i
+.PHONY : dry/q1.cpp.i
 
-date/date.s: date/date.c.s
+dry/q1.s: dry/q1.cpp.s
 
-.PHONY : date/date.s
-
-# target to generate assembly for a file
-date/date.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/date/date.c.s
-.PHONY : date/date.c.s
-
-date_wrap.obj: date_wrap.cpp.obj
-
-.PHONY : date_wrap.obj
-
-# target to build an object file
-date_wrap.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/date_wrap.cpp.obj
-.PHONY : date_wrap.cpp.obj
-
-date_wrap.i: date_wrap.cpp.i
-
-.PHONY : date_wrap.i
-
-# target to preprocess a source file
-date_wrap.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/date_wrap.cpp.i
-.PHONY : date_wrap.cpp.i
-
-date_wrap.s: date_wrap.cpp.s
-
-.PHONY : date_wrap.s
+.PHONY : dry/q1.s
 
 # target to generate assembly for a file
-date_wrap.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/date_wrap.cpp.s
-.PHONY : date_wrap.cpp.s
-
-event_container.obj: event_container.cpp.obj
-
-.PHONY : event_container.obj
-
-# target to build an object file
-event_container.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/event_container.cpp.obj
-.PHONY : event_container.cpp.obj
-
-event_container.i: event_container.cpp.i
-
-.PHONY : event_container.i
-
-# target to preprocess a source file
-event_container.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/event_container.cpp.i
-.PHONY : event_container.cpp.i
-
-event_container.s: event_container.cpp.s
-
-.PHONY : event_container.s
-
-# target to generate assembly for a file
-event_container.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/event_container.cpp.s
-.PHONY : event_container.cpp.s
-
-festival.obj: festival.cpp.obj
-
-.PHONY : festival.obj
-
-# target to build an object file
-festival.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/festival.cpp.obj
-.PHONY : festival.cpp.obj
-
-festival.i: festival.cpp.i
-
-.PHONY : festival.i
-
-# target to preprocess a source file
-festival.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/festival.cpp.i
-.PHONY : festival.cpp.i
-
-festival.s: festival.cpp.s
-
-.PHONY : festival.s
-
-# target to generate assembly for a file
-festival.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/festival.cpp.s
-.PHONY : festival.cpp.s
-
-open_event.obj: open_event.cpp.obj
-
-.PHONY : open_event.obj
-
-# target to build an object file
-open_event.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/open_event.cpp.obj
-.PHONY : open_event.cpp.obj
-
-open_event.i: open_event.cpp.i
-
-.PHONY : open_event.i
-
-# target to preprocess a source file
-open_event.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/open_event.cpp.i
-.PHONY : open_event.cpp.i
-
-open_event.s: open_event.cpp.s
-
-.PHONY : open_event.s
-
-# target to generate assembly for a file
-open_event.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/open_event.cpp.s
-.PHONY : open_event.cpp.s
-
-provided/test_partB.obj: provided/test_partB.cpp.obj
-
-.PHONY : provided/test_partB.obj
-
-# target to build an object file
-provided/test_partB.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.obj
-.PHONY : provided/test_partB.cpp.obj
-
-provided/test_partB.i: provided/test_partB.cpp.i
-
-.PHONY : provided/test_partB.i
-
-# target to preprocess a source file
-provided/test_partB.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.i
-.PHONY : provided/test_partB.cpp.i
-
-provided/test_partB.s: provided/test_partB.cpp.s
-
-.PHONY : provided/test_partB.s
-
-# target to generate assembly for a file
-provided/test_partB.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.s
-.PHONY : provided/test_partB.cpp.s
+dry/q1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/dry/q1.cpp.s
+.PHONY : dry/q1.cpp.s
 
 # Help Target
 help:
@@ -367,30 +178,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ex3
-	@echo ... base_event.obj
-	@echo ... base_event.i
-	@echo ... base_event.s
-	@echo ... closed_event.obj
-	@echo ... closed_event.i
-	@echo ... closed_event.s
-	@echo ... date/date.obj
-	@echo ... date/date.i
-	@echo ... date/date.s
-	@echo ... date_wrap.obj
-	@echo ... date_wrap.i
-	@echo ... date_wrap.s
-	@echo ... event_container.obj
-	@echo ... event_container.i
-	@echo ... event_container.s
-	@echo ... festival.obj
-	@echo ... festival.i
-	@echo ... festival.s
-	@echo ... open_event.obj
-	@echo ... open_event.i
-	@echo ... open_event.s
-	@echo ... provided/test_partB.obj
-	@echo ... provided/test_partB.i
-	@echo ... provided/test_partB.s
+	@echo ... dry/q1.obj
+	@echo ... dry/q1.i
+	@echo ... dry/q1.s
 .PHONY : help
 
 

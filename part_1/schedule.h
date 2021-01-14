@@ -16,7 +16,8 @@ namespace mtm
         public:
         Schedule();
         ~Schedule();
-    
+        const int min_month = 1;
+        const int max_month = 12;
        
         void addEvents(const EventContainer&);
         void registerToEvent(DateWrap date, string name, int student);
