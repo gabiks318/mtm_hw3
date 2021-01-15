@@ -6,34 +6,39 @@ namespace mtm
 template <typename T,typename S> 
 class List;
 
+/*
+	Class Node - stores the date of the elements in the generic linked list
+*/
 template <typename T,typename S>
-class Node //nodes to be contained with a list
+class Node 
 {
-    T node_data; //templatized data stored in node
+	private:
+    T node_data; 
 	Node* next; //pointer to the next node in list
     friend class List<T,S>;
 
     public:
+	// === Member Functions === //
 	Node(T node_data);
 	T getData();
-	void dataDelete(T node);
-	
 };
-template <typename T,typename S>
-void Node<T,S>::dataDelete(T node_data)
-{
-	delete node_data;
-}
+// === Class Node Implementation ===//
 
+/*
+	Builder Ctor - creating new node storing the received data and pointing to NULL
+*/
 template <typename T,typename S>
 Node<T,S>::Node(T data)
 {
-	node_data = data; //stores data in node
-	next = NULL; //initializes point to next node to null
+	node_data = data; 
+	next = NULL; 
 }
 
+/*
+	getData - return the data  stored in the node
+*/
 template <typename T,typename S>
-T Node<T,S>::getData() //returns data stored in node
+T Node<T,S>::getData()
 {
 	return node_data;
 }

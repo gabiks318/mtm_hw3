@@ -9,35 +9,44 @@ using std::cout;
 using std::endl;
 using mtm::OutOfBoundaries;
 #include "node.h"
+
 namespace mtm
 {
+/*
+    Descreptiron- Generic Sorted Linked List.
+    T represent the type of the object that stored in the list.
+    S is an object function user providing that compares the elements.
+*/
 template <typename T, typename S>
-class List //linked list of Node objects
+class List
 {
+    private:
     Node<T,S> *start_node; //stores the pointer of first object in the linked list
 	Node<T,S> *end_node; //stored the pointer of the last object in the linked list
-	void insertStart(T); //inserts new node before the first node in the list
-	void insertEnd(T); //inserts new node after the last node in the list
+	void insertStart(T); 
+	void insertEnd(T); 
     void removeStart();
     void removeEnd();
     S compare_function;
     
-
     public:
+    // === Member Function === //
 	List(S compare_function);
     List(const List<T,S>& copy_list);
     List<T,S>& operator=(const List<T,S>& copy_list);
 	~List();
-	void insert(T data); //fucntion used to insert new node in order in the list
+	void insert(T data); 
     void remove(T data);
     int getSize() const;
-    bool isEmpty() const; //utility functions used to see if the list contains no elements
-	bool exists(T data) const; //searches for a value in the linked list and returns the point to object that contains that value
+    bool isEmpty() const; 
+	bool exists(T data) const; 
     T operator[](int index) const;	
 };
+// === Linked List Implementation === //
 
-
-
+/*
+    Copy Ctor- receives a list and copying it to this
+*/
 template <typename T, typename S>
 List<T,S>::List(const List<T,S>& copy_list)
 {
@@ -51,14 +60,21 @@ List<T,S>::List(const List<T,S>& copy_list)
     }
 }
 
+/* 
+    Builder Ctor- receives an object function that compares elements priority.
+                  function creates list with start_node and end_node as NULL and stroing the provided function
+*/
 template <typename T, typename S>
-List<T,S>::List(S compare) //creates list with start_node and end_node as NULL
+List<T,S>::List(S compare) 
 {
     compare_function = compare;
 	start_node = NULL;
 	end_node = NULL;
 }
 
+/* 
+    operator= - receives a list and assigning it to this
+*/
 template <typename T, typename S>
 List<T,S>& List<T,S>::operator=(const List<T,S>& copy_list){
     if(!isEmpty()){
@@ -70,7 +86,7 @@ List<T,S>& List<T,S>::operator=(const List<T,S>& copy_list){
             current = current->next;
             delete temp;
         }
-}
+    }
 
     start_node = NULL;
     end_node = NULL;
@@ -83,15 +99,18 @@ List<T,S>& List<T,S>::operator=(const List<T,S>& copy_list){
     return *this;
 }
 
+/*  
+    Destrcutor - destroying the nodes of the list
+*/    
 template <typename T, typename S>
 List<T,S>::~List()
 {
-	if (!isEmpty()) // List is not empty
+	if (!isEmpty())
    {    
       Node<T,S>* current = start_node;
       Node<T,S>* temp;
 
-      while (current != NULL ) // delete remaining nodes
+      while (current != NULL )
       {  
          temp = current;
          current = current->next;
@@ -100,87 +119,101 @@ List<T,S>::~List()
    }
 }
 
+/*
+    isEmpty - return true is list empty, false elsewhere
+*/
 template <typename T, typename S>
 bool List<T,S>::isEmpty() const
 {
-	if(start_node == NULL && end_node == NULL){   //if the start_node pointer and end_node pointer are NULL then the list is empty
+	if(start_node == NULL){ 
         return true;
     } else {
 		return false;
     }
 }
 
+/* 
+    insertStart - inserting the received data iמ the first place of the list
+*/
 template <typename T, typename S>
 void List<T,S>::insertStart(T data)
 {
-	if(isEmpty()) //if the list is empty create first element of the list
+	if(isEmpty()) 
 	{
-		Node<T,S>* new_node = new Node<T,S>(data); //creates new node
-		start_node = new_node; //start_node and end_node pointer are same becuase there is only one object in list
+		Node<T,S>* new_node = new Node<T,S>(data); 
+		start_node = new_node; 
 		end_node = new_node;
 	}
-    else //if node(s) exist in list insert additional object before the first
+    else 
 	{
 		Node<T,S>* new_node = new Node<T,S>(data);
-		new_node->next = start_node; //the next pointer of the new node points to the node that was previously first
-		start_node = new_node; //the pointer for the new node is now the starting node
+		new_node->next = start_node; 
+		start_node = new_node; 
 	}
 }
-
+/* 
+    insertEnd - inserting the received data in the last place of the list
+*/
 template <typename T, typename S>
 void List<T,S>::insertEnd(T data)
 {
-	if(isEmpty()) //if the list is empty create first element of the list (same as first case in insert at begin)
+	if(isEmpty()) 
 	{
 		Node<T,S>* new_node = new Node<T,S>(data);
 		start_node = new_node;
 		end_node = new_node;
-	} else //if node(s) exist in the list then insert new node at the end_node of the list
+	} else 
 	{
 		Node<T,S>* new_node = new Node<T,S>(data);
-		end_node->next = new_node; //the current last node's next pointer points to the new node
-		end_node = new_node; //the new node is now the last node in the list
+		end_node->next = new_node; 
+		end_node = new_node; 
 	}
 }
 
+/* 
+    insert - inserting recived data to the list in the proper oreder defined by provided compare function
+*/    
 template <typename T, typename S>
-void List<T,S>::insert(T data) //general funtionn to insert new node the proper order in the list
+void List<T,S>::insert(T data) 
 {
-	if(isEmpty()) //if there is no nodes in the list simply insert at beginning
+	if(isEmpty()) 
 	{
 		insertStart(data);
         return;
 	}
 
-	if(compare_function(data,start_node->node_data)) //if the data of the new object is less than than the data of first node in list insert at beginning
+	if(compare_function(data,start_node->node_data)) 
 	{
 		insertStart(data);
         return;
 	}
-	if(!compare_function(data,end_node->node_data)) //if the data of the new object is greater than than the data of last node in list insert at end_node
+	if(!compare_function(data,end_node->node_data)) 
 	{
 		insertEnd(data);
         return;
 	}
 		
 	Node<T,S>* current = start_node;
-	Node<T,S>* new_node = new Node<T,S>(data); //creates new node
-	while(current != end_node) //runs until the end_node of the list is reached
+	Node<T,S>* new_node = new Node<T,S>(data); 
+	while(current != end_node) 
 	{
         // (new data < next data) && (new data >= current data)
-		if((compare_function(new_node->node_data,current->next->node_data)) && (!compare_function(new_node->node_data, current->node_data))) //if the data of the new node is less the data in the next node and greater than the data in the current node, insert after current node 
+		if((compare_function(new_node->node_data,current->next->node_data))
+                && (!compare_function(new_node->node_data, current->node_data))) 
 		{
 			Node<T,S>* next = current->next; 
-			current->next = new_node; //current nodes next pointer now points to the new node
-			new_node->next = next; //the new nodes next pointer now points the node previously after the current node
+			current->next = new_node; 
+			new_node->next = next; 
 			break;
 		}
-		current = current->next; //moves to the next node in the list
-		
+		current = current->next; 	
 	}
 	
 }
 
+/*
+    getSize - function returns size of the list
+*/
 template <typename T, typename S>
 int List<T,S>::getSize() const
 {
@@ -197,6 +230,9 @@ int List<T,S>::getSize() const
     return count;
 }
 
+/*
+    removeStart - removing the first node in the list 
+*/
 template <typename T, typename S>
 void List<T,S>::removeStart(){
     Node<T,S>* temp = start_node;
@@ -204,6 +240,9 @@ void List<T,S>::removeStart(){
     delete temp;
 }
 
+/*
+    removeEnd - removing the last node in the list 
+*/
 template <typename T, typename S>
 void List<T,S>::removeEnd(){
     Node<T,S>* temp = end_node;
@@ -220,8 +259,9 @@ void List<T,S>::removeEnd(){
     delete temp;
 }
 
-
-
+/*
+    remove - removing the data in the list that indentical to the given key
+*/
 template <typename T, typename S>
 void List<T,S>::remove(T key)
 {
@@ -253,24 +293,29 @@ void List<T,S>::remove(T key)
     delete node_ptr;
 }
 
-
+/*
+    exists- function that return true if the list contains data equal to the key, false elsewhere
+*/
 template <typename T, typename S>
-bool List<T,S>::exists(T key) const //exists functions that searches for node that contains data equal to the key
+bool List<T,S>::exists(T key) const 
 {
 	Node<T,S>* node_ptr;
 	node_ptr = start_node;
 
-	while(node_ptr != NULL) //runs through list until data is found within a node or end_node of list is reached
+	while(node_ptr != NULL) 
 	{
 		if(node_ptr->node_data == key){
             return true;
 		} else {
-            node_ptr = node_ptr->next; //moves to next node in list 
+            node_ptr = node_ptr->next;  
         }	
 	}
-	return false; //returns pointer to the node that contains data equal to key (NULL if not found)
+	return false; 
 }
 
+/*
+    operator[] - returns the object stored in received index
+*/
 template <typename T, typename S>
 T List<T,S>::operator[](int index) const
 {

@@ -9,7 +9,7 @@ using mtm::EventContainer;
 
 
 EventContainer::EventIterator::EventIterator(List<BaseEvent*, EventContainer::CompareEvents> events, int index)
-                                                                                    : index(index), events(events)
+                                                                                    :index(index), events(events)
 {     
 }
 
