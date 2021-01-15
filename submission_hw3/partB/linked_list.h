@@ -52,11 +52,8 @@ List<T,S>::List(const List<T,S>& copy_list)
 }
 
 template <typename T, typename S>
-List<T,S>::List(S compare) //creates list with start_node and end_node as NULL
+List<T,S>::List(S compare):start_node(NULL), end_node(NULL), compare_function(compare) //creates list with start_node and end_node as NULL
 {
-    compare_function = compare;
-	start_node = NULL;
-	end_node = NULL;
 }
 
 template <typename T, typename S>
@@ -97,13 +94,15 @@ List<T,S>::~List()
          current = current->next;
          delete temp;
       }
+      start_node = NULL;
+      end_node = NULL;
    }
 }
 
 template <typename T, typename S>
 bool List<T,S>::isEmpty() const
 {
-	if(start_node == NULL && end_node == NULL){   //if the start_node pointer and end_node pointer are NULL then the list is empty
+	if(start_node == NULL){   //if the start_node pointer and end_node pointer are NULL then the list is empty
         return true;
     } else {
 		return false;

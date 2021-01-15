@@ -1,0 +1,13 @@
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/cmake-build-debug/CMakeFiles/ex3.dir
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/cmake-build-debug/partA/CMakeFiles/edit_cache.dir
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/cmake-build-debug/partA/CMakeFiles/rebuild_cache.dir
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/cmake-build-debug/partB/CMakeFiles/edit_cache.dir
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/cmake-build-debug/partB/CMakeFiles/rebuild_cache.dir
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/cmake-build-debug/partC/CMakeFiles/edit_cache.dir
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/cmake-build-debug/partC/CMakeFiles/rebuild_cache.dir
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/cmake-build-debug/provided/CMakeFiles/edit_cache.dir
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/cmake-build-debug/provided/CMakeFiles/rebuild_cache.dir
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/cmake-build-debug/tests/CMakeFiles/edit_cache.dir
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/cmake-build-debug/tests/CMakeFiles/rebuild_cache.dir
