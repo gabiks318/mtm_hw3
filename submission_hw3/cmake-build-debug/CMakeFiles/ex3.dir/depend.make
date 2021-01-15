@@ -64,19 +64,19 @@ CMakeFiles/ex3.dir/partC/schedule.cpp.obj: ../partB/node.h
 CMakeFiles/ex3.dir/partC/schedule.cpp.obj: ../partC/schedule.cpp
 CMakeFiles/ex3.dir/partC/schedule.cpp.obj: ../partC/schedule.h
 
-CMakeFiles/ex3.dir/tests/coverage.cpp.obj: ../partA/date.h
-CMakeFiles/ex3.dir/tests/coverage.cpp.obj: ../partA/date_wrap.h
-CMakeFiles/ex3.dir/tests/coverage.cpp.obj: ../partA/exceptions.h
-CMakeFiles/ex3.dir/tests/coverage.cpp.obj: ../partB/base_event.h
-CMakeFiles/ex3.dir/tests/coverage.cpp.obj: ../partB/closed_event.h
-CMakeFiles/ex3.dir/tests/coverage.cpp.obj: ../partB/custom_event.h
-CMakeFiles/ex3.dir/tests/coverage.cpp.obj: ../partB/event_container.h
-CMakeFiles/ex3.dir/tests/coverage.cpp.obj: ../partB/festival.h
-CMakeFiles/ex3.dir/tests/coverage.cpp.obj: ../partB/linked_list.h
-CMakeFiles/ex3.dir/tests/coverage.cpp.obj: ../partB/node.h
-CMakeFiles/ex3.dir/tests/coverage.cpp.obj: ../partB/one_time_event.h
-CMakeFiles/ex3.dir/tests/coverage.cpp.obj: ../partB/open_event.h
-CMakeFiles/ex3.dir/tests/coverage.cpp.obj: ../partB/recurring_event.h
-CMakeFiles/ex3.dir/tests/coverage.cpp.obj: ../partC/schedule.h
-CMakeFiles/ex3.dir/tests/coverage.cpp.obj: ../tests/coverage.cpp
+CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj: ../partA/date.h
+CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj: ../partA/date_wrap.h
+CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj: ../partA/exceptions.h
+CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj: ../partB/base_event.h
+CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj: ../partB/closed_event.h
+CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj: ../partB/custom_event.h
+CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj: ../partB/event_container.h
+CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj: ../partB/festival.h
+CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj: ../partB/linked_list.h
+CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj: ../partB/node.h
+CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj: ../partB/one_time_event.h
+CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj: ../partB/open_event.h
+CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj: ../partB/recurring_event.h
+CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj: ../tests/event_collection_tests.cpp
+CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj: ../tests/test_utilities.h
 

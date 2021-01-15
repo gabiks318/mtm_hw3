@@ -2,15 +2,15 @@
 #include <string>
 
 #include "test_utilities.h"
-#include "../exceptions.h"
-#include "../date_wrap.h"
-#include "../open_event.h"
-#include "../closed_event.h"
-#include "../custom_event.h"
-#include "../festival.h"
-#include "../event_container.h"
-#include "../recurring_event.h"
-#include "../one_time_event.h"
+#include "../partA/exceptions.h"
+#include "../partA/date_wrap.h"
+#include "../partB/open_event.h"
+#include "../partB/closed_event.h"
+#include "../partB/custom_event.h"
+#include "../partB/festival.h"
+#include "../partB/event_container.h"
+#include "../partB/recurring_event.h"
+#include "../partB/one_time_event.h"
 
 
 using std::string;
@@ -63,7 +63,7 @@ bool testRecurring(){
     }
     mtm::RecurringEvent<mtm::OpenEvent> recurring2(mtm::DateWrap(21, 10, 2020),
                                                "crazy night", 500, 7);
-    int counter;                                          
+    int counter = 0;
     for (Iter iter = recurring2.begin(); iter != recurring2.end(); ++iter) {
         counter++;
     }

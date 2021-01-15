@@ -11,6 +11,7 @@ namespace mtm
     {
         protected:
         
+        // Function object to use inside event list, gets pointer and compares them with comparison operator overloaded
         class CompareEvents{
         public:
         bool operator()(const BaseEvent* event1, const BaseEvent* event2){

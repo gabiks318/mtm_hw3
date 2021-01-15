@@ -76,18 +76,18 @@ include CMakeFiles/ex3.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ex3.dir/flags.make
 
-CMakeFiles/ex3.dir/tests/coverage.cpp.obj: CMakeFiles/ex3.dir/flags.make
-CMakeFiles/ex3.dir/tests/coverage.cpp.obj: ../tests/coverage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\submission_hw3\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ex3.dir/tests/coverage.cpp.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ex3.dir\tests\coverage.cpp.obj -c "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\submission_hw3\tests\coverage.cpp"
+CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj: CMakeFiles/ex3.dir/flags.make
+CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj: ../tests/event_collection_tests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\submission_hw3\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ex3.dir\tests\event_collection_tests.cpp.obj -c "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\submission_hw3\tests\event_collection_tests.cpp"
 
-CMakeFiles/ex3.dir/tests/coverage.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex3.dir/tests/coverage.cpp.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\submission_hw3\tests\coverage.cpp" > CMakeFiles\ex3.dir\tests\coverage.cpp.i
+CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\submission_hw3\tests\event_collection_tests.cpp" > CMakeFiles\ex3.dir\tests\event_collection_tests.cpp.i
 
-CMakeFiles/ex3.dir/tests/coverage.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex3.dir/tests/coverage.cpp.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\submission_hw3\tests\coverage.cpp" -o CMakeFiles\ex3.dir\tests\coverage.cpp.s
+CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Gabriel\Desktop\Technion\Programming Files\Matam\mtm_hw3\submission_hw3\tests\event_collection_tests.cpp" -o CMakeFiles\ex3.dir\tests\event_collection_tests.cpp.s
 
 CMakeFiles/ex3.dir/partB/festival.cpp.obj: CMakeFiles/ex3.dir/flags.make
 CMakeFiles/ex3.dir/partB/festival.cpp.obj: ../partB/festival.cpp
@@ -195,7 +195,7 @@ CMakeFiles/ex3.dir/partA/date.c.s: cmake_force
 
 # Object files for target ex3
 ex3_OBJECTS = \
-"CMakeFiles/ex3.dir/tests/coverage.cpp.obj" \
+"CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj" \
 "CMakeFiles/ex3.dir/partB/festival.cpp.obj" \
 "CMakeFiles/ex3.dir/partC/schedule.cpp.obj" \
 "CMakeFiles/ex3.dir/partB/event_container.cpp.obj" \
@@ -208,7 +208,7 @@ ex3_OBJECTS = \
 # External object files for target ex3
 ex3_EXTERNAL_OBJECTS =
 
-ex3.exe: CMakeFiles/ex3.dir/tests/coverage.cpp.obj
+ex3.exe: CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj
 ex3.exe: CMakeFiles/ex3.dir/partB/festival.cpp.obj
 ex3.exe: CMakeFiles/ex3.dir/partC/schedule.cpp.obj
 ex3.exe: CMakeFiles/ex3.dir/partB/event_container.cpp.obj

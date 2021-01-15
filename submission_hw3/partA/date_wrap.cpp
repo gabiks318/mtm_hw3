@@ -9,7 +9,10 @@ extern "C"
 
 using mtm::DateWrap;
 using std::ostream;
- 
+
+/*
+    Returns true or false whether date is legal
+*/
 bool DateWrap::isDateLegal(int day, int month , int year)
 {
     if(day > max_day || day < min_day || month > max_month || month < min_month)
@@ -25,10 +28,6 @@ DateWrap::DateWrap(int day, int month, int year){
         throw InvalidDate();
     }
     date = dateCreate(day, month, year);
-    if(date == NULL){
-        // TODO: Handle memory fail
-    }
-   
 }
 
 DateWrap::~DateWrap(){

@@ -128,7 +128,7 @@
 		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partC/schedule.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/tests/coverage.cpp">
+		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/tests/event_collection_tests.cpp">
 			<Option target="ex3"/>
 		</Unit>
 		<Unit filename="C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/CMakeLists.txt">

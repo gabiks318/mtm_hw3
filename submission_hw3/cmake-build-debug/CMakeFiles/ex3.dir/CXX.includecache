@@ -22,33 +22,11 @@ exception
 new
 -
 
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/base_event.cpp
-iostream
--
-base_event.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/base_event.h
-../partA/exceptions.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partA/exceptions.h
-string
--
-linked_list.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/linked_list.h
-
 C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/base_event.h
 ../partA/date_wrap.h
 C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partA/date_wrap.h
 string
 -
-linked_list.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/linked_list.h
-
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/closed_event.cpp
-base_event.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/base_event.h
-../partA/exceptions.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partA/exceptions.h
-closed_event.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/closed_event.h
 linked_list.h
 C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/linked_list.h
 
@@ -70,29 +48,11 @@ C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3
 string
 -
 
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/event_container.cpp
-event_container.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/event_container.h
-linked_list.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/linked_list.h
-../partA/exceptions.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partA/exceptions.h
-base_event.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/base_event.h
-
 C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/event_container.h
 ../partA/date_wrap.h
 C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partA/date_wrap.h
 base_event.h
 C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/base_event.h
-
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/festival.cpp
-festival.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/festival.h
-../partA/exceptions.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partA/exceptions.h
-linked_list.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/linked_list.h
 
 C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/festival.h
 event_container.h
@@ -122,14 +82,6 @@ C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3
 string
 -
 
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/open_event.cpp
-base_event.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/base_event.h
-../partA/exceptions.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partA/exceptions.h
-open_event.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/open_event.h
-
 C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/open_event.h
 ../partA/date_wrap.h
 C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partA/date_wrap.h
@@ -152,53 +104,39 @@ C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3
 string
 -
 
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partC/schedule.cpp
-schedule.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partC/schedule.h
-list
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/tests/event_collection_tests.cpp
+iostream
 -
-../partB/event_container.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/event_container.h
+string
+-
+test_utilities.h
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/tests/test_utilities.h
 ../partA/exceptions.h
 C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partA/exceptions.h
-algorithm
--
-
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partC/schedule.h
-../partB/event_container.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/event_container.h
-../partB/linked_list.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/linked_list.h
-list
--
-
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/tests/coverage.cpp
-../partB/base_event.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/base_event.h
+../partA/date_wrap.h
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partA/date_wrap.h
+../partB/open_event.h
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/open_event.h
 ../partB/closed_event.h
 C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/closed_event.h
 ../partB/custom_event.h
 C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/custom_event.h
-../partA/date_wrap.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partA/date_wrap.h
-../partB/event_container.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/event_container.h
-../partA/exceptions.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partA/exceptions.h
 ../partB/festival.h
 C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/festival.h
-../partB/one_time_event.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/one_time_event.h
-../partB/open_event.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/open_event.h
+../partB/event_container.h
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/event_container.h
 ../partB/recurring_event.h
 C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/recurring_event.h
-../partC/schedule.h
-C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partC/schedule.h
-cstdlib
+../partB/one_time_event.h
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/one_time_event.h
+
+C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/tests/test_utilities.h
+fstream
 -
-iostream
+iterator
 -
-sstream
+string
+-
+algorithm
 -
 

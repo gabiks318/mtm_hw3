@@ -20,7 +20,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/festival.cpp" "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/cmake-build-debug/CMakeFiles/ex3.dir/partB/festival.cpp.obj"
   "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partB/open_event.cpp" "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/cmake-build-debug/CMakeFiles/ex3.dir/partB/open_event.cpp.obj"
   "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/partC/schedule.cpp" "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/cmake-build-debug/CMakeFiles/ex3.dir/partC/schedule.cpp.obj"
-  "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/tests/coverage.cpp" "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/cmake-build-debug/CMakeFiles/ex3.dir/tests/coverage.cpp.obj"
+  "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/tests/event_collection_tests.cpp" "C:/Users/Gabriel/Desktop/Technion/Programming Files/Matam/mtm_hw3/submission_hw3/cmake-build-debug/CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

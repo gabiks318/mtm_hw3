@@ -18,6 +18,8 @@ namespace mtm{
         
         const int min_id = 1;
         const int max_id = 1234567890;
+        
+        // Function object to compare int variables
         class CompareInt{
             public:
             bool operator()(const int num_1,const int num_2);
@@ -39,10 +41,10 @@ namespace mtm{
         virtual ostream& printShort(ostream& os);
         virtual ostream& printLong(ostream& os);
         virtual BaseEvent* clone() const = 0;
-        DateWrap getDate() const;
-        string getName() const;
-        List<int,CompareInt> getParticipants() const;
-        bool participantRegistered(int student);
+        DateWrap getDate() const; // getter for event date
+        string getName() const; // getter for event name
+        List<int,CompareInt> getParticipants() const; // getter for participants list
+        bool participantRegistered(int student); // checks whtether a participant is registered
     };      
 }
    

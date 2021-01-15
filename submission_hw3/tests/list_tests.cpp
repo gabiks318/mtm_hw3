@@ -1,6 +1,6 @@
 #include "test_utilities.h"
-#include "../linked_list/linked_list.h"
-#include "../exceptions.h"
+#include "../partB/linked_list.h"
+#include "../partA/exceptions.h"
 #include <iostream>
 #include <string>
 using std::string;
@@ -39,11 +39,7 @@ class CompareTestEvent{
 bool testListCreateDestroy() {
     bool result = true;
 
-<<<<<<< HEAD
-    mtm::List<int, CompareInt> list((CompareInt()));
-=======
     List<int, CompareInt> list((CompareInt()));
->>>>>>> 72e43ad4a9c71555b5bd7fb444f7caad351802bf
     ASSERT_TEST(list.isEmpty() == true, returnListCreateDestroy);
     
 returnListCreateDestroy:

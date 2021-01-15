@@ -358,32 +358,32 @@ partC/schedule.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/partC/schedule.cpp.s
 .PHONY : partC/schedule.cpp.s
 
-tests/coverage.obj: tests/coverage.cpp.obj
+tests/event_collection_tests.obj: tests/event_collection_tests.cpp.obj
 
-.PHONY : tests/coverage.obj
+.PHONY : tests/event_collection_tests.obj
 
 # target to build an object file
-tests/coverage.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/coverage.cpp.obj
-.PHONY : tests/coverage.cpp.obj
+tests/event_collection_tests.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.obj
+.PHONY : tests/event_collection_tests.cpp.obj
 
-tests/coverage.i: tests/coverage.cpp.i
+tests/event_collection_tests.i: tests/event_collection_tests.cpp.i
 
-.PHONY : tests/coverage.i
+.PHONY : tests/event_collection_tests.i
 
 # target to preprocess a source file
-tests/coverage.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/coverage.cpp.i
-.PHONY : tests/coverage.cpp.i
+tests/event_collection_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.i
+.PHONY : tests/event_collection_tests.cpp.i
 
-tests/coverage.s: tests/coverage.cpp.s
+tests/event_collection_tests.s: tests/event_collection_tests.cpp.s
 
-.PHONY : tests/coverage.s
+.PHONY : tests/event_collection_tests.s
 
 # target to generate assembly for a file
-tests/coverage.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/coverage.cpp.s
-.PHONY : tests/coverage.cpp.s
+tests/event_collection_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/event_collection_tests.cpp.s
+.PHONY : tests/event_collection_tests.cpp.s
 
 # Help Target
 help:
@@ -418,9 +418,9 @@ help:
 	@echo ... partC/schedule.obj
 	@echo ... partC/schedule.i
 	@echo ... partC/schedule.s
-	@echo ... tests/coverage.obj
-	@echo ... tests/coverage.i
-	@echo ... tests/coverage.s
+	@echo ... tests/event_collection_tests.obj
+	@echo ... tests/event_collection_tests.i
+	@echo ... tests/event_collection_tests.s
 .PHONY : help
 
 

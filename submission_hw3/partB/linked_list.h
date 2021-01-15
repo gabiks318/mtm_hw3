@@ -13,7 +13,7 @@ using mtm::OutOfBoundaries;
 namespace mtm
 {
 /*
-    Descreptiron- Generic Sorted Linked List.
+    Description- Generic Sorted Linked List.
     T represent the type of the object that stored in the list.
     S is an object function user providing that compares the elements.
 */
@@ -22,7 +22,7 @@ class List
 {
     private:
     Node<T,S> *start_node; //stores the pointer of first object in the linked list
-	Node<T,S> *end_node; //stored the pointer of the last object in the linked list
+	Node<T,S> *end_node; //stores the pointer of the last object in the linked list
 	void insertStart(T); 
 	void insertEnd(T); 
     void removeStart();
@@ -65,11 +65,7 @@ List<T,S>::List(const List<T,S>& copy_list)
                   function creates list with start_node and end_node as NULL and stroing the provided function
 */
 template <typename T, typename S>
-<<<<<<< HEAD
-List<T,S>::List(S compare) 
-=======
 List<T,S>::List(S compare):start_node(NULL), end_node(NULL), compare_function(compare) //creates list with start_node and end_node as NULL
->>>>>>> 37d9ee3bdb9c781fb2c79fb9ecacaae413b9185e
 {
 }
 
@@ -128,11 +124,7 @@ List<T,S>::~List()
 template <typename T, typename S>
 bool List<T,S>::isEmpty() const
 {
-<<<<<<< HEAD
 	if(start_node == NULL){ 
-=======
-	if(start_node == NULL){   //if the start_node pointer and end_node pointer are NULL then the list is empty
->>>>>>> 37d9ee3bdb9c781fb2c79fb9ecacaae413b9185e
         return true;
     } else {
 		return false;

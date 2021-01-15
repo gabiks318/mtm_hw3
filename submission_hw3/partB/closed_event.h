@@ -10,7 +10,7 @@ namespace mtm
 {
     class ClosedEvent: public BaseEvent
     {
-        List<int,CompareInt> allowed_participants;
+        List<int,CompareInt> allowed_participants; // A list to hold the invited students
         public:
         ClosedEvent(DateWrap date, string name);
         ClosedEvent(const ClosedEvent&);
@@ -20,8 +20,8 @@ namespace mtm
         void addInvitee(int student);
         void registerParticipant(int student) override;
         BaseEvent* clone() const override;
-        List<int,CompareInt> getInvitees() const;
-        bool isInvited(int student);
+        List<int,CompareInt> getInvitees() const; // getter for allowed participants
+        bool isInvited(int student); // returns true/false whether a student is invited
     };
 }
 #endif
