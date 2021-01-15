@@ -13,8 +13,8 @@ namespace mtm
     class OneTimeEvent: public EventContainer
     {
     public:
-        OneTimeEvent(DateWrap date, string name);
-        ~OneTimeEvent(){};
+        explicit OneTimeEvent(DateWrap date, string name);
+        ~OneTimeEvent() = default;
         
         void add(const BaseEvent& event) override;
     };

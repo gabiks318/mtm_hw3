@@ -10,7 +10,6 @@ namespace mtm
     class EventContainer
     {
         protected:
-        
         // Function object to use inside event list, gets pointer and compares them with comparison operator overloaded
         class CompareEvents{
         public:
@@ -30,7 +29,7 @@ namespace mtm
             EventIterator(List<BaseEvent*, CompareEvents> events, int index);
             EventIterator(const EventIterator& event_iterator);
             EventIterator& operator=(const EventIterator& event_iterator);
-            ~EventIterator() {};
+            ~EventIterator() = default;
 
             mtm::BaseEvent& operator*();
             EventIterator& operator++();

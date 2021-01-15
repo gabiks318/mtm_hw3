@@ -28,10 +28,10 @@ namespace mtm{
         List<int, CompareInt> participants;
 
         public:
-        BaseEvent(DateWrap date, string name);
+        explicit BaseEvent(DateWrap date, string name);
         BaseEvent(const BaseEvent&);
         BaseEvent& operator=(const BaseEvent&); 
-        virtual ~BaseEvent(){};
+        virtual ~BaseEvent() = default;
 
         bool operator==(const BaseEvent& event) const;
         bool operator<(const BaseEvent& event) const;

@@ -12,7 +12,7 @@ namespace mtm
     {
         CanRegister check_condition;
         public:
-        CustomEvent(DateWrap date, string name, CanRegister check_condition);
+        explicit CustomEvent(DateWrap date, string name, CanRegister check_condition);
         CustomEvent(const CustomEvent&);
         CustomEvent& operator=(const CustomEvent&);
         ~CustomEvent(){};

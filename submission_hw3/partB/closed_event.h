@@ -12,10 +12,10 @@ namespace mtm
     {
         List<int,CompareInt> allowed_participants; // A list to hold the invited students
         public:
-        ClosedEvent(DateWrap date, string name);
+        explicit ClosedEvent(DateWrap date, string name);
         ClosedEvent(const ClosedEvent&);
         ClosedEvent& operator=(const ClosedEvent&);
-        ~ClosedEvent(){};
+        ~ClosedEvent() = default;
 
         void addInvitee(int student);
         void registerParticipant(int student) override;

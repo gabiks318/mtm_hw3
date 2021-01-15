@@ -9,10 +9,10 @@ namespace mtm
     class OpenEvent: public BaseEvent
     {
         public:
-        OpenEvent(DateWrap date, string name);
+        explicit OpenEvent(DateWrap date, string name);
         OpenEvent(const OpenEvent&);
         OpenEvent& operator=(const OpenEvent&);
-        virtual ~OpenEvent(){};
+        ~OpenEvent() = default;
 
         BaseEvent* clone() const override;
     };
