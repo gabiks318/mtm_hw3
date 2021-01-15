@@ -22,7 +22,8 @@ namespace mtm
     //==============Implementation==========//
     
     template<class EventType>
-    RecurringEvent<EventType>::RecurringEvent(DateWrap first_date, string name, int num_occurrences, int interval):EventContainer()
+    RecurringEvent<EventType>::RecurringEvent(DateWrap first_date, string name, int num_occurrences, int interval)
+                                                                                                :EventContainer()
     {
         if(num_occurrences <= 0){
             throw InvalidNumber();

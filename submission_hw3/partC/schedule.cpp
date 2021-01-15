@@ -9,7 +9,8 @@ Schedule::Schedule(): events_list(){}
 
 void Schedule::addEvents(const EventContainer& events)
 {
-    for(mtm::EventContainer::EventIterator events_iterator = events.begin(); events_iterator!= events.end(); ++events_iterator){
+    for(mtm::EventContainer::EventIterator events_iterator = events.begin(); 
+                                            events_iterator!= events.end(); ++events_iterator){
         mtm::BaseEvent& current_event = *events_iterator;
         for(mtm::BaseEvent* event : events_list){
             if(event->getName() == current_event.getName() && event->getDate() == current_event.getDate())
@@ -17,7 +18,8 @@ void Schedule::addEvents(const EventContainer& events)
         }
     }
     mtm::BaseEvent* event_clone;
-    for(mtm::EventContainer::EventIterator events_iterator = events.begin(); events_iterator!= events.end(); ++events_iterator){
+    for(mtm::EventContainer::EventIterator events_iterator = events.begin();
+                                                    events_iterator!= events.end(); ++events_iterator){
         mtm::BaseEvent& event = *events_iterator;
         event_clone = event.clone();
         try{

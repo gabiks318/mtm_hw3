@@ -19,7 +19,7 @@ namespace mtm{
         const int min_id = 1;
         const int max_id = 1234567890;
         
-        // Function object to compare int variables
+        // Function object passed to generic list to compare int variables
         class CompareInt{
             public:
             bool operator()(const int num_1,const int num_2);
@@ -44,7 +44,7 @@ namespace mtm{
         DateWrap getDate() const; // getter for event date
         string getName() const; // getter for event name
         List<int,CompareInt> getParticipants() const; // getter for participants list
-        bool participantRegistered(int student); // checks whtether a participant is registered
+        bool participantRegistered(int student); // checks whether a participant is registered
     };      
 }
    

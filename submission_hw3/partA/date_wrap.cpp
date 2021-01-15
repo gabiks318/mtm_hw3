@@ -11,7 +11,7 @@ using mtm::DateWrap;
 using std::ostream;
 
 /*
-    Returns true or false whether date is legal
+    isDateLegal - returns true or false whether date is legal
 */
 bool DateWrap::isDateLegal(int day, int month , int year)
 {

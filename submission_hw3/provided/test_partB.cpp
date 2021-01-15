@@ -10,6 +10,7 @@
 #include "../partB/recurring_event.h"
 #include <cstdlib>
 #include <iostream>
+#include <typeinfo>
 #include <fstream>
 
 using std::cout;

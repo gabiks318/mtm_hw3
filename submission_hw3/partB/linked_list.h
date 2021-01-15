@@ -65,7 +65,7 @@ List<T,S>::List(const List<T,S>& copy_list)
                   function creates list with start_node and end_node as NULL and stroing the provided function
 */
 template <typename T, typename S>
-List<T,S>::List(S compare):start_node(NULL), end_node(NULL), compare_function(compare) //creates list with start_node and end_node as NULL
+List<T,S>::List(S compare):start_node(NULL), end_node(NULL), compare_function(compare)
 {
 }
 

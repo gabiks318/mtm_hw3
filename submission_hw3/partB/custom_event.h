@@ -20,6 +20,7 @@ namespace mtm
         void registerParticipant(int student) override;
         BaseEvent* clone() const override;
     };
+
     //==============Implementation==========//
     template <class CanRegister>
     CustomEvent<CanRegister>::CustomEvent(DateWrap date, string name, CanRegister check_condition) 
@@ -61,7 +62,7 @@ namespace mtm
 
     template <class CanRegister>
     BaseEvent* CustomEvent<CanRegister>::clone() const {
-    return new CustomEvent(*this);
+        return new CustomEvent(*this);
     }
 } 
 #endif
