@@ -21,6 +21,7 @@ namespace mtm
         void registerParticipant(int student) override;
         BaseEvent* clone() const override;
         List<int,CompareInt> getInvitees() const;
+        bool isInvited(int student);
     };
 }
 #endif

@@ -330,33 +330,6 @@ open_event.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/open_event.cpp.s
 .PHONY : open_event.cpp.s
 
-provided/test_partB.obj: provided/test_partB.cpp.obj
-
-.PHONY : provided/test_partB.obj
-
-# target to build an object file
-provided/test_partB.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.obj
-.PHONY : provided/test_partB.cpp.obj
-
-provided/test_partB.i: provided/test_partB.cpp.i
-
-.PHONY : provided/test_partB.i
-
-# target to preprocess a source file
-provided/test_partB.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.i
-.PHONY : provided/test_partB.cpp.i
-
-provided/test_partB.s: provided/test_partB.cpp.s
-
-.PHONY : provided/test_partB.s
-
-# target to generate assembly for a file
-provided/test_partB.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/provided/test_partB.cpp.s
-.PHONY : provided/test_partB.cpp.s
-
 schedule.obj: schedule.cpp.obj
 
 .PHONY : schedule.obj
@@ -383,6 +356,33 @@ schedule.s: schedule.cpp.s
 schedule.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/schedule.cpp.s
 .PHONY : schedule.cpp.s
+
+tests/schedule_tests.obj: tests/schedule_tests.cpp.obj
+
+.PHONY : tests/schedule_tests.obj
+
+# target to build an object file
+tests/schedule_tests.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/schedule_tests.cpp.obj
+.PHONY : tests/schedule_tests.cpp.obj
+
+tests/schedule_tests.i: tests/schedule_tests.cpp.i
+
+.PHONY : tests/schedule_tests.i
+
+# target to preprocess a source file
+tests/schedule_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/schedule_tests.cpp.i
+.PHONY : tests/schedule_tests.cpp.i
+
+tests/schedule_tests.s: tests/schedule_tests.cpp.s
+
+.PHONY : tests/schedule_tests.s
+
+# target to generate assembly for a file
+tests/schedule_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ex3.dir\build.make CMakeFiles/ex3.dir/tests/schedule_tests.cpp.s
+.PHONY : tests/schedule_tests.cpp.s
 
 # Help Target
 help:
@@ -414,12 +414,12 @@ help:
 	@echo ... open_event.obj
 	@echo ... open_event.i
 	@echo ... open_event.s
-	@echo ... provided/test_partB.obj
-	@echo ... provided/test_partB.i
-	@echo ... provided/test_partB.s
 	@echo ... schedule.obj
 	@echo ... schedule.i
 	@echo ... schedule.s
+	@echo ... tests/schedule_tests.obj
+	@echo ... tests/schedule_tests.i
+	@echo ... tests/schedule_tests.s
 .PHONY : help
 
 

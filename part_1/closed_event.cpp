@@ -46,7 +46,7 @@ void ClosedEvent::registerParticipant(int student){
     if(allowed_participants.exists(student)){
         participants.insert(student); //TODO : what if student not allowed to register?
     }else{ 
-            throw RegistrationBlocked();
+        throw RegistrationBlocked();
     }
 }
 
@@ -56,4 +56,8 @@ BaseEvent* ClosedEvent::clone() const{
 
 List<int,BaseEvent::CompareInt> ClosedEvent::getInvitees() const{
     return allowed_participants;
+}
+
+bool ClosedEvent::isInvited(int student){
+    return allowed_participants.exists(student);
 }

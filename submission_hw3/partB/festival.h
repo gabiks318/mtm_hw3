@@ -1,0 +1,21 @@
+#ifndef FESTIVAL_H
+#define FESTIVAL_H
+
+#include "event_container.h"
+#include "base_event.h"
+
+namespace mtm
+{
+    class Festival: public EventContainer 
+    {   
+        DateWrap date;
+        public:
+        Festival(DateWrap date);
+        ~Festival(){ };
+        
+        void add(const BaseEvent& event) override;
+    };
+}
+
+
+#endif

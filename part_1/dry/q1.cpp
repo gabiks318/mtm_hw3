@@ -1,11 +1,9 @@
 #include <vector>
 #include <algorithm>
 #include <iostream>
-#include <shared_ptr>
+#include <memory>
 
 class BadInput{};
-
-void printVector(std::vector<char> vec);
 
 std::vector<char> slice(std::vector<char> vec, int start, int step, int stop){
     int size = vec.size();
@@ -39,37 +37,30 @@ void printVector(std::vector<char> vec){
 }
 
 
-
 class A {
 public:
-    std::vector<shared_ptr<int>> values;
+    std::vector<std::shared_ptr<int>> values;
+
     void add(int x){ 
-         values.push_back(new int(x)); 
-    }
-    ~A(){
-        for(std::vector<int*> it : values){
-            delete it;
-        }
-    }
-    A& operator=(const std::vector& vec){
-        for(std::vector<int*> it : vec){
-            values.push_back(it);
-        }  
+        std::shared_ptr<int> ptr(new int(x));
+        values.push_back(ptr); 
     }
 };
 
-// a = 0 1 2 3 4 5
+// a = 0 1 2 3 4 5<valarray>
 // sliced =  1 2 3 4 5
 
 int main() {
     A a, sliced;
     a.add(0); a.add(1); a.add(2); a.add(3); a.add(4); a.add(5);
-    sliced.values = slice(a.values, 1, 1, 4);
+//    sliced.values = slice(a.values, 1, 1, 4);
+    sliced.values = a.values;
     *(sliced.values[0]) = 800;
-    std::cout << *(a.values[1]) << std::endl;
+    std::cout << *(a.values[0]) << std::endl;
     return 0;
 }
 
+//add_executable(ex3 provided/test_partB.cpp festival.cpp event_container.cpp open_event.cpp base_event.cpp closed_event.cpp date_wrap.cpp date/date.c)
 
 /* int main(){
     // this syntax initializes a vector with values a,b,c,d,e

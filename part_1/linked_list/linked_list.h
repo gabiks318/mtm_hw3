@@ -157,7 +157,7 @@ void List<T,S>::insert(T data) //general funtionn to insert new node the proper 
 		insertStart(data);
         return;
 	}
-	if(compare_function(end_node->node_data,data)) //if the data of the new object is greater than than the data of last node in list insert at end_node
+	if(!compare_function(data,end_node->node_data)) //if the data of the new object is greater than than the data of last node in list insert at end_node
 	{
 		insertEnd(data);
         return;

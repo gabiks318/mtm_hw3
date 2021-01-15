@@ -10,8 +10,8 @@ using std::ostream;
 
 namespace mtm{
 
-    class BaseEvent{
-
+    class BaseEvent
+    {
         protected:
         DateWrap date;
         string name;
@@ -22,7 +22,6 @@ namespace mtm{
             public:
             bool operator()(const int num_1,const int num_2);
         };
-
         List<int, CompareInt> participants;
 
         public:
@@ -42,11 +41,7 @@ namespace mtm{
         DateWrap getDate() const;
         string getName() const;
         List<int,CompareInt> getParticipants() const;
-
-        /*class CompareInt{
-        public:
-        bool operator()(int,int);
-        };*/
+        bool participantRegistered(int student);
     };      
 }
    

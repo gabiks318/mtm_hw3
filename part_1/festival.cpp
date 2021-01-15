@@ -14,21 +14,11 @@ void Festival::add(const BaseEvent& event)
         throw DateMismatch();
     }
     BaseEvent* event_clone;
-    try{
-        event_clone = event.clone();
-    } catch(std::bad_alloc& e){
-        for(int i = 0; i < events.getSize(); i++){
-            delete events[i];
-        }    
-        throw e;
-    }
+    event_clone = event.clone();
     try{
         events.insert(event_clone);
     } catch(std::bad_alloc& e){
         delete event_clone;
-        for(int i = 0; i < events.getSize(); i++){
-            delete events[i];
-        }    
         throw e;
     } 
 }

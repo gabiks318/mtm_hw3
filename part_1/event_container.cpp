@@ -6,18 +6,12 @@
 using mtm::EventContainer;
 
 
-EventContainer::EventIterator::EventIterator(List<BaseEvent*,ComparePointerToEvents> events, int index): event(), index(index), events(events)
-{
-    if(index == events.getSize()){
-        event = nullptr;
-        return;
-    }
-    event = events[index];        
+EventContainer::EventIterator::EventIterator(List<BaseEvent*, EventContainer::CompareEvents> events, int index)
+                                                                                            :index(index), events(events){     
 }
 
-EventContainer::EventIterator::EventIterator(const EventIterator& event_iterator): events(EventContainer::ComparePointerToEvents())
+EventContainer::EventIterator::EventIterator(const EventIterator& event_iterator): events(EventContainer::CompareEvents())
 {
-    event = event_iterator.event;
     index = event_iterator.index;
     events = event_iterator.events;
 }
@@ -27,8 +21,6 @@ EventContainer::EventIterator& EventContainer::EventIterator::operator=(const Ev
     if(*this == event_iterator){
         return *this;
     }
-    delete event;
-    event = event_iterator.event;
     index = event_iterator.index;
     events = event_iterator.events;
     return *this;
@@ -36,32 +28,24 @@ EventContainer::EventIterator& EventContainer::EventIterator::operator=(const Ev
 
 mtm::BaseEvent& EventContainer::EventIterator::operator*()
 {
-    return *event;
+    return *events[index];
 }
 
 EventContainer::EventIterator& EventContainer::EventIterator::operator++()
 {
     index++;
-    if(index == events.getSize()){
-        event = nullptr;
-        return *this;
-    }
-    event = events[index];
     return *this;
 }
 
-EventContainer::EventContainer(): events(EventContainer::ComparePointerToEvents()) {
+EventContainer::EventContainer(): events(EventContainer::CompareEvents()) {
 }
 
 bool EventContainer::EventIterator::operator==(const EventIterator& event_iterator) const
 {
-    if((event == nullptr && event_iterator.event != nullptr) || (event != nullptr && event_iterator.event == nullptr)){
-        return false;
-    }
-    if(event == nullptr && event_iterator.event == nullptr){
+    if(index == event_iterator.events.getSize()){
         return true;
     }
-    return *event == *event_iterator.event;
+    return false;
 }
 
 bool EventContainer::EventIterator::operator!=(const EventIterator& event_iterator) const
@@ -86,13 +70,3 @@ EventContainer::~EventContainer()
     }
 }
 
-bool EventContainer::ComparePointerToEvents::operator()(const BaseEvent* event1, const BaseEvent* event2){
-    if(event1->getDate() < event2->getDate()){
-        return true;
-    }
-    if(event1->getDate() == event2->getDate()){
-        if(event1->getName() < event2->getName())
-            return true;
-    }
-    return false;
- }

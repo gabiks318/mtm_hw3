@@ -88,6 +88,9 @@ List<int, BaseEvent::CompareInt> BaseEvent::getParticipants() const{
     return participants;
 }
 
+bool BaseEvent::participantRegistered(int student){
+    return participants.exists(student);
+}
 bool BaseEvent::CompareInt::operator()(const int num_1,const int num_2){
     return num_1 < num_2;
 }

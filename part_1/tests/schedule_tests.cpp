@@ -78,6 +78,16 @@ void testYan2()
         mtm::DateWrap(30, 1, 2020), "YanM"));
     schedule.addEvents(mtm::OneTimeEvent<mtm::OpenEvent>(
         mtm::DateWrap(1, 1, -20), "YanX"));
+    try{
+        schedule.addEvents(mtm::OneTimeEvent<mtm::OpenEvent>(
+         mtm::DateWrap(1, 1, -20), "YanX"));
+    }catch(mtm::EventAlreadyExists&){ 
+    }
+     try{
+        schedule.addEvents(mtm::OneTimeEvent<mtm::OpenEvent>(
+         mtm::DateWrap(1, 1, -20), "YanC"));
+    }catch(mtm::EventAlreadyExists&){ 
+    }
     schedule.printAllEvents();
     cout<< "====test2===="<<endl;
     /*

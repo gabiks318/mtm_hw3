@@ -34,15 +34,13 @@ namespace mtm
         EventType* current_event = new EventType(first_date, name);
         
         for(int i = 0; i < num_occurrences; i++){
-            events.insert(current_event);
             try{
-                current_event = new EventType(DateWrap(first_date + (i+1)*interval), name);
+            events.insert(current_event);
             } catch(std::bad_alloc& e){
-                for(int i = 0; i < events.getSize(); i++){
-                    delete events[i];
-                }
+                delete current_event;
                 throw e;      
             }
+            current_event = new EventType(DateWrap(first_date + (i+1)*interval), name);
         }
         delete current_event;
     }

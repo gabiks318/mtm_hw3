@@ -40,7 +40,7 @@ DateWrap::DateWrap(const DateWrap& date2){
 }
 
 DateWrap& DateWrap::operator=(const DateWrap& date_wrap){
-    if(this == &date_wrap){
+    if(*this == date_wrap){
         return *this;
     }
     dateDestroy(date);
@@ -96,8 +96,9 @@ bool mtm::operator<(const DateWrap& date1, const DateWrap& date2){
 }
 
 DateWrap DateWrap::operator++(int){
+    DateWrap pervious_date(*this);
     dateTick(date);
-    return *this;   
+    return pervious_date; 
 }
 
 DateWrap& DateWrap::operator+=(int num){

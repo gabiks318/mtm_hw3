@@ -3,6 +3,8 @@ C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build/CMakeFiles/edit_c
 C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build/CMakeFiles/rebuild_cache.dir
 C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build/date/CMakeFiles/edit_cache.dir
 C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build/date/CMakeFiles/rebuild_cache.dir
+C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build/dry/CMakeFiles/edit_cache.dir
+C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build/dry/CMakeFiles/rebuild_cache.dir
 C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build/linked_list/CMakeFiles/edit_cache.dir
 C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build/linked_list/CMakeFiles/rebuild_cache.dir
 C:/Users/yan11/OneDrive/Desktop/MATAM/hw3/mtm_hw3/part_1/build/provided/CMakeFiles/edit_cache.dir

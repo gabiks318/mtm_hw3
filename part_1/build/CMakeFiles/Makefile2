@@ -73,6 +73,7 @@ CMAKE_BINARY_DIR = C:\Users\yan11\OneDrive\Desktop\MATAM\hw3\mtm_hw3\part_1\buil
 # The main recursive "all" target.
 all: CMakeFiles/ex3.dir/all
 all: date/all
+all: dry/all
 all: linked_list/all
 all: provided/all
 all: tests/all
@@ -81,6 +82,7 @@ all: tests/all
 
 # The main recursive "preinstall" target.
 preinstall: date/preinstall
+preinstall: dry/preinstall
 preinstall: linked_list/preinstall
 preinstall: provided/preinstall
 preinstall: tests/preinstall
@@ -90,6 +92,7 @@ preinstall: tests/preinstall
 # The main recursive "clean" target.
 clean: CMakeFiles/ex3.dir/clean
 clean: date/clean
+clean: dry/clean
 clean: linked_list/clean
 clean: provided/clean
 clean: tests/clean
@@ -113,6 +116,24 @@ date/preinstall:
 date/clean:
 
 .PHONY : date/clean
+
+#=============================================================================
+# Directory level rules for directory dry
+
+# Recursive "all" directory target.
+dry/all:
+
+.PHONY : dry/all
+
+# Recursive "preinstall" directory target.
+dry/preinstall:
+
+.PHONY : dry/preinstall
+
+# Recursive "clean" directory target.
+dry/clean:
+
+.PHONY : dry/clean
 
 #=============================================================================
 # Directory level rules for directory linked_list

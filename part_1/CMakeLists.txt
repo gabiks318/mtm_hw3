@@ -8,6 +8,7 @@ set(MTM_FLAGS_RELEASE "${MTM_FLAGS_DEBUG} -DNDEBUG")
 set(CMAKE_CXX_FLAGS ${MTM_FLAGS_DEBUG})
 
 add_subdirectory("${PROJECT_SOURCE_DIR}/date")
+add_subdirectory("${PROJECT_SOURCE_DIR}/dry")
 add_subdirectory("${PROJECT_SOURCE_DIR}/linked_list")
 add_subdirectory("${PROJECT_SOURCE_DIR}/provided")
 add_subdirectory("${PROJECT_SOURCE_DIR}/tests")
@@ -15,4 +16,4 @@ add_subdirectory("${PROJECT_SOURCE_DIR}/tests")
 
 
 
-add_executable(ex3 provided/test_partB.cpp schedule.cpp open_event.cpp base_event.cpp closed_event.cpp date_wrap.cpp date/date.c event_container.cpp festival.cpp)
+add_executable(ex3 tests/schedule_tests.cpp festival.cpp schedule.cpp event_container.cpp open_event.cpp base_event.cpp closed_event.cpp date_wrap.cpp date/date.c)
