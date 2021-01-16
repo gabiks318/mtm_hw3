@@ -31,6 +31,9 @@ bool testDateWrapCreateDestroy() {
     ASSERT_TEST(date2.day() == day2, returnLabel);
     ASSERT_TEST(date2.month() == month2, returnLabel);
     ASSERT_TEST(date2.year() == year2, returnLabel);
+    DateWrap date4(1,1, 20);
+    DateWrap date5(1,1, 20);
+    ASSERT_TEST(date5++ == date4, returnLabel);
 
 
 returnLabel:

@@ -21,7 +21,7 @@ EventContainer::EventIterator::EventIterator(const EventIterator& event_iterator
 
 EventContainer::EventIterator& EventContainer::EventIterator::operator=(const EventIterator& event_iterator)
 {
-    if(*this == event_iterator){
+    if(this == &event_iterator){
         return *this;
     }
     index = event_iterator.index;
@@ -45,7 +45,13 @@ EventContainer::EventContainer(): events(EventContainer::CompareEvents()) {
 
 bool EventContainer::EventIterator::operator==(const EventIterator& event_iterator) const
 {
-    if(index == event_iterator.index){
+    if(index == events.getSize() && event_iterator.events.getSize() == event_iterator.index){
+        return true;
+    }
+    if(index == events.getSize() || event_iterator.events.getSize()  == event_iterator.index){
+        return false;
+    }
+    if(events[index] == event_iterator.events[index]){
         return true;
     }
     return false;

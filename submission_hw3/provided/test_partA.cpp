@@ -115,6 +115,7 @@ bool testBooleanOperators()
     ASSERT(d1 == d2)
     ASSERT(d1 < d3)
     ASSERT(d1 != d3)
+    ASSERT(d1++ == d2)
     return result;
 }
 

@@ -16,4 +16,4 @@ add_subdirectory("${PROJECT_SOURCE_DIR}/tests")
 
 
 
-add_executable(ex3 tests/schedule_tests.cpp partB/festival.cpp partC/schedule.cpp partB/event_container.cpp partB/open_event.cpp partB/base_event.cpp partB/closed_event.cpp partA/date_wrap.cpp partA/date.c)
+add_executable(ex3 provided/test_partB.cpp partB/festival.cpp partC/schedule.cpp partB/event_container.cpp partB/open_event.cpp partB/base_event.cpp partB/closed_event.cpp partA/date_wrap.cpp partA/date.c)
