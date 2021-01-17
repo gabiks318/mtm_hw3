@@ -16,7 +16,7 @@ OpenEvent::OpenEvent(const OpenEvent& event):BaseEvent(event){
 
 OpenEvent& OpenEvent::operator=(const OpenEvent& event)
 {
-    if(*this == event){
+    if(this == &event){
         return *this;
     }
     name = event.name;

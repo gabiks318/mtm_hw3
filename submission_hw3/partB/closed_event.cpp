@@ -16,7 +16,7 @@ ClosedEvent::ClosedEvent(const ClosedEvent& event): BaseEvent(event), allowed_pa
 }
 
 ClosedEvent& ClosedEvent::operator=(const ClosedEvent& event){
-    if(*this == event){
+    if(this == &event){
         return *this;
     }
     name = event.name;

@@ -19,7 +19,7 @@ void Schedule::addEvents(const EventContainer& events)
     }
     mtm::BaseEvent* event_clone;
     for(mtm::EventContainer::EventIterator events_iterator = events.begin();
-                                                    events_iterator!= events.end(); ++events_iterator){
+                                            events_iterator!= events.end(); ++events_iterator){
         mtm::BaseEvent& event = *events_iterator;
         event_clone = event.clone();
         try{

@@ -85,7 +85,7 @@ void testYan2()
     }
      try{
         schedule.addEvents(mtm::OneTimeEvent<mtm::OpenEvent>(
-         mtm::DateWrap(1, 1, -20), "YanC"));
+         mtm::DateWrap(1, 2, 2020), "YanC"));
     }catch(mtm::EventAlreadyExists&){ 
     }
     schedule.printAllEvents();

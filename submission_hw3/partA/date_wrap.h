@@ -17,7 +17,7 @@ namespace mtm
     bool isDateLegal(int day, int month , int year);
     
     public:
-    DateWrap(int day = 1, int month = 1, int year = 2021);
+    explicit DateWrap(int day, int month, int year);
     DateWrap(const DateWrap& date2);
     DateWrap& operator=(const DateWrap& date_wrap);
     ~DateWrap();

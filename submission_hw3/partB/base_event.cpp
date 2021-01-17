@@ -16,7 +16,7 @@ BaseEvent::BaseEvent(const BaseEvent& event):  date(event.date), name(event.name
 }
 
 BaseEvent& BaseEvent::operator=(const BaseEvent& event){
-    if(*this == event){
+    if(this == &event){
         return *this;
     }
     name = event.name;

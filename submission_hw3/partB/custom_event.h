@@ -15,7 +15,7 @@ namespace mtm
         explicit CustomEvent(DateWrap date, string name, CanRegister check_condition);
         CustomEvent(const CustomEvent&);
         CustomEvent& operator=(const CustomEvent&);
-        ~CustomEvent(){};
+        ~CustomEvent() = default;
 
         void registerParticipant(int student) override;
         BaseEvent* clone() const override;
@@ -35,7 +35,7 @@ namespace mtm
 
     template <class CanRegister> 
     CustomEvent<CanRegister>& CustomEvent<CanRegister>::operator=(const CustomEvent& event){
-        if(*this == event){
+        if(this == &event){
         return *this;
         }
         name = event.name;
