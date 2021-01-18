@@ -1,11 +1,9 @@
 #include <vector>
 #include <algorithm>
 #include <iostream>
-#include <shared_ptr>
+#include <memory>
 
 class BadInput{};
-
-void printVector(std::vector<char> vec);
 
 std::vector<char> slice(std::vector<char> vec, int start, int step, int stop){
     int size = vec.size();
@@ -31,35 +29,27 @@ std::vector<char> slice(std::vector<char> vec, int start, int step, int stop){
     return sliced_vector;
 }
 
-
-void printVector(std::vector<char> vec){
-    for (unsigned int i = 0; i < vec.size(); i++){
-        std::cout << vec[i] << ' ';
-    }
-}
-
-
-
 class A {
 public:
-    std::vector<shared_ptr<int>> values;
+    std::vector<std::shared_ptr<int>> values;
     void add(int x){ 
-         values.push_back(new int(x)); 
+        std::shared_ptr<int> value_pointer(new int(x));
+        values.push_back(value_pointer); 
     }
-    ~A(){
-        for(std::vector<int*> it : values){
-            delete it;
+    /* ~A(){
+        for(std::shared_ptr<int> it : values){
+            delete[] it;
         }
-    }
-    A& operator=(const std::vector& vec){
-        for(std::vector<int*> it : vec){
+    } */
+    A& operator=(const std::vector<std::shared_ptr<int>>& vec){
+        for(std::shared_ptr<int> it : vec){
             values.push_back(it);
-        }  
+        } 
+
+        return *this; 
     }
 };
 
-// a = 0 1 2 3 4 5
-// sliced =  1 2 3 4 5
 
 int main() {
     A a, sliced;
@@ -69,20 +59,3 @@ int main() {
     std::cout << *(a.values[1]) << std::endl;
     return 0;
 }
-
-
-/* int main(){
-    // this syntax initializes a vector with values a,b,c,d,e
-    std::vector<char> vec1 {'a', 'b', 'c', 'd', 'e'};
-    // returns vector with values a,c
-    std::vector<char> vec_sliced = slice(vec1, 0, 2, 4);
-    printVector(vec_sliced);
-    //std::vector<char> vec1 {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n','o', 'p', 'q', 'r', 's', 't','u', 'v', 'w', 'x', 'y', 'z'};
-
-    // returns vector with values b,c,d,e
-    //std::vector<char> 
-    vec_sliced = slice(vec1, 1, 1, 5);
-    return 0;
-} */
-
-
