@@ -36,19 +36,8 @@ public:
         std::shared_ptr<int> value_pointer(new int(x));
         values.push_back(value_pointer); 
     }
-    /* ~A(){
-        for(std::shared_ptr<int> it : values){
-            delete[] it;
-        }
-    } */
-    A& operator=(const std::vector<std::shared_ptr<int>>& vec){
-        for(std::shared_ptr<int> it : vec){
-            values.push_back(it);
-        } 
-
-        return *this; 
-    }
 };
+
 
 
 int main() {
