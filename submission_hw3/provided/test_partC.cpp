@@ -28,7 +28,7 @@ using mtm::OpenEvent;
 using mtm::ClosedEvent;
 using mtm::CustomEvent;
 
-static const std::string FILE_PATH = "../../provided/testOutputs/partC";
+static const std::string FILE_PATH = "../provided/testOutputs/partC";
 
 #define ASSERT_TEST(expr, backUpbuf)                                                         \
      do {                                                                                    \

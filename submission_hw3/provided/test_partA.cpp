@@ -11,7 +11,7 @@ using std::ifstream;
 using std::ofstream;
 using mtm::Exception;
 
-const std::string FILE_PATH = "../../provided/testOutputs/partA";
+const std::string FILE_PATH = "../provided/testOutputs/partA";
 
 #define ASSERT_TEST(expr)                                                         \
      do {                                                                          \

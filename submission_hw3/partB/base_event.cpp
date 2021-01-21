@@ -50,18 +50,18 @@ void BaseEvent::unregisterParticipant(int student){
 } 
 
 bool BaseEvent::operator<(const BaseEvent& event) const{
-    if(date < event.getDate()){
+    if(date < event.date){
         return true;
     }
-    if(date == event.getDate()){
-        if(name < event.getName())
+    if(date == event.date){
+        if(name < event.name)
             return true;
     }
     return false;
 }
 
 bool BaseEvent::operator==(const BaseEvent& event) const{
-    return name == event.getName() && date == event.getDate(); 
+    return name == event.name && date == event.date; 
 }
 
 ostream& BaseEvent::printShort(ostream& os){

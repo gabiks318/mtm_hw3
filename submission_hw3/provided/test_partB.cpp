@@ -31,7 +31,7 @@ using mtm::Festival;
 using mtm::RecurringEvent;
 using mtm::OneTimeEvent;
 
-static const std::string FILE_PATH = "../../provided/testOutputs/partB";
+static const std::string FILE_PATH = "../provided/testOutputs/partB";
 
 /**Prints which assertion failed and in which file*/
 #define ASSERT_TEST(expr)                                                         \

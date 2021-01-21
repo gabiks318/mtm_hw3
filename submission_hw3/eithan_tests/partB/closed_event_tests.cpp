@@ -1,6 +1,6 @@
-#include "base_event.h"
-#include "closed_event.h"
-#include "../partA/exceptions.h"
+#include "../../partB/base_event.h"
+#include "../../partB/closed_event.h"
+#include "../../partA/exceptions.h"
 #include <sstream>
 #include <cassert>
 using std::ostringstream;
